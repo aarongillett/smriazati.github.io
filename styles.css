@@ -266,6 +266,10 @@ a:hover img {
         background: rgba(255,255,255,.8);
     }
 
+    .description p {
+        width: 90%;
+    }
+
 }
 
 /* 1 COLUMN */
