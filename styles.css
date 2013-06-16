@@ -1,0 +1,299 @@
+body {
+    color:#000000; 
+    background:#FFFFFF; 
+    font-size: 16px;
+    margin:0 0 0 0;
+    font-family: helvetica, sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+a {
+    transition: all ease-in .1s;
+}
+
+
+/* home page */
+.homepage {
+}
+
+.homepage a {
+    text-decoration: none;
+}
+
+.homepage header, .homepage section {
+
+}
+
+.homepage header {
+    width: 100%;
+    margin: 1% auto 0 auto;
+    text-align: center;
+}
+
+.homepage header h1, .homepage header h2 {
+    display: block;
+}
+
+.homepage header h1 {
+    letter-spacing: .3em;
+    font-size: 3em;
+    padding: 1% 0 2% 0;
+    color: rgba(255,255,255,.8);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.homepage nav {
+    width: 100%;
+    float: left;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.homepage nav ul {
+    margin: 0 auto;
+}
+
+.homepage nav ul li {
+    list-style: none;
+    display: inline;
+    font-size: .8em;
+}
+
+.homepage nav ul li a {
+    padding: 10px;
+    background: rgba(255,255,255,.2);
+    transition: all ease-in .3s;
+}
+
+.homepage nav ul li a:hover {
+    background: rgba(255,255,255,.7);
+}
+
+
+
+.homepage #container {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.homepage section {
+    position: relative;
+    background: rgba(255,255,255,.3);
+    transition: all ease-in .3s;
+    width: 32.8%;
+    margin: 0 .5% .5% 0;
+}
+
+.homepage section:hover {
+    background: rgba(255,255,255,.7);
+}
+
+.homepage section a .click {
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+
+
+.homepage section h1, .homepage section h2 {
+    padding-left: 10%;
+}
+
+.homepage section h1 {
+    font-size: 1em;
+}
+.homepage section h2 {
+    font-size: .8em;
+    margin-top: 0;
+}
+
+
+/* work page */
+
+.backbutton {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    color: black;
+    font-size: 1em;
+    margin-top: 1%;
+}
+
+.backbutton p {
+    margin: 1% 0 1% 0;
+}
+
+.backbutton p a, .backbutton p a:visited  {
+    text-decoration: none;
+    background: rgba(0,0,0,.2);
+    padding: 10px;
+}
+
+.backbutton p a:hover {
+    background: rgba(164, 253, 243,.9);
+}
+
+.backbutton a i {
+    padding-right: .5%;
+}
+
+section {
+    width: 100%;
+    float: left;
+    display: block;
+}
+
+section article {
+    font-size: .9em;
+}
+
+
+
+h1, h2, p {
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+p {
+    font-size: .8em;
+    margin-bottom: 1%;
+}
+
+h2,  p {
+    letter-spacing: .1em;
+    margin-top: 1%;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+    padding: 5px 1px;
+}
+
+.description {
+   color: rgb(32, 32, 32);
+    height: 40%;
+    margin: 0 auto;
+    display: block;
+    text-align: left;
+    padding-left: 10%;
+}
+
+.description p {
+    width: 50%;
+    line-height: 1.5em;
+}
+
+.description a {
+    text-decoration: none;
+    padding: 5px 7px;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+}
+
+.description a:hover {
+    background: rgba(0,0,0,.1);
+}
+
+.description a:hover .external {
+    background: none;
+    padding: 0;
+}
+
+a:hover img {
+    background: none;
+}
+
+.description iframe, .postimages img {
+    box-shadow: 0px 0px 50px rgba(0,0,0,.3);
+    background: rgba(255,255,255,.3);
+    margin-bottom: 2%;
+}
+
+.highlight {
+    background: rgba(123, 255, 170,.7);
+    display: inline-block;
+    padding: 1%;
+    transition: all ease-in .1s;
+}
+
+.highlight:hover {
+    background: rgba(123, 255, 170,1);
+}
+
+.highlight a {padding: none;}
+.highlight a:hover {background: none;}
+
+.credits p {
+    line-height: 1.1em;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.credits {
+    margin-bottom: 1%;
+}
+
+/* sm screen */
+
+/* 2 COLUMN */
+
+@media (max-width: 1340px) {
+    .homepage section {
+        width: 49%;
+    }
+
+    .homepage section, .homepage nav ul li a {
+        background: rgba(255,255,255,.5);
+    }
+
+    .homepage section:hover, .homepage nav ul li a:hover {
+        background: rgba(255,255,255,.8);
+    }
+
+}
+
+/* 1 COLUMN */
+
+@media (max-width: 805px) {
+    .homepage header h1 {
+        font-size: 1.5em;
+    }
+
+    .homepage section, .homepage nav ul li a {
+        width: 100%;
+        font-size: .9em;
+    }
+
+    .homepage section, .homepage nav ul li a {
+         background: rgba(255,255,255,.8);
+    }
+
+    .homepage section:hover, .homepage nav ul li a:hover {
+        width: 100%;
+        background: rgba(255,255,255,.6);
+  } 
+    .homepage nav ul {
+        -webkit-padding-start: 0px;
+        margin-top: 2%;
+    }
+}
+
+
+
+
