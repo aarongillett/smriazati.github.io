@@ -163,13 +163,13 @@ a {
 }
 
 .aboutpage .backtomain a {
-    background: rgba(255, 255, 0,.5);
+    background: rgba(255, 255, 255,.8);
     padding:1%;
     transition: all ease-in .1s;
 }
 
 .aboutpage .backtomain a:hover {
-    background: rgba(255, 255, 0,.7);
+    background: rgba(255, 255, 255,.5);
 }
 
 .aboutpage p img {
