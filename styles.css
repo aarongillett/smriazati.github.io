@@ -150,7 +150,6 @@ a {
 .aboutpage ul li a {
     color: rgb(0, 0, 0);
     border: 1px solid rgba(0, 0, 0, .5);
-    box-shadow: 0px 1px 5px rgba(146, 146, 146,.8);
     padding: 10px 10px;
     transition: all ease-in .1s;
 }
