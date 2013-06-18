@@ -36,44 +36,22 @@ a {
 }
 
 .homepage header h1 {
-    letter-spacing: .3em;
-    font-size: 3em;
+    letter-spacing: .1em;
+    font-size: 4em;
+    font-family: "sansita one", helvetica, sans-serif;
     padding: 1% 0 2% 0;
-    color: rgba(255,255,255,.8);
+    color: rgba(255,255,255,1);
     max-width: 80%;
     margin: 0 auto;
+    text-transform: none;
+    text-shadow: 0px 1px 5px rgb(146, 146, 146);
 }
 
-.homepage nav {
-    width: 100%;
-    float: left;
-    margin-top: 1%;
-    text-align: center;
+.homepage header h1 a {
+    color: rgba(255,255,255,1);
 }
 
-.homepage nav ul {
-    margin: 0 auto;
-}
-
-.homepage nav ul li {
-    list-style: none;
-    display: inline;
-    font-size: .8em;
-}
-
-.homepage nav ul li a {
-    padding: 10px;
-    background: rgba(255,255,255,.2);
-    transition: all ease-in .3s;
-}
-
-.homepage nav ul li a:hover {
-    background: rgba(255,255,255,.7);
-}
-
-
-
-.homepage #container {
+.homepage #container, .homepage nav {
     display: block;
     width: 75%;
     margin: 0 auto;
@@ -81,14 +59,25 @@ a {
 
 .homepage section {
     position: relative;
-    background: rgba(255,255,255,.3);
+    background: rgba(255,255,255,.9);
     transition: all ease-in .3s;
     width: 32.8%;
     margin: 0 .5% .5% 0;
+    box-shadow: 0px 1px 5px rgba(146, 146, 146,.8);
+    height: 60px;
 }
 
 .homepage section:hover {
-    background: rgba(255,255,255,.7);
+    background: rgba(0, 245, 255, .3);
+}
+
+
+.homepage nav section {
+    background: rgba(255,255,255,.3);
+}
+
+.homepage nav section:hover {
+    background: rgba(129, 31, 255, .3);
 }
 
 .homepage section a .click {
@@ -113,6 +102,80 @@ a {
     margin-top: 0;
 }
 
+/*about page */
+
+.aboutpage {
+    text-align: center;
+    font-size:1.1em;
+}
+
+.aboutpage .abouttext {
+    line-height: 1.1em;
+}
+
+.aboutpage .aboutlinks {
+
+    width:100%;
+
+    /* Firefox */
+    display:-moz-box;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    /* Safari and Chrome */
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+
+    /* W3C */
+    display:box;
+    box-pack:center;
+    box-align:center;
+}
+
+
+.aboutpage ul {
+    list-style: none;
+    width:50%;
+}
+
+.aboutpage ul li {
+    font-size:.8em;
+    margin-bottom: 2%;
+    float: left;
+    display: inline;
+    margin: 1%;
+}
+
+.aboutpage ul li a {
+    color: rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, .5);
+    box-shadow: 0px 1px 5px rgba(146, 146, 146,.8);
+    padding: 10px 10px;
+    transition: all ease-in .1s;
+}
+
+.aboutpage ul li a:hover {
+    background: rgba(255, 255, 0,.3);
+}
+
+.aboutpage .backtomain {
+    margin: 3% 0;
+}
+
+.aboutpage .backtomain a {
+    background: rgba(255, 255, 0,.5);
+    padding:1%;
+    transition: all ease-in .1s;
+}
+
+.aboutpage .backtomain a:hover {
+    background: rgba(255, 255, 0,.7);
+}
+
+.aboutpage p img {
+    box-shadow: 0px 0px 50px rgba(0,0,0,.3);
+}
 
 /* work page */
 
