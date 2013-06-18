@@ -68,12 +68,12 @@ a {
 }
 
 .homepage section:hover {
-    background: rgba(0, 245, 255, .3);
+    background: rgba(164, 253, 243,.3);
 }
 
 
 .homepage nav section {
-    background: rgba(255,255,255,.3);
+    background: rgba(255,255,255,.6);
 }
 
 .homepage nav section:hover {
@@ -179,7 +179,7 @@ a {
 /* work page */
 
 .backbutton {
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 100%;
     float: left;
@@ -194,7 +194,7 @@ a {
 
 .backbutton p a, .backbutton p a:visited  {
     text-decoration: none;
-    background: rgba(0,0,0,.2);
+    background: rgba(164, 253, 243,.3);
     padding: 10px;
 }
 
