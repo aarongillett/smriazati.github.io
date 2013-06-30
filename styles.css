@@ -14,71 +14,45 @@ a {
 
 
 /* home page */
+
 .homepage {
+    text-align: center;
 }
 
 .homepage a {
     text-decoration: none;
 }
 
-.homepage header, .homepage section {
-
-}
-
 .homepage header {
-    width: 100%;
-    margin: 1% auto 0 auto;
-    text-align: center;
-}
-
-.homepage header h1, .homepage header h2 {
-    display: block;
+    font-family: 'sansita one', sans-serif;
+    text-transform: none;
+    color: #FFF;
+    font-size: 3em; 
+    margin: 5% 0;
 }
 
 .homepage header h1 {
-    letter-spacing: .1em;
-    font-size: 4em;
-    font-family: "sansita one", helvetica, sans-serif;
-    padding: 1% 0 2% 0;
-    color: rgba(255,255,255,1);
-    max-width: 80%;
-    margin: 0 auto;
-    text-transform: none;
-    text-shadow: 0px 1px 5px rgb(146, 146, 146);
-}
-
-.homepage header h1 a {
-    color: rgba(255,255,255,1);
-}
-
-.homepage #container, .homepage nav {
-    display: block;
-    width: 75%;
-    margin: 0 auto;
 }
 
 .homepage section {
+    background: rgba(255,255,255,.8);
+    padding: 25px 2% 0px 2%;
+    margin-bottom: 2%;
+    display: block;
+    height: 100px;
     position: relative;
-    background: rgba(255,255,255,.9);
-    transition: all ease-in .3s;
-    width: 32.8%;
-    margin: 0 .5% .5% 0;
-    box-shadow: 0px 1px 5px rgba(146, 146, 146,.8);
-    height: 60px;
+    transition: all .3s;
 }
 
-.homepage section:hover {
-    background: rgba(164, 253, 243,.3);
-}
-
-
-.homepage nav section {
+.homepage #about {
     background: rgba(255,255,255,.6);
 }
 
-.homepage nav section:hover {
-    background: rgba(129, 31, 255, .3);
+
+.homepage section:hover, .homepage #about:hover  {
+    background: rgba(255,255,255,1);
 }
+
 
 .homepage section a .click {
   position:absolute; 
@@ -89,85 +63,48 @@ a {
   z-index: 1;
 }
 
-
-.homepage section h1, .homepage section h2 {
-    padding-left: 10%;
-}
-
 .homepage section h1 {
-    font-size: 1em;
+    font-size: 1.3em;
+    margin-bottom: 0;
+    line-height: 1em;
 }
+
 .homepage section h2 {
-    font-size: .8em;
+    font-size: .9em;
     margin-top: 0;
+    line-height: 1.2em;
+    font-style: italic;
+}
+
+
+
+@media (max-width: 767px) {
+    .homepage header h1 {
+        font-size: 1.1em;
+    }
+
 }
 
 /*about page */
 
 .aboutpage {
-    text-align: center;
-    font-size:1.1em;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
-.aboutpage .abouttext {
-    line-height: 1.1em;
+.aboutpage header {
+     margin: 5% 0;
 }
 
-.abouttext p a {
-    text-decoration: underline;
+.aboutpage header h1 a {
+    color: #FFF;
 }
 
-.aboutpage .aboutlinks {
-    text-align: center;
-    width: 100%;
-}
-
-
-.aboutpage ul {
-    list-style: none;
-    max-width:100%;
-    margin: 4% auto;
-}
-
-.aboutpage ul li {
-    font-size:.8em;
-    display: inline;
-    text-align: center;
-}
-
-.aboutpage ul li a {
-    color: rgb(0, 0, 0);
-    border: 1px solid rgba(0, 0, 0, .5);
-    padding: 10px 10px;
-    transition: all ease-in .1s;
-    margin-top: 2%;
-    display: inline-block;
-}
-
-.aboutpage ul li a:hover {
-    background: rgba(255, 255, 0,.3);
+.aboutpage .btn {
+    margin: 2% 0;
 }
 
 
-
-
-.aboutpage .backtomain {
-    margin: 3% 0;
-}
-
-.aboutpage .backtomain a {
-    background: rgba(255, 255, 255,.8);
-    padding:1%;
-    transition: all ease-in .1s;
-}
-
-.aboutpage .backtomain a:hover {
-    background: rgba(255, 255, 255,.5);
-}
-
-.aboutpage p img {
-    box-shadow: 0px 0px 50px rgba(0,0,0,.3);
-}
 
 /* work page */
 
@@ -305,54 +242,6 @@ a:hover img {
     margin-bottom: 1%;
 }
 
-/* sm screen */
-
-/* 2 COLUMN */
-
-@media (max-width: 1340px) {
-    .homepage section {
-        width: 49%;
-    }
-
-    .homepage section, .homepage nav ul li a {
-        background: rgba(255,255,255,.5);
-    }
-
-    .homepage section:hover, .homepage nav ul li a:hover {
-        background: rgba(255,255,255,.8);
-    }
-
-    .description p {
-        width: 90%;
-    }
-
-}
-
-/* 1 COLUMN */
-
-@media (max-width: 805px) {
-    .homepage header h1 {
-        font-size: 1.5em;
-    }
-
-    .homepage section, .homepage nav ul li a {
-        width: 100%;
-        font-size: .9em;
-    }
-
-    .homepage section, .homepage nav ul li a {
-         background: rgba(255,255,255,.8);
-    }
-
-    .homepage section:hover, .homepage nav ul li a:hover {
-        width: 100%;
-        background: rgba(255,255,255,.6);
-  } 
-    .homepage nav ul {
-        -webkit-padding-start: 0px;
-        margin-top: 2%;
-    }
-}
 
 
 
