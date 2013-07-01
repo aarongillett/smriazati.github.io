@@ -1,0 +1,229 @@
+body {
+    color:#000000; 
+    background:#FFFFFF; 
+    font-size: 16px;
+    margin:0 0 0 0;
+    font-family: helvetica, sans-serif;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+a {
+    transition: all ease .2s;
+}
+
+
+/* home page */
+
+.homepage {
+    text-align: center;
+}
+
+.homepage a {
+    color: #000;
+    text-decoration: none;
+}
+
+.homepage header {
+    font-family: 'sansita one', sans-serif;
+    text-transform: none;
+    color: #FFF;
+    font-size: 3em; 
+    margin: 5% 0;
+}
+
+.homepage header h1 {
+    font-size: 1.5em;
+    letter-spacing: .01em;
+}
+
+.homepage section {
+    background: rgba(255,255,255,.8);
+    padding: 25px 2% 0px 2%;
+    margin-bottom: 2%;
+    display: block;
+    height: 100px;
+    position: relative;
+    transition: all .3s;
+}
+
+.homepage #about {
+    background: rgba(255,255,255,.6);
+}
+
+
+.homepage section:hover, .homepage #about:hover  {
+    background: rgba(255,255,255,1);
+}
+
+
+.homepage section a .click {
+  position:absolute; 
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+
+.homepage section h1 {
+    font-size: 1.1em;
+    margin-bottom: 0;
+    line-height: 1em;
+}
+
+.homepage section h2 {
+    font-size: .8em;
+    margin-top: 0;
+    line-height: 1.2em;
+}
+
+
+
+@media (max-width: 767px) {
+    .homepage header h1 {
+        font-size: 1.1em;
+    }
+
+}
+
+/*about page */
+
+.aboutpage {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+}
+
+.aboutpage header {
+     margin: 1% 0;
+}
+
+.aboutpage header h1 a {
+    font-family: 'sansita one';
+    text-transform: none;
+    color: rgba(0,0,0,.2);
+    font-size: .8em;
+    width: 100%;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+.aboutpage header h1 a:hover {
+    color: rgba(0,0,0,1); 
+    text-decoration: none;   
+}
+
+.aboutpage .btn {
+    margin: 2% 0;
+}
+
+.aboutpage p {
+    font-size: .9em;
+    line-height: 1.5em;
+}
+
+.aboutpage .bio p a {
+    text-decoration: underline;
+    color: #000;
+}
+
+.aboutpage .bio p a:hover {
+    background: white;
+}
+
+
+.aboutpage p a.backto {
+    margin-top: 1%;
+    display:inline-block;
+}
+
+/* post page */
+
+.postpage {
+    max-width: 960px;
+    margin: 0 auto;
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+h1, h2, h3, p {
+    font-weight: 300;
+}
+
+.postpage header h1 a {
+    font-family: 'sansita one';
+    text-transform: none;
+    color: rgba(0,0,0,.2);
+    font-size: .8em;
+    width: 100%;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+
+
+.postpage header h1 a:hover {
+    text-decoration: none;
+    color: rgba(0,0,0,1);
+}
+
+.postpage .description {
+    margin: 0 auto;
+}
+
+.postpage .description a, .postpage .description a:visited {
+    text-decoration: underline;
+    color: #000;
+}
+
+.postpage .description a:hover {
+    background: yellow;
+}
+
+.postpage .description h1 {
+    font-size: 1.5em;
+    line-height: 1.3em;
+}
+
+.postpage .description h2, .postpage .description h3 {
+    font-size: 1em;
+    line-height: .9em;
+}
+
+.postpage .description p {
+    max-width: 80%;
+    margin: 0 auto .5% auto;
+    font-size: .8em;
+    line-height: 1.5em;
+}
+
+.postpage .videowrapper {
+    margin: 3% 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;    
+}
+
+.postpage .videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.postpage .postimages {
+    margin-top: 1%;
+}
+
+.postpage iframe, .postpage img {
+    box-shadow: 0px 0px 50px rgba(0,0,0,.3);
+}
+
+.postpage .endlinks {
+    margin: 3% 0 5% 0;
+}
+
+a.backto {
+    color: black;
+}
