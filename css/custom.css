@@ -20,3 +20,13 @@ header {
 	width: 200px;
 	background: black;
 }
+
+
+.aboutpage .btn-success {
+	background: rgb(75, 75, 75);
+}
+
+.aboutpage {
+	background: #fff;
+	padding: 2%;
+}
