@@ -12,6 +12,12 @@ a {
     transition: all ease .2s;
 }
 
+.btn {
+    -webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+
 
 /* home page */
 
@@ -91,13 +97,16 @@ a {
 
 .aboutpage {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 1% auto;
     text-align: center;
     font-weight: 300;
+    background: rgba(255,255,255,.8);
+    padding: 2%;
+    box-shadow: 0px 0px 10px rgba(223, 223, 223,.8);
 }
 
 .aboutpage header {
-     margin: 1% 0;
+     margin: 1% 0 3% 0;
 }
 
 .aboutpage header h1 a {
@@ -123,19 +132,13 @@ a {
     line-height: 1.5em;
 }
 
-.aboutpage .bio p a {
+.aboutpage .bio p a, .aboutpage .sociallinks p a {
     text-decoration: underline;
     color: #000;
 }
 
-.aboutpage .bio p a:hover {
-    background: white;
-}
-
-
-.aboutpage p a.backto {
-    margin-top: 1%;
-    display:inline-block;
+.aboutpage .bio p a:hover, .aboutpage .sociallinks p a:hover {
+    background: yellow;
 }
 
 /* post page */
@@ -149,6 +152,10 @@ a {
 
 h1, h2, h3, p {
     font-weight: 300;
+}
+
+.postpage a.btn {
+    box-shadow: 0px 0px 15px rgba(0,0,0,.1);
 }
 
 .postpage header h1 a {
@@ -199,7 +206,7 @@ h1, h2, h3, p {
 .postpage .videowrapper {
     margin: 3% 0;
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 53.5%;
     padding-top: 25px;
     height: 0;    
 }
