@@ -302,3 +302,12 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 <IfModule mod_php5.c>
   php_value session.cookie_httponly true
 </IfModule>
+
+
+
+# Redirects domain.com/file.html to domain.com/file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteCond %{REQUEST_URI} ^(.+)\.html$
+RewriteRule (.*)\.html$ /$1 [R=301,L]
+
