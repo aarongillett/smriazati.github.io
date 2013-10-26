@@ -1,0 +1,419 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="{block:Description}{MetaDescription}{/block:Description}"/>
+
+
+    <title>*~ sarah riazati ~*</title>
+
+    <link rel="shortcut icon" href="{Favicon}"/>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+    <link rel="stylesheet" type="text/css" href="" charset="utf-8"/>
+
+
+<!-- fonts -->
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+
+
+<style>
+
+body {
+    color: black;
+    font-family: 'oswald', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: rgb(219, 219, 219);
+    background: url("http://sarahriazati.com/images/bg-school-tile.png") repeat;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+    a:hover {
+        color: rgb(0, 255, 224);
+    }
+
+
+h1, h2, h3 {
+    font-weight: 300;
+}
+
+
+.container {
+    width: 100%;
+    display: block;
+    float: left;
+}
+div {
+    -moz-transition: .3s all ease;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+iframe {
+    background: rgb(224, 255, 0);
+}
+
+
+
+
+/* header styles */
+
+header {
+    width: 24%;
+    display: block;
+    float: left;
+    color: rgba(255,255,255,.8);
+    text-align: left;
+    font-size: 1em;
+}
+
+    header a {
+        color: rgb(224, 255, 0);
+    }
+
+    header h1 {
+        margin: 0;
+        letter-spacing: .08em;  
+    }
+
+        header h1 a {
+        }
+
+    /* font size */
+    header h1 {
+        font-size: 2em;
+    }    
+
+    header p {
+        font-size: 80%;
+        margin: 0;
+        letter-spacing: .2em;
+    }
+
+/* black backgrounds */
+    header h1, nav {
+        background: rgba(0,0,0,.7);
+        padding: 1% 15% 1% 5%;
+        width: auto;
+    }
+
+nav {
+    margin-top: 4%;
+}
+
+    nav p {
+        display: inline-block;
+        margin-right: 10%;
+    }
+
+
+
+
+/* sections are the rows */
+section {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-top: 2%;
+}
+
+section img {
+    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+}
+
+section:last-child {
+    margin-bottom: 5%;
+}
+
+
+
+/* grid */
+section a > div {
+    width: 24%;
+    display: block;
+    position: relative;
+    float: left;
+    margin-right: 1%;
+}
+
+section > div > div {
+    display: block;
+    position: relative;
+    float: left;
+    margin: 0 1% 0 0;
+    text-transform: uppercase;
+}
+
+    section div > div + div {
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,.5);
+        position: absolute;
+        text-align: left;
+        top: 0;
+    }
+
+
+/* hovers */
+
+    section div > div {
+        opacity: .9;   
+    }
+
+    section div > div + div {
+        opacity: 1;   
+    }
+
+    section div:hover > div + div {
+        opacity: 0;
+    }
+
+    section div > div + div {
+        background: rgba(0,0,0,.5);
+        font-size: 2em;
+        line-height: 1.7em;
+    }
+
+    /* blue text colors */
+     section div:nth-child(1) > div + div {
+        color: rgb(0, 255, 224);
+    }
+
+    section div .info {
+        padding: 2%;
+        width: 95%;
+    }
+
+        section div .info h2 {
+            font-weight: 300;
+            display: inline-block;
+            margin: 0;
+        }
+
+/* article */
+
+div.page a nav:last-child {
+    color: rgb(0, 255, 224);
+}
+
+div.post {
+    float: left;
+    width: 70%;
+    margin-bottom: 10%;
+    margin-left: 1%;
+}
+
+
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.description {
+    width: 60%;
+    text-align: left;
+    font-size: .8em;
+    letter-spacing: .05em;
+    margin-bottom: 7%;
+}
+
+    .description h1 {
+        margin-bottom: 0px;
+    }
+
+    .description h2 {
+        margin-top: 0;
+    }
+
+div.photos img {
+    margin-bottom: 2%;
+}
+
+
+
+/* responsive grid & typography & nav */
+@media all and (max-width: 1360px) {
+    body {
+        font-size: 12px;
+    }   
+
+    body div.post {
+        font-size: 16px;
+    }       
+
+}
+
+@media all and (max-width: 1124px) {
+    body {
+        font-size: 18px;
+    }   
+
+    section a > div {
+        width: 48%;
+        margin-bottom: 2%;
+    }   
+
+    section {
+        margin: 0;
+    }
+
+    /* new header */
+    header {
+        width: 100%;
+        font-size: .8em;
+        margin-bottom: 2%;
+    }
+
+    header a {
+        color: black;
+    }
+
+    header h1, nav {
+        background: none;
+        color: black;
+        padding: 0 5%;
+        width: auto;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    header h1 {
+        font-size: 3em;
+        margin-bottom: 2%;
+    }
+
+    nav {
+        margin: 0 0 1% 0;
+    }
+    
+        nav p {
+            display: inline-block;
+            margin: 0 3%;
+        }
+
+    /* new article */
+
+    div.post {
+        width: 95%;
+    }
+
+
+    div.page a nav:last-child {
+        color: black;
+    }
+
+    .description {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .page nav a {
+        color: black;
+    }
+
+        /* hover colors in header */
+        .page header a:hover  h1, .page nav a:hover,  .page a:hover nav p {
+            color: yellow;
+        }
+
+}
+
+@media all and (max-width: 700px) {
+    body {
+        font-size: 12px;
+    }  
+
+    header, section a > div {
+        width: 96%;
+    }   
+
+    section div > div {
+        width: 100%;
+    }
+
+    .description {
+        width: 80%;
+    }
+
+}
+
+
+/* scroll to top override styles */
+#topcontrol {
+    bottom: 15px !important;
+    left: 15px !important;
+    right: 0 !important;
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+<div class="container page">
+
+    <header>
+        <a href="index.html"><h1>sarah riazati</h1></a>
+
+        <nav>
+            <p><a href="about.html">about</a></p>
+            <p><a href="http://sriazati.tumblr.com" target="_blank">recent</a></p>
+            <p><a href="http://www.vimeo.com/sriazati" target="_blank">vimeo</a></p>
+        </nav>
+
+        <a href="index.html"><nav>
+            <p><i class="fa fa-caret-left"></i> back to home</p>
+        </nav></a>
+
+
+    </header>
+
+        <div class="post">
+
+            <div class="video">
+                <iframe width="560" height="315" src="http://www.youtube.com/embed/j2_Po4jEiJI?rel=0&modestbranding=1&controls=0" frameborder="0" allowfullscreen></iframe>
+            </div>
+        
+            <div class="description">
+                <h1>Unorthodox by Joey Bada$$ prod. by DJ Premier</h1>
+                <h2>Lyric Video</h2>
+                <p>Roles: camera, editor, effects. Client: <a href="http://green-label.com/" target="_blank">green label sound / mountain dew</a>.</p>
+            </div>
+
+        </div>
+
+</div> <!-- container -->
+
+
+</body>
+
+</html>
