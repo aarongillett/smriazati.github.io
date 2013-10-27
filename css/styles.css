@@ -177,7 +177,7 @@ section > div > div {
 /* article */
 
 div.page a nav:last-child {
-    padding-top: 44px;
+    padding: 22px 0;
     color: rgb(0, 255, 224);
 }
 
