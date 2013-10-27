@@ -52,7 +52,7 @@ header {
 }
 
     header a {
-        color: rgb(224, 255, 0);
+        color: white;
     }
 
     header h1 {
@@ -345,7 +345,7 @@ div.photos img {
 
         /* hover colors in header */
         .page header a:hover  h1, .page nav a:hover,  .page a:hover nav p {
-            color: yellow;
+            color: white;
         }
 
 }
