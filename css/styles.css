@@ -156,6 +156,7 @@ section > div > div {
         background: rgba(0,0,0,.5);
         font-size: 2em;
         line-height: 1.7em;
+        overflow: hidden;
     }
 
     section div .info {
