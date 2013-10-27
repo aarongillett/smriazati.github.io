@@ -158,11 +158,6 @@ section > div > div {
         line-height: 1.7em;
     }
 
-    /* blue text colors */
-     section div:nth-child(1) > div + div {
-        color: rgb(0, 255, 224);
-    }
-
     section div .info {
         padding: 2%;
         width: 95%;
@@ -173,6 +168,47 @@ section > div > div {
             display: inline-block;
             margin: 0;
         }
+
+/*typography colors */
+     section div:nth-child(1) > div + div {
+        color: rgb(0, 255, 224);
+    }
+
+    .camera, .interviews, .editor, .animator, .director, .designer, .assorted {
+        color: rgb(255, 128, 224);
+    }
+
+
+/*  separate if needed
+
+   .camera {
+        color: rgb(255, 219, 77);
+    }
+
+    .interviews {
+        color: rgb(255, 219, 77);
+    }
+
+    .editor {
+        color: rgb(255, 219, 77);
+    }
+
+    .director {
+        color: rgb(255, 219, 77);
+    }
+
+    .designer {
+        color: rgb(255, 219, 77);
+    }
+
+    .animator {
+        color: rgb(255, 219, 77);
+    }
+
+    .assorted {
+        color: rgb(255, 219, 77);
+    }*/
+
 
 /* article */
 
