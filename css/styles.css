@@ -379,5 +379,5 @@ div.photos img {
 }
 
 #topcontrol img {
-    min-width: auto !important;
+    min-width: 1 !important;
 }
