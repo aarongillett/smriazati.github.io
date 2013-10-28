@@ -103,6 +103,8 @@ section {
 
 section img {
     box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+    min-width: 100%;
+
 }
 
 section:last-child {
@@ -127,13 +129,6 @@ section > div > div {
     margin: 0 1% 0 0;
     text-transform: uppercase;
 }
-
-    section > div > div img {
-        min-width: 100%;
-    }
-
-
-
 
     section div > div + div {
         height: 100%;
