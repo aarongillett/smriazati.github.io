@@ -10,7 +10,6 @@ body {
 
 img {
     max-width: 100%;
-    min-width: 100%;
 }
 
 a {
@@ -128,6 +127,13 @@ section > div > div {
     margin: 0 1% 0 0;
     text-transform: uppercase;
 }
+
+    section > div > div img {
+        min-width: 100%;
+    }
+
+
+
 
     section div > div + div {
         height: 100%;
@@ -376,8 +382,4 @@ div.photos img {
     bottom: 15px !important;
     left: 15px !important;
     right: 0 !important;
-}
-
-#topcontrol img {
-    min-width: 1 !important;
 }
