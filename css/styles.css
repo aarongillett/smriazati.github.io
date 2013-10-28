@@ -376,4 +376,5 @@ div.photos img {
     bottom: 15px !important;
     left: 15px !important;
     right: 0 !important;
+    min-width: auto !important;
 }
