@@ -258,6 +258,10 @@ div.post {
         margin-top: 0;
     }
 
+    .description p {
+        font-weight: 300;
+    }
+
 div.photos img {
     margin-bottom: 2%;
 }
