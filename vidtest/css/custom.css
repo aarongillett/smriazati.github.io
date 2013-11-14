@@ -79,14 +79,14 @@ a {
 
 
 header {
-    position: relative;
+    position: fixed;
     display: block;
     background: rgba(0,0,0,.7);
-    z-index: 10001;
+    z-index: 101;
     top: 0;
     left: 0;
     width: 100%;
-    height: 2em;  
+    height: 4em;  
 }
 
     nav {
@@ -95,6 +95,7 @@ header {
     }
 
     nav a {
+        padding-top: .5%;
         width: 40%;
         display: inline-block;
         color: rgba(255,255,255,1);
@@ -160,19 +161,20 @@ section .overlay {
 }
 
 footer {
-    position: relative;
-    bottom: 0;
+    position: fixed;
+    top: 0;
     height: 3em;
     padding-top: 1.5em;
-    width: 100%;
+    width: 60%;
+    margin: 0 20%;
+    text-align: center;
     z-index: 1001;
-    color: white;
+    color: rgba(255,255,255,.5);
 }
 
 
 footer .container {
-    width: 60%;
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
 }
 
