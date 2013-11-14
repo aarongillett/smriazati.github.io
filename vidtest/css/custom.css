@@ -1,0 +1,261 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+::-moz-selection {
+    background: #000000;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+
+::selection {
+    background: #000000;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================================================
+   Sarah's styles
+   ========================================================================== */
+
+
+
+body {
+    width: 100%;
+    min-height: 100%;
+    background: rgba(0,0,0,.9);
+    font-size: 16px;
+}
+
+a {
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+
+header {
+    position: relative;
+    display: block;
+    background: rgba(0,0,0,.7);
+    z-index: 10001;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2em;  
+}
+
+    nav {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    nav a {
+        width: 40%;
+        display: inline-block;
+        color: rgba(255,255,255,1);
+    }
+
+   /*previous*/
+    nav a:nth-child(1) {
+        float: left;
+        text-align: left;
+        padding-left: 2%;
+    }
+
+    /*next*/
+    nav a:nth-child(2) {
+        float: right;
+        text-align: right;
+        padding-right: 2%;
+    }
+
+
+ /*interaction*/ 
+    nav a {
+        opacity: .5;
+    }
+
+    nav a:hover {
+        opacity: 1;
+    }
+
+
+
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.overlay, video {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay {
+    z-index: 100;
+
+    width: 100%;
+    min-height: 100%;
+    display: block;
+}
+
+
+video {
+    width: 100%;
+    min-width: 100%;
+}
+
+section .overlay {
+    opacity: .3;
+    background: rgba(0,0,0,.3);
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    height: 3em;
+    padding-top: 1.5em;
+    width: 100%;
+    z-index: 1001;
+}
+
+    .sliderholder {
+        width: 30%;
+        margin: 0 auto;
+        opacity: .1;
+    }
+
+
+
+
+
+
+/* slider overrides */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid #FFFFFF;
+    background: black;
+    font-weight: normal;
+    color: #474747;
+}
+
+.ui-widget-content {
+    border: 1px solid #aaaaaa;
+    background: #000000;
+    color: #222222;
+}
+
+.ui-widget-content a {
+    color: #222222;
+}
+.ui-corner-all {
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; 
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+    Media Queries 
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+}
+
+
