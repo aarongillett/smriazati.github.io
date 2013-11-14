@@ -36,26 +36,26 @@
 
     <div id="box" class="overlay">
         <video poster="" autoplay loop tabindex="0">
-          <source src="vid/train2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+          <source src="vid/lights1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         </video>
     </div>
 
     <video poster="" autoplay loop tabindex="0">
-      <source src="vid/lights1.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+      <source src="vid/train2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
     </video>
 
 </section>
 
 
 <footer>
-    <div class="sliderholder">
-        <div id="slider" data-wjs-element="box"></div>
-    </div> 
+    <div class="container">
+        <p>urban</p>
+        <div class="sliderholder">
+            <div id="slider" data-wjs-element="box"></div>
+        </div> 
+        <p>pastoral</p>
+    </div>
 </footer>
-
-
-
-
 
 
 
@@ -63,22 +63,10 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.3/themes/base/jquery-ui.css" type="text/css"/>
+    <script type="text/javascript" src="js/slider.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#slider').slider({ 
-            min: 0, 
-            max: 1, 
-            step: 0.01, 
-            value: 1,
-            orientation: "horizontal",
-                 slide: function(e,ui){
-                         $('#box').css('opacity', ui.value)
 
-                 }                
-            })
-        });
-    </script>
+
 
 
 <!--        
