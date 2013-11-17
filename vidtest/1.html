@@ -24,10 +24,14 @@
 
 <header>
 
-    <nav>
-        <a class="invisible" href=""><i class="fa fa-angle-left"></i></a>
-        <a href="2.html"><i class="fa fa-angle-right"></i></a>    
-    </nav>
+    <a class="arrow left" href="5.html"><i class="fa fa-angle-left"></i></a>
+    <div class="sliderholder">
+        <p>Urban</p>
+        <div id="slider" data-wjs-element="box"></div>
+        <p>Pastoral</p>
+    </div> 
+    <a class="arrow right" href="2.html"><i class="fa fa-angle-right"></i></a>    
+    
 
 </header>
 
@@ -46,15 +50,7 @@
 
 </section>
 
-<footer>
-    <div class="container">
-        <p>urban</p>
-        <div class="sliderholder">
-            <div id="slider" data-wjs-element="box"></div>
-        </div> 
-        <p>pastoral</p>
-    </div>
-</footer>
+
 
 
 
@@ -66,10 +62,24 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.4/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.3/themes/base/jquery-ui.css" type="text/css"/>
-    <script type="text/javascript" src="js/slider.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#slider').slider({ 
+            min: 0, 
+            max: 1, 
+            step: 0.01, 
+            value: .5,
+            orientation: "horizontal",
+                 slide: function(e,ui){
+                         $('#box').css('opacity', ui.value)
+
+                 }                
+            })
+        });
 
 
-
+    </script>
 
 
 <!--        

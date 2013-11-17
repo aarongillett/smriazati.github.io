@@ -77,54 +77,92 @@ a {
     transition: all .5s ease;
 }
 
+    a:hover {
+        opacity: 1;
+    }
+
 
 header {
     position: fixed;
     display: block;
-    background: rgba(0,0,0,.1);
+    background: rgba(0,0,0,.5);
     z-index: 101;
     top: 0;
     left: 0;
     width: 100%;
-    height: 4em;  
+
+    text-transform: uppercase;
+    color: white;
+    font-weight: 300;
+    letter-spacing: .1em;
 }
 
-    nav {
-        width: 100%;
-        font-size: 2em;
-    }
 
-    nav a {
-        padding-top: .5%;
-        width: 40%;
-        display: inline-block;
-        color: rgba(255,255,255,1);
-    }
+/* positioning */
+header a, header .sliderholder {
+    display: inline-block;
+    float: left;
+
+    opacity: .5;
+}
+
+header a.arrow {
+    width: 28%;
+    font-size: 3em;
+
+    padding-top: .5%;
+    display: inline-block;
+    color: rgba(255,255,255,1);
+}
+
+header .sliderholder {
+    width: 40%;
+
+    padding: 2% 0;
+}
+
 
    /*previous*/
-    nav a:nth-child(1) {
-        float: left;
+    header a.left {
         text-align: left;
         padding-left: 2%;
     }
 
     /*next*/
-    nav a:nth-child(2) {
-        float: right;
+    header a.right {
         text-align: right;
         padding-right: 2%;
     }
 
+/* slider positioning */
+.sliderholder {
+    text-align: center;
+}
 
- /*interaction*/ 
-    nav a {
-        opacity: .5;
-    }
+.sliderholder p, .sliderholder #slider {
+    float: left;
+}
 
-    nav a:hover {
-        opacity: 1;
-    }
+.sliderholder p {
+    width: 17%;
+    margin: 0;
+    vertical-align: text-top;
+    font-size: .8em;
+}
 
+.sliderholder p:first-child {
+    text-align: right;
+    padding-right: 2%;
+}
+
+.sliderholder p:last-child {
+    text-align: left;
+    padding-left: 2%;
+}
+
+.sliderholder #slider {
+    width: 60%;
+}
 
 
 
@@ -159,49 +197,6 @@ section .overlay {
     opacity: .3;
     background: rgba(0,0,0,.3);
 }
-
-footer {
-    position: fixed;
-    top: 0;
-    height: 3em;
-    padding-top: 1.5em;
-    width: 60%;
-    margin: 0 20%;
-    text-align: center;
-    z-index: 1001;
-    color: rgba(255,255,255,.5);
-}
-
-
-footer .container {
-    width: 100%;
-    text-align: center;
-}
-
-footer p, footer .sliderholder {
-    display: inline-block;
-}
-
-footer .container p {
-    width: 10%;
-    text-transform: uppercase;
-    font-size: .8em;
-    letter-spacing: .05em;
-    opacity: .5;
-    margin-top: 0;
-    vertical-align: top;
-}
-
-footer .container p:last-child {
-    text-align: right;
-}
-
-    .sliderholder {
-        width: 40%;
-        margin: 0 auto;
-        opacity: .1;
-    }
-
 
 
 
@@ -283,7 +278,8 @@ footer .container p:last-child {
     Media Queries 
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 600px) {
+
 }
 
 
