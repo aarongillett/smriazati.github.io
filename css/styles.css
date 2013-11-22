@@ -26,6 +26,10 @@ h1, h2, h3 {
     font-weight: 300;
 }
 
+.highlight {
+    color: rgb(255, 128, 224) !important;
+}
+
 
 .container {
     width: 100%;
@@ -43,53 +47,74 @@ div {
 /* header styles */
 
 header {
-    width: 24%;
     display: block;
-    float: left;
-    color: rgba(255,255,255,.8);
-    text-align: left;
     font-size: 1em;
 }
 
-    header a {
-        color: white;
-    }
+header h1 {
+    width: 24%;
+    float: left;
+    text-align: left;
+}
 
-    header h1 {
-        margin: 0;
-        letter-spacing: .08em;  
-    }
+header nav {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
 
-        header h1 a {
-        }
+header h1, header nav {
+    margin: 20px 0 0 0;
+}
+
+
+header, header a {
+    color: black;
+}
+
 
     /* font size */
     header h1 {
-        font-size: 2em;
+        font-size: 2.5em;
+        letter-spacing: .08em;  
     }    
 
     header p {
         font-size: 80%;
-        margin: 0;
         letter-spacing: .2em;
     }
 
-/* black backgrounds */
-    header h1, nav {
-        background: rgba(0,0,0,.7);
-        padding: 1% 15% 1% 5%;
-        width: auto;
-    }
 
 nav {
-    margin-top: 4%;
-}
+/*    margin-top: 4%;
+*/}
 
     nav p {
         display: inline-block;
-        margin-right: 10%;
+        margin-left: 5%;
     }
 
+/* nav on a page */
+
+.page header {
+    text-align: left;
+    float: left;
+    width: 24%;
+}
+
+.page header h1, .page header nav {
+    float: left;
+    text-align: left;
+    width: 100%;
+    margin: 0; /* reset */
+}
+
+.page header h1 {
+    margin: 20px 0 0 0;
+}
+.page header p {
+    margin: 3% 5% 6% 0;
+}
 
 
 
@@ -119,7 +144,11 @@ section a > div {
     display: block;
     position: relative;
     float: left;
-    margin-right: 1%;
+    margin-right: 1.33333%;
+}
+
+section a:last-child > div {
+    margin-right: 0;
 }
 
 section > div > div {
@@ -215,9 +244,7 @@ section > div > div {
 
 /* article */
 
-div.page a nav:last-child {
-    color: rgb(0, 255, 224);
-}
+
 
 div.post {
     float: left;
@@ -274,6 +301,10 @@ div.photos img {
         font-size: 12px;
     }   
 
+    header {
+        font-size: 1.2em;
+    }
+
     body div.post {
         font-size: 16px;
     }       
@@ -305,28 +336,44 @@ div.photos img {
         color: black;
     }
 
-    header h1, nav {
+    header, header nav, .page header, .page header nav {
+        width: 100%;
+    }
+
+    header h1, header nav {
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+    header h1, header nav {
         background: none;
         color: black;
-        padding: 0 5%;
-        width: auto;
-        text-align: center;
         font-size: 1.5em;
+        float: left;
+    }
+
+    .page header h1, .page header nav {
+        text-align: center;
+    }
+
+    .page header p {
+        margin: 1% 5%;
+    }  
+
+    /* back button */
+    div.page a nav:last-child p{
+        margin: 0;
     }
 
     header h1 {
         font-size: 3em;
-        margin-bottom: 2%;
     }
 
-    nav {
-        margin: 0 0 1% 0;
-    }
     
-        nav p {
-            display: inline-block;
-            margin: 0 3%;
-        }
+    nav p {
+        display: inline-block;
+        margin: 0 3%;
+    }
 
     /* new article */
 
