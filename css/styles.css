@@ -355,16 +355,14 @@ div.photos img {
         margin: 0 0 20px 0;
     }
 
-/* hover colors in header */
+    /* hover colors in header */
         .page header a:hover  h1, .page nav a:hover,  .page a:hover nav p {
             color: white;
         }
 
-}
 
 
-
-/* new grid */
+    /* new grid */
 
     section a > div {
         width: 48.6%;
@@ -374,8 +372,6 @@ div.photos img {
     section {
         margin: 0;
     }
-
-    
 
     /* new article */
 
@@ -398,6 +394,8 @@ div.photos img {
         color: black;
     }
 
+
+} /* end media query */
 
 
 @media all and (max-width: 700px) {
