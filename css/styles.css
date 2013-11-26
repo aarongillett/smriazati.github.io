@@ -393,7 +393,7 @@ div.photos img {
 
 
     div.page a nav:last-child {
-        color: black;
+        color: white;
         padding: 22px 0;
     }
 
@@ -403,7 +403,7 @@ div.photos img {
     }
 
     .page nav a {
-        color: black;
+        color: white;
     }
 
 
@@ -419,7 +419,7 @@ div.photos img {
     }
 
     header a {
-        color: black;
+        color: white;
     }
 
     header, header nav, .page header, .page header nav {
@@ -438,7 +438,7 @@ div.photos img {
 
     header h1, header nav {
         background: none;
-        color: black;
+        color: white;
         font-size: 1.5em;
         float: left;
         width: 100%;
