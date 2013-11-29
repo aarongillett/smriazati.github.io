@@ -99,7 +99,7 @@ section div span {
 /* header grid */
 header {
   width: 100%;
-  margin: 25px 0; }
+  margin: 10px 0; }
 
 header {
   text-align: center; }
@@ -140,7 +140,7 @@ section div:hover > div + div {
   opacity: 0; }
 
 section div .info {
-  padding: 25px; }
+  padding: 10px; }
 
 /* break to 2 col at 1160 */
 @media screen and (max-width: 1200px) {
