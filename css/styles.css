@@ -161,9 +161,26 @@ div.post {
   text-align: center;
   letter-spacing: 0.1em; }
 
+@media screen and (min-width: 1280px) {
+  div.post {
+    width: 1280px; } }
 @media screen and (max-width: 960px) {
   div.post {
     width: 100%; } }
+.post hr {
+  margin-bottom: 50px; }
+
+.description hr {
+  margin: 0; }
+
+.description p {
+  text-align: left;
+  text-transform: none; }
+
+.description.center p {
+  text-align: center;
+  text-transform: uppercase; }
+
 .video {
   position: relative;
   padding-bottom: 56.25%;
