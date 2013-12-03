@@ -26,6 +26,9 @@ img,
 video {
   vertical-align: middle; }
 
+iframe {
+  border: none; }
+
 .wrapper {
   background: black;
   border: 20px solid #00ffe0;
@@ -212,6 +215,14 @@ div.post {
 
 div.photos img {
   margin-bottom: 2%; }
+
+.grid {
+  margin-top: 50px;
+  text-align: center; }
+
+.grid iframe {
+  margin-top: 25px;
+  border: none; }
 
 /* scroll to top override styles */
 #topcontrol {
