@@ -220,6 +220,10 @@ div.photos img {
   margin-top: 50px;
   text-align: center; }
 
+#grid {
+  margin-top: 25px;
+  text-align: left; }
+
 /* scroll to top override styles */
 #topcontrol {
   bottom: 15px !important;
