@@ -216,13 +216,9 @@ div.post {
 div.photos img {
   margin-bottom: 2%; }
 
-.grid {
+.more {
   margin-top: 50px;
   text-align: center; }
-
-.grid iframe {
-  margin-top: 25px;
-  border: none; }
 
 /* scroll to top override styles */
 #topcontrol {
