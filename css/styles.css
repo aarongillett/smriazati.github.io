@@ -300,7 +300,8 @@ div.photos img {
   top: 0;
   left: 15px;
   font-size: 80%;
-  text-align: left; }
+  text-align: left;
+  letter-spacing: 0.1em; }
 
 /* stack order */
 .fall_snow {
