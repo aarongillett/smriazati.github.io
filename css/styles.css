@@ -234,7 +234,7 @@ div.photos img {
 /* snowy */
 .fall_snow {
   background-image: url("../img/snow/snow3.png"), url("../img/snow/snow2.png"), url("../img/snow/snow3.png");
-  height: 100vh;
+  height: 100%;
   left: 0;
   position: absolute;
   top: 0;
