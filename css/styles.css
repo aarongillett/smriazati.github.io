@@ -234,7 +234,7 @@ div.photos img {
 /* snowy */
 .fall_snow {
   background-image: url("../img/snow/snow1.png"), url("../img/snow/snow2.png"), url("../img/snow/snow3.png");
-  height: 10000px;
+  height: 100vh;
   left: 0;
   position: absolute;
   top: 0;
@@ -285,7 +285,7 @@ div.photos img {
     background-position: 500px 1000px, 200px 400px, -100px 300px; } }
 
 .button {
-  background: #00FF29;
+  background: #68EB87;
   padding: 10px;
   display: inline-block; }
 
