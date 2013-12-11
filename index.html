@@ -41,15 +41,21 @@
 
 </div> <!-- container -->
 
-<script>
-    $( ".snow" ).click(function() {
-      $( ".fall_snow" ).toggle();
-    });
-</script>
+
 
 
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $( ".snow" ).click(function() {
+      $( ".fall_snow" ).toggle();
+    });
+});
+
+</script>
+<!--  -->
 <script>
 $(document).ready(function(){
     $("#grid").load("grid.html #container");

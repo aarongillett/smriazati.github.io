@@ -285,21 +285,22 @@ div.photos img {
     background-position: 500px 1000px, 200px 400px, -100px 300px; } }
 
 .button {
-  background: #00ffe0;
-  padding: 10px 3%;
+  background: #00FF29;
+  padding: 10px;
   display: inline-block; }
 
 .button:hover {
   cursor: pointer;
   opacity: 0.8;
-  background: #ff80e0; }
+  background: #00ffe0; }
 
 .snow {
-  margin-top: 1%;
   color: black;
   position: fixed;
   top: 0;
-  left: 0; }
+  left: 15px;
+  font-size: 80%;
+  text-align: left; }
 
 /* stack order */
 .fall_snow {
