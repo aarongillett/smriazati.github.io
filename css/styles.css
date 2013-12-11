@@ -233,16 +233,17 @@ div.photos img {
 
 /* snowy */
 .fall_snow {
-  background-image: url("../img/snow/snow1.png"), url("../img/snow/snow2.png"), url("../img/snow/snow3.png");
+  background-image: url("../img/snow/snow3.png"), url("../img/snow/snow2.png"), url("../img/snow/snow3.png");
   height: 100vh;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
-  -webkit-animation: snow 10s linear infinite;
-  -moz-animation: snow 10s linear infinite;
-  -ms-animation: snow 10s linear infinite;
-  animation: snow 10s linear infinite; }
+  -webkit-animation: snow 15s linear infinite;
+  -moz-animation: snow 15s linear infinite;
+  -ms-animation: snow 15s linear infinite;
+  -o-animation: snow 15s linear infinite;
+  animation: snow 15s linear infinite; }
 
 @keyframes snow {
   0% {
