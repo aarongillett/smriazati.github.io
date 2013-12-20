@@ -23,7 +23,6 @@
 
 <div class='container'>
     <div class="thephoto">
-        <img src="img/photo1.jpg" />
     </div>
 
 </div> <!-- /container -->
@@ -88,7 +87,7 @@ console.log(imgPath)
 
 
 $('<img src="'+ imgPath +'">').load(function() {
-  $(this).width(1000).height(800).appendTo('.thephoto');
+  $(this).('.thephoto');
 })
 
 
