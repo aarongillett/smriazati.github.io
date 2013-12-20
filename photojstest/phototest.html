@@ -52,19 +52,22 @@ $(document).ready(function(){
     };
 
     newImgPath();
-    console.log(newImgPath());
-
-
+    var firstVal = randVal;
 
     $( "#thephoto" ).click(function() {
         
         $(this).empty();
-    
 
         var randoVal = Math.floor(Math.random() * 15);
-        var imgPath = 'img/photo' + randoVal + '.jpg';
 
-        newImgPath();
+        if (randoVal == firstVal) {
+            var imgPath = 'img/photo' + randoVal + '.jpg';
+            newImgPath();
+        }
+
+        else () {
+            var randoVal = Math.floor(Math.random() * 15);
+        }
 
     });
 
