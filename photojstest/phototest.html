@@ -61,19 +61,23 @@ $(document).ready(function(){
     newImgPath();
     var firstVal = randoVal;
 
+    function swapDiv() {
+        $(targetDiv).empty();
+        newImgPath();
+    };
+
+
 
     $(targetDiv).click(function() {
         var delay = '400ms';
 
+
         $(this).fadeOut(delay);
-            $(this).fadeIn(delay);
+        $(this).fadeIn(delay);
 
         setTimeout(swapDiv, delay);
-        function swapDiv() {
-            $(targetDiv).empty();
-            newImgPath();
-        };
-
+        swapDiv();
+        console.log(swapDiv());
     
     });
 
