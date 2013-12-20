@@ -66,13 +66,12 @@ $(document).ready(function(){
         var delay = '400ms';
 
         $(this).fadeOut(delay);
+            $(this).fadeIn(delay);
 
         setTimeout(swapDiv, delay);
         function swapDiv() {
             $(targetDiv).empty();
             newImgPath();
-            $(this).fadeIn(delay);
-
         };
 
     
