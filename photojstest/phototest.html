@@ -45,11 +45,15 @@ $(document).ready(function(){
         var randoVal = Math.ceil(Math.random() * numbOfPics);
         var imgPath = 'img/photo' + randoVal + '.jpg';
 
-        if (listSoFar.length < (numbOfPics + 1)) {
-
+        function pathMaker() {
             $('<img src="'+ imgPath +'">').load(function() {
                 $(this).appendTo(targetDiv);
-            })
+            })   
+        }
+
+        if (listSoFar.length < (numbOfPics + 1)) {
+
+            pathMaker();
 
             listSoFar.push(randoVal);
 
@@ -61,10 +65,7 @@ $(document).ready(function(){
         else {
             listSoFar.length = 0;
 
-
-            $('<img src="'+ imgPath +'">').load(function() {
-                $(this).appendTo(targetDiv);
-            })
+            pathMaker();
 
             listSoFar.push(randoVal);
 
