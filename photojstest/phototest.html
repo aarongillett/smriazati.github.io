@@ -51,8 +51,15 @@ $(document).ready(function(){
             console.log(imgPath)
         })
 
-        listSoFar.push(randoVal);
-        console.log(listSoFar);
+        if (listSoFar.length == numbOfPics) {
+            listSoFar.lenght = 0;
+        }
+
+        else {
+            listSoFar.push(randoVal);
+            console.log(listSoFar);     
+        }
+
 
         return randoVal;
 
