@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 <head>
 
     <meta charset="utf-8">
@@ -34,10 +33,13 @@
 <script>
 $(document).ready(function(){
 
+
+    var randoVal = Math.floor(Math.random() * 15);
+    var imgPath = 'img/photo' + randoVal + '.jpg';
+
     function randomPhotoFunc() {
 
-        var randoVal = Math.floor(Math.random() * 15);
-        var imgPath = 'img/photo' + randoVal + '.jpg';
+
         $('<img src="'+ imgPath +'">').load(function() {
             $(this).appendTo('.thephoto');
             console.log(imgPath)
