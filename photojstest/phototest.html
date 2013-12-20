@@ -41,7 +41,6 @@ $(document).ready(function(){
 
     function newImgPath() {
 
-        $(targetDiv).fadeIn('slow');
 
 
         var randoVal = Math.ceil(Math.random() * numbOfPics);
@@ -54,7 +53,6 @@ $(document).ready(function(){
 
         return randoVal;
 
-        $(targetDiv).fadeOut('slow');
 
     // add the randoVal to an array called listSoFar. on the next loop, see if the randoVal equals any value in listSoFar. if it does, randomize again. when the length of listSoFar equals the numbOfPics, empty the array. 
 
@@ -64,9 +62,14 @@ $(document).ready(function(){
     var firstVal = randoVal;
 
     $(targetDiv).click(function() {
-        
+
+        $(targetDiv).fadeOut('slow');
+
         $(this).empty();
         newImgPath();
+
+        $(targetDiv).fadeIn('slow');
+
 
     });
 
