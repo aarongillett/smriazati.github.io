@@ -37,20 +37,25 @@ $(document).ready(function(){
     var randoVal = Math.floor(Math.random() * 15);
     var imgPath = 'img/photo' + randoVal + '.jpg';
 
-    function randomPhotoFunc() {
-
-
         $('<img src="'+ imgPath +'">').load(function() {
             $(this).appendTo('.thephoto');
             console.log(imgPath)
         })
-    };
 
-console.log(randomPhotoFunc);
+
 
 
     $( ".thephoto" ).click(function() {
-        randomPhotoFunc();
+
+        var randoVal = Math.floor(Math.random() * 15);
+        var imgPath = 'img/photo' + randoVal + '.jpg';
+
+            $('<img src="'+ imgPath +'">').load(function() {
+                $(this).appendTo('.thephoto');
+                console.log(imgPath)
+            })
+
+
     });
 
 });
