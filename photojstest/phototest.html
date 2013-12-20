@@ -46,19 +46,31 @@ $(document).ready(function(){
         var imgPath = 'img/photo' + randoVal + '.jpg';
 
         if (listSoFar.length < numbOfPics) {
+
             $('<img src="'+ imgPath +'">').load(function() {
                 $(this).appendTo(targetDiv);
             })
 
             listSoFar.push(randoVal);
 
-            console.log(imgPath)
-            console.log(listSoFar)
+            console.log(imgPath);
+            console.log(listSoFar);
 
         }
 
         else {
             listSoFar.length = 0;
+
+
+            $('<img src="'+ imgPath +'">').load(function() {
+                $(this).appendTo(targetDiv);
+            })
+
+            listSoFar.push(randoVal);
+
+            console.log(imgPath);
+            console.log(listSoFar);
+
         }
 
         return randoVal;
