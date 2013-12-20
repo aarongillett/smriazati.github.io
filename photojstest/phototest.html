@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 
     var randoVal;
-    var imgPath = 'img/photo' + randoVal + '.jpg';
+    var imgPath;
     var targetDiv = '#thephoto';
     var numbOfPics = 15;
     var listSoFar = [];
@@ -45,6 +45,7 @@ $(document).ready(function(){
 
         function pathMaker() {
             var randoVal = Math.ceil(Math.random() * numbOfPics);
+            var imgPath = 'img/photo' + randoVal + '.jpg';
 
             $('<img src="'+ imgPath +'">').load(function() {
                 $(this).appendTo(targetDiv);
