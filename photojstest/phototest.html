@@ -43,7 +43,7 @@ $(document).ready(function(){
         var imgPath = 'img/photo' + randoVal + '.jpg';
 
         $('<img src="'+ imgPath +'">').load(function() {
-            $(this).appendTo('.thephoto');
+            $(this).appendTo('#thephoto');
             console.log(imgPath)
         })
 
