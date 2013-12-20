@@ -63,11 +63,17 @@ $(document).ready(function(){
 
 
     $(targetDiv).click(function() {
+        var delay = '400ms';
 
-        $(this).fadeOut('fast');
-        $(this).empty();
+        $(this).fadeOut(delay);
+
+        setTimeout(emptyDiv, delay);
+        function emptyDiv() {
+            $(this).empty();
+        }
+        
         newImgPath();
-        $(this).fadeIn('fast');
+        $(this).fadeIn(delay);
     });
 
 });
