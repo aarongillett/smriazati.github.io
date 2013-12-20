@@ -39,7 +39,7 @@ $(document).ready(function(){
 
     function newImgPath() {
 
-        var randoVal = Math.floor(Math.random() * 15);
+        var randoVal = Math.ceil(Math.random() * 15);
         var imgPath = 'img/photo' + randoVal + '.jpg';
 
         $('<img src="'+ imgPath +'">').load(function() {
@@ -57,17 +57,7 @@ $(document).ready(function(){
     $( "#thephoto" ).click(function() {
         
         $(this).empty();
-
-        var randoVal = Math.floor(Math.random() * 15);
-
-        if (randoVal == firstVal) {
-            var imgPath = 'img/photo' + randoVal + '.jpg';
-            newImgPath();
-        }
-
-        else {
-            var randoVal = Math.floor(Math.random() * 15);
-        }
+        newImgPath();
 
     });
 
