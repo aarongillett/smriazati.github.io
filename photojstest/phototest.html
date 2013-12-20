@@ -51,27 +51,21 @@ $(document).ready(function(){
             })   
         }
 
-        if (listSoFar.length < (numbOfPics + 1)) {
-
+        function noRepeats() {
             pathMaker();
-
             listSoFar.push(randoVal);
 
             console.log(imgPath);
             console.log(listSoFar);
+        };
 
+        if (listSoFar.length < (numbOfPics + 1)) {
+            noRepeats();
         }
 
         else {
             listSoFar.length = 0;
-
-            pathMaker();
-
-            listSoFar.push(randoVal);
-
-            console.log(imgPath);
-            console.log(listSoFar);
-
+            noRepeats();
         }
 
         return randoVal;
