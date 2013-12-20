@@ -36,25 +36,31 @@ $(document).ready(function(){
 
     var randoVal;
     var imgPath;
+    var targetDiv = '#thephoto';
 
     function newImgPath() {
+
+        $(targetDiv).fadeOut('fast');
+
 
         var randoVal = Math.ceil(Math.random() * 15);
         var imgPath = 'img/photo' + randoVal + '.jpg';
 
         $('<img src="'+ imgPath +'">').load(function() {
-            $(this).appendTo('#thephoto');
+            $(this).appendTo(targetDiv);
             console.log(imgPath)
         })
 
         return randoVal;
+
+        $(targetDiv).fadeOut('fast');
 
     };
 
     newImgPath();
     var firstVal = randoVal;
 
-    $( "#thephoto" ).click(function() {
+    $( argetDiv).click(function() {
         
         $(this).empty();
         newImgPath();
