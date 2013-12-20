@@ -47,14 +47,14 @@ $(document).ready(function(){
     };
 
 
+    
 
-    function clearBox(elementId) {
-        document.getElementById('elementID').innerHTML = "";
-    };
+
 
     $( "#thephoto" ).click(function() {
         
-        clearBox('#thephoto');
+        $(this).empty();
+    
 
         var randoVal = Math.floor(Math.random() * 15);
         var imgPath = 'img/photo' + randoVal + '.jpg';
