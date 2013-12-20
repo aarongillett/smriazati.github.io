@@ -62,26 +62,28 @@ $(document).ready(function(){
             console.log(listSoFar);
         };
 
+        noRepeats();
+
+        console.log(listSoFar.indexOf(randoVal, 0));
 
 
 
-        if (listSoFar.length < (numbOfPics + 1)) {
-            // -1 if the randoVal is not present
-            if (listSoFar.indexOf(randoVal, 0) > -1 ) {
-                noRepeats();
-            }
+        // if (listSoFar.length < (numbOfPics + 1)) {
+        //     // -1 if the randoVal is not present
+        //     if (listSoFar.indexOf(randoVal, 0) > -1 ) {
+        //         noRepeats();
+        //     }
+        //     else {
+        //         pathMaker();
+        //     }   
+        // }
 
-            else {
-                pathMaker();
-            }   
-        }
+        // else {
+        //     listSoFar.length = 0; // empty the array
+        //     noRepeats();
+        // }
 
-        else {
-            listSoFar.length = 0; // empty the array
-            noRepeats();
-        }
-
-        return randoVal;
+        // return randoVal;
 
 
     // add the randoVal to an array called listSoFar. on the next loop, see if the randoVal equals any value in listSoFar. if it does, randomize again. 
