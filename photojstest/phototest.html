@@ -22,7 +22,7 @@
 
 
 <div class='container'>
-    <div class="thephoto">
+    <div id="thephoto">
     </div>
 
 </div> <!-- /container -->
@@ -37,24 +37,29 @@ $(document).ready(function(){
     var randoVal = Math.floor(Math.random() * 15);
     var imgPath = 'img/photo' + randoVal + '.jpg';
 
+    function newImgPath() {
+
         $('<img src="'+ imgPath +'">').load(function() {
             $(this).appendTo('.thephoto');
             console.log(imgPath)
         })
 
+    };
 
 
 
-    $( ".thephoto" ).click(function() {
+    function clearBox(elementId) {
+        document.getElementById(elementID).innerHTML = "";
+    };
+
+    $( "#thephoto" ).click(function() {
+        
+        clearBox(#thephoto);
 
         var randoVal = Math.floor(Math.random() * 15);
         var imgPath = 'img/photo' + randoVal + '.jpg';
 
-            $('<img src="'+ imgPath +'">').load(function() {
-                $(this).appendTo('.thephoto');
-                console.log(imgPath)
-            })
-
+        newImgPath();
 
     });
 
