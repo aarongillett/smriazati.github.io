@@ -34,10 +34,13 @@
 $(document).ready(function(){
 
 
-    var randoVal = Math.floor(Math.random() * 15);
-    var imgPath = 'img/photo' + randoVal + '.jpg';
+    var randoVal;
+    var imgPath;
 
     function newImgPath() {
+
+        var randoVal = Math.floor(Math.random() * 15);
+        var imgPath = 'img/photo' + randoVal + '.jpg';
 
         $('<img src="'+ imgPath +'">').load(function() {
             $(this).appendTo('.thephoto');
