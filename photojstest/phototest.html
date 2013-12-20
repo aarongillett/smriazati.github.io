@@ -45,7 +45,7 @@ $(document).ready(function(){
         var randoVal = Math.ceil(Math.random() * numbOfPics);
         var imgPath = 'img/photo' + randoVal + '.jpg';
 
-        if (listSoFar.length < numbOfPics) {
+        if (listSoFar.length < (numbOfPics + 1)) {
 
             $('<img src="'+ imgPath +'">').load(function() {
                 $(this).appendTo(targetDiv);
