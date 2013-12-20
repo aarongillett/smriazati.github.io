@@ -1,7 +1,8 @@
 body, html {
   width: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: #000; }
 
 .container {
   width: 100%; }

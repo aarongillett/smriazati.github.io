@@ -33,12 +33,23 @@
 
 <script>
 $(document).ready(function(){
-    var randoVal = Math.floor(Math.random() * 15);
-    var imgPath = 'img/photo' + randoVal + '.jpg';
-    $('<img src="'+ imgPath +'">').load(function() {
-        $(this).appendTo('.thephoto');
-        console.log(imgPath)
-    })
+
+    var randomPhotoFunc = new Function(){
+        var randoVal = Math.floor(Math.random() * 15);
+        var imgPath = 'img/photo' + randoVal + '.jpg';
+        $('<img src="'+ imgPath +'">').load(function() {
+            $(this).appendTo('.thephoto');
+            console.log(imgPath)
+        })
+    };
+
+
+
+
+    $( ".thephoto" ).click(function() {
+        randomPhotoFunc();
+    });
+
 });
 </script>
 
