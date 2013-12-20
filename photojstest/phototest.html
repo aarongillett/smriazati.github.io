@@ -65,13 +65,13 @@ $(document).ready(function(){
     function replace(targetDiv) {
         $(this).empty();
         newImgPath();
-        $(this).fadeIn('slow');
     };
 
     $(targetDiv).click(function() {
 
         $(this).fadeOut('slow');
         replace();
+        $(this).fadeIn('slow');
     });
 
 });
