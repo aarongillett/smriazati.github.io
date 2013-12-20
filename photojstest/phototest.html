@@ -63,22 +63,14 @@ $(document).ready(function(){
 
     function swapDiv() {
         $(targetDiv).empty();
+        
         newImgPath();
     };
 
 
 
     $(targetDiv).click(function() {
-        var delay = '400ms';
-
-
-        $(this).fadeOut(delay);
-        $(this).fadeIn(delay);
-
-        setTimeout(swapDiv, delay);
         swapDiv();
-        console.log(swapDiv());
-    
     });
 
 });
