@@ -48,11 +48,13 @@ $(document).ready(function(){
         if (listSoFar.length < numbOfPics) {
             $('<img src="'+ imgPath +'">').load(function() {
                 $(this).appendTo(targetDiv);
-                console.log(imgPath)
             })
 
             listSoFar.push(randoVal);
-        
+
+            console.log(imgPath)
+            console.log(listSoFar)
+
         }
 
         else {
