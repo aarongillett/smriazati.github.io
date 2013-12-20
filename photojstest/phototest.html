@@ -62,16 +62,12 @@ $(document).ready(function(){
     var firstVal = randoVal;
 
 
-    function replace(targetDiv) {
-        newImgPath();
-    };
-
     $(targetDiv).click(function() {
 
-        $(this).fadeOut('slow');
+        $(this).fadeOut('fast');
         $(this).empty();
-        replace();
-        $(this).fadeIn('slow');
+        newImgPath();
+        $(this).fadeIn('fast');
     });
 
 });
