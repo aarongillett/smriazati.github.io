@@ -43,23 +43,28 @@ $(document).ready(function(){
 
     function newImgPath() {
 
-        var randoVal = Math.ceil(Math.random() * numbOfPics);
-        var imgPath = 'img/photo' + randoVal + '.jpg';
+        function addImg() {
+            var randoVal = Math.ceil(Math.random() * numbOfPics);
+            var imgPath = 'img/photo' + randoVal + '.jpg';
 
-        $('<img src="'+ imgPath +'">').load(function() {
-            $(this).appendTo(targetDiv);
-            console.log(imgPath)
-        })
+            $('<img src="'+ imgPath +'">').load(function() {
+                $(this).appendTo(targetDiv);
+                console.log(imgPath)
+            });
+            return randoVal;
+        }
+
 
         if (listSoFar.length == numbOfPics) {
-            listSoFar.length = 1;
+            listSoFar.length = 0;
+            addImg();
+            listSoFar.push(randoVal);
         }
 
         else {
             listSoFar.push(randoVal);
             console.log(listSoFar);     
         }
-
 
         return randoVal;
 
