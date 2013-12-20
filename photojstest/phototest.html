@@ -35,20 +35,22 @@ $(document).ready(function(){
 
 
     var randoVal;
-    var imgPath;
+    var imgPath = 'img/photo' + randoVal + '.jpg';
     var targetDiv = '#thephoto';
     var numbOfPics = 15;
     var listSoFar = [];
 
 
     function newImgPath() {
-        var randoVal = Math.ceil(Math.random() * numbOfPics);
-        var imgPath = 'img/photo' + randoVal + '.jpg';
 
         function pathMaker() {
+            var randoVal = Math.ceil(Math.random() * numbOfPics);
+
             $('<img src="'+ imgPath +'">').load(function() {
                 $(this).appendTo(targetDiv);
             })   
+
+            return randoVal;
         }
 
         function noRepeats() {
@@ -59,19 +61,29 @@ $(document).ready(function(){
             console.log(listSoFar);
         };
 
+
+
+
         if (listSoFar.length < (numbOfPics + 1)) {
-            noRepeats();
+            // -1 if value isn't present
+            if (listSoFar.indexOf(randoVal, 0]) > -1 ) {
+                pathMaker();
+            }
+
+            else {
+                noRepeats();
+            }   
         }
 
         else {
-            listSoFar.length = 0;
+            listSoFar.length = 0; // empty the array
             noRepeats();
         }
 
         return randoVal;
 
 
-    // add the randoVal to an array called listSoFar. on the next loop, see if the randoVal equals any value in listSoFar. if it does, randomize again. when the length of listSoFar equals the numbOfPics, empty the array. 
+    // add the randoVal to an array called listSoFar. on the next loop, see if the randoVal equals any value in listSoFar. if it does, randomize again. 
 
     };
 
