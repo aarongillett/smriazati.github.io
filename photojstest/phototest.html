@@ -38,10 +38,10 @@ $(document).ready(function(){
     var imgPath;
     var targetDiv = '#thephoto';
     var numbOfPics = 15;
+    var listSoFar = [];
+
 
     function newImgPath() {
-
-
 
         var randoVal = Math.ceil(Math.random() * numbOfPics);
         var imgPath = 'img/photo' + randoVal + '.jpg';
@@ -50,6 +50,9 @@ $(document).ready(function(){
             $(this).appendTo(targetDiv);
             console.log(imgPath)
         })
+
+        listSoFar.push(RandoVal);
+        console.log(listSoFar[]);
 
         return randoVal;
 
@@ -63,7 +66,6 @@ $(document).ready(function(){
 
     function swapDiv() {
         $(targetDiv).empty();
-        
         newImgPath();
     };
 
