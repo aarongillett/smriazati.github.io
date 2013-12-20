@@ -17,7 +17,6 @@
 
 
 </head>
-
 <body>
 
 
@@ -31,76 +30,16 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 <script>
-
 $(document).ready(function(){
-
-
-// var bCheckEnabled = true;
-// var bFinishCheck = false;
-
-// var img;
-// var pics = new Array();
-// var i = 0;
-
-// var myInterval = setInterval(loadImage, 1);
-
-// function loadImage() {
-
-//     if (bFinishCheck) {
-//         clearInterval(myInterval);
-//         alert('Loaded ' + i + ' image(s)!)');
-//         return;
-//     }
-
-//     if (bCheckEnabled) {
-
-//         bCheckEnabled = false;
-
-//         img = new Image();
-//         img.onload = fExists;
-//         img.onerror = fDoesntExist;
-//         img.src = 'img/' + i + '.JPG';
-
-//     }
-
-// }
-
-// function fExists() {
-//     pics.push(img);
-//     i++;
-//     bCheckEnabled = true;
-// }
-
-// console.log(img);
-// console.log(pics);
-// console.log(i);
-
-
-
-var randoVal = Math.floor(Math.random() * 15); // constant should be array length
-var imgPath = 'img/photo' + randoVal + '.jpg';
-
-
-console.log(randoVal);
-console.log(imgPath)
-
-
-
-$('<img src="'+ imgPath +'">').load(function() {
-  $(this).appendTo('.thephoto');
-})
-
-
-
+    var randoVal = Math.floor(Math.random() * 15);
+    var imgPath = 'img/photo' + randoVal + '.jpg';
+    $('<img src="'+ imgPath +'">').load(function() {
+        $(this).appendTo('.thephoto');
+        console.log(imgPath)
+    })
 });
-
 </script>
 
-
-
-
-</script>
 
 </body>
-
 </html>
