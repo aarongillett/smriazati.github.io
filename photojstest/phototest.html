@@ -42,11 +42,17 @@ $(document).ready(function(){
 
 
     function newImgPath() {
+        function randomize() {
+            var randoVal = Math.ceil(Math.random() * numbOfPics);
+            return randoVal;
+        }
+
+
 
         function pathMaker() {
-            var randoVal = Math.ceil(Math.random() * numbOfPics);
+            randomize();
+            
             var imgPath = 'img/photo' + randoVal + '.jpg';
-
             $('<img src="'+ imgPath +'">').load(function() {
                 $(this).appendTo(targetDiv);
             })   
