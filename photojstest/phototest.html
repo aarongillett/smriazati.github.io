@@ -60,9 +60,19 @@ $(document).ready(function(){
             console.log(listSoFar);
         };
 
-        if (listSoFar.length < numbOfPics + 1) {
+
+// The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present
+
+        if (listSoFar.length < numbOfPics + 1 && listSoFar.indexOf(randoVal, 0)) === -1) {
+            
             executePath();
         }
+
+        else if (listSoFar.indexOf(randoVal, 0)) !=== -1)) {
+            var randoVal = Math.ceil(Math.random() * numbOfPics);
+            return randoVal;
+        }
+
         else {
             listSoFar.length = 0;
             pathMaker();
