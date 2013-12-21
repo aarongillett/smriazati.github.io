@@ -42,20 +42,12 @@ $(document).ready(function(){
 
 
     function newImgPath() {
-
-        var randoVal = Math.ceil(Math.random() * numbOfPics);
-
-        function randomize() {
-            var randoVal = Math.ceil(Math.random() * numbOfPics);
-            return randoVal;
-        }
-
-
+        
 
         function pathMaker() {
-            randomize();
-
+            var randoVal = Math.ceil(Math.random() * numbOfPics);
             var imgPath = 'img/photo' + randoVal + '.jpg';
+
             $('<img src="'+ imgPath +'">').load(function() {
                 $(this).appendTo(targetDiv);
             })   
