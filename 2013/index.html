@@ -132,6 +132,11 @@
  -->
    <script src="js/jquery-1.7.1.min.js"></script>
    <script src="js/jquery.masonry.min.js"></script>
+
+   <style>
+
+   </style>
+
    <script> 
 
 		$(document).ready(function() {
@@ -149,10 +154,17 @@
 
 			    	finished = -1;
 		   		};
-		   		
-		     	console.log(finished);
+
 		    	masonry();
 		    	console.log(finished);
+
+
+		    	if (finished = -1) {
+		    		$( "body" ).show( "slow");
+		    	} else {
+		    		$( "body" ).hide("slow");
+		    	}
+
 
 				window.onresize = function(event) {     
 			        masonry();
