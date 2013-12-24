@@ -137,16 +137,6 @@
 
    </style>
 
-   <script>
-   
-		    	if (finished = -1) {
-		    		$( ".container" ).show( "slow");
-		    	} else {
-		    		$( ".container" ).hide("slow");
-		    	}
-
-   </script>
-
    <script> 
 
 		$(document).ready(function() {
@@ -162,17 +152,27 @@
 			        	});
 			    	});
 
-			    	finished = -1;
 		   		};
 
 		    	masonry();
-		    	console.log(finished);
+
+
 
 
 				window.onresize = function(event) {     
 			        masonry();
 				};
+
+		    	$( ".container" ).hide("2000");
+
 		     });
+
+		    $(window).load(function(){
+
+		    		$( ".container" ).show( "2000");
+
+		    });
+
 
 
 		});
