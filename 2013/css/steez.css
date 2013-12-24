@@ -98,3 +98,56 @@ a {
 
 footer {
   height: 10em; }
+
+@keyframes Pulse {
+  0% {
+    color: #ff0d51; }
+
+  100% {
+    color: #ffd600; } }
+
+@-webkit-keyframes Pulse {
+  0% {
+    color: #ff0d51; }
+
+  100% {
+    color: #ffd600; } }
+
+@-moz-keyframes Pulse {
+  0% {
+    color: #ff0d51; }
+
+  100% {
+    color: #ffd600; } }
+
+@-o-keyframes Pulse {
+  0% {
+    color: #ff0d51; }
+
+  100% {
+    color: #ffd600; } }
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #4700ff;
+  padding: 25% 0 145% 0;
+  z-index: 1000;
+  width: 100%;
+  text-align: center; }
+
+#loading p {
+  -webkit-animation: Pulse 0.5s alternate infinite;
+  -moz-animation: Pulse 0.5s alternate infinite;
+  -ms-animation: Pulse 0.5s alternate infinite;
+  -o-animation: Pulse 0.5s alternate infinite;
+  animation: Pulse 0.5s alternate infinite;
+  font-family: 'alice', sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 200%;
+  color: #ffd600;
+  text-transform: uppercase; }
+
+#photos {
+  z-index: 0; }

@@ -22,6 +22,7 @@
 </head>
 <body>
 
+<div id="loading"><p>Loading</p></div>
 
 	<div class="container">
 		
@@ -147,29 +148,26 @@
 
 	
 			    	var $container = $('#photos');
-			    	$( "#photos" ).hide("2000");
 		     
 			    	$container.imagesLoaded( function(){
 			        	$container.masonry({
 			        		itemSelector : 'li'
 			        	});
 			    	});
-
-		    		$( "#photos" ).show( "2000");
-
 		   		};
 
 		    	masonry();
-
-
-
 
 				window.onresize = function(event) {     
 			        masonry();
 				};
 
-
 		     });
+
+		    $(window).load(function(){
+		    	$( "#loading" ).hide( "slow");
+		    });
+
 
 
 
