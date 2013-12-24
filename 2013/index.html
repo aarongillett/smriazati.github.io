@@ -134,30 +134,32 @@
    <script src="js/jquery.masonry.min.js"></script>
    <script> 
 
+		$(document).ready(function() {
+		    var finished;
 
-$( document ).ready(function() {
+		    $(function(){
+		   		function masonry() {
+			    	var $container = $('#photos');
+			     
+			    	$container.imagesLoaded( function(){
+			        	$container.masonry({
+			        		itemSelector : 'li'
+			        	});
+			    	});
 
-    $(function(){
-   		function masonry() {
-	    	var $container = $('#photos');
-	     
-	    	$container.imagesLoaded( function(){
-	        	$container.masonry({
-	        		itemSelector : 'li'
-	        	});
-	    	});
-   		};
-     
-    	masonry();
+			    	finished = -1;
+		   		};
+		     	
+		    	masonry();
+		    	console.log(finished);
 
-		window.onresize = function(event) {     
-	        masonry();
-		};
+				window.onresize = function(event) {     
+			        masonry();
+				};
+		     });
 
-     });
 
-});
-
+		});
 
    </script>
  
