@@ -137,6 +137,16 @@
 
    </style>
 
+   <script>
+   
+		    	if (finished = -1) {
+		    		$( ".container" ).show( "slow");
+		    	} else {
+		    		$( ".container" ).hide("slow");
+		    	}
+
+   </script>
+
    <script> 
 
 		$(document).ready(function() {
@@ -157,13 +167,6 @@
 
 		    	masonry();
 		    	console.log(finished);
-
-
-		    	if (finished = -1) {
-		    		$( ".container" ).show( "slow");
-		    	} else {
-		    		$( ".container" ).hide("slow");
-		    	}
 
 
 				window.onresize = function(event) {     
