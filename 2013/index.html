@@ -144,13 +144,18 @@
 
 		    $(function(){
 		   		function masonry() {
+
+	
 			    	var $container = $('#photos');
-			     
+			    	$( "#photos" ).hide("2000");
+		     
 			    	$container.imagesLoaded( function(){
 			        	$container.masonry({
 			        		itemSelector : 'li'
 			        	});
 			    	});
+
+		    		$( "#photos" ).show( "2000");
 
 		   		};
 
@@ -163,15 +168,10 @@
 			        masonry();
 				};
 
-		    	$( "#photos" ).hide("2000");
 
 		     });
 
-		    $(window).load(function(){
 
-		    		$( "#photos" ).show( "2000");
-
-		    });
 
 
 
