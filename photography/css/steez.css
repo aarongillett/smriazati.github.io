@@ -118,7 +118,7 @@ ul {
   #info {
     background-position: 0 0;
     background-attachment: scroll;
-    padding: 40% 0 40% 0; } }
+    padding: 40% 0 100% 0; } }
 #tnails {
   padding: 5% 0;
   text-align: center; }
@@ -215,7 +215,7 @@ a {
   top: 0;
   left: 0;
   background: #030303;
-  padding: 25% 0 145% 0;
+  padding: 25% 0 345% 0;
   z-index: 1000;
   width: 100%;
   text-align: center; }
