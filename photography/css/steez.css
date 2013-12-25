@@ -1,0 +1,298 @@
+/* font styles */
+/* unfix bg on mobile */
+/* base styles */
+::selection {
+  color: white;
+  background: #4700ff; }
+
+::-moz-selection {
+  color: white;
+  background: #4700ff; }
+
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: url("http://sarahriazati.com/img/bg-school-tile.png") repeat #030303; }
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  opacity: 0.7; }
+  img:hover {
+    opacity: 1; }
+
+/* transition */
+div, a, img, .button {
+  -webkit-transition: 0.3s ease all;
+  -moz-transition: 0.3s ease all;
+  -ms-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  transition: 0.3s ease all; }
+
+/* button */
+.button {
+  color: white;
+  border: 1px solid white;
+  margin: 15px;
+  padding: 15px;
+  display: inline-block;
+  background: rgba(3, 3, 3, 0.5); }
+  .button:hover {
+    background: #030303; }
+  .button a:hover {
+    color: white; }
+
+footer .button {
+  color: #646464;
+  border: 1px solid #646464;
+  margin: 15px;
+  padding: 15px;
+  display: inline-block;
+  background: rgba(3, 3, 3, 0.5); }
+  footer .button:hover {
+    background: #00ffe0; }
+  footer .button a:hover {
+    color: #646464; }
+
+@media screen and (max-width: 960px) {
+  .button {
+    color: white;
+    border: 1px solid white;
+    margin: 15px;
+    padding: 15px;
+    display: inline-block;
+    background: rgba(3, 3, 3, 0.5); }
+    .button:hover {
+      background: #030303; }
+    .button a:hover {
+      color: white; }
+
+  footer .button {
+    color: #646464;
+    border: 1px solid #646464;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    background: rgba(3, 3, 3, 0.5); }
+    footer .button:hover {
+      background: #00ffe0; }
+    footer .button a:hover {
+      color: #646464; } }
+/* grid */
+.container {
+  width: 100%; }
+
+ul {
+  display: block;
+  list-style-type: none;
+  -moz-margin-before: 0em;
+  -moz-margin-after: 0em;
+  -moz-margin-start: 0px;
+  -moz-margin-end: 0px;
+  -moz-padding-start: 00px;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px; }
+
+/* info module */
+#info {
+  background: url("../img/live08.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  text-align: center;
+  padding: 10% 0 40% 0; }
+
+@media screen and (max-width: 960px) {
+  #info {
+    background-position: 0 0;
+    background-attachment: scroll;
+    padding: 40% 0 40% 0; } }
+#tnails {
+  padding: 5% 0;
+  text-align: center; }
+
+@media screen and (max-width: 960px) {
+  #tnails {
+    width: 90%;
+    margin: 0 auto; } }
+ul {
+  width: 90%;
+  margin: 3% auto 0 auto;
+  position: relative; }
+
+ul li {
+  width: 19%;
+  display: inline-block; }
+
+@media screen and (max-width: 960px) {
+  ul li {
+    width: 49%; } }
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  background: #030303;
+  padding: 1% 0; }
+
+@media screen and (max-width: 960px) {
+  footer {
+    padding: 8% 0; } }
+/* typography */
+body {
+  font-size: 16px;
+  color: gray;
+  font-family: 'alice', sans-serif;
+  letter-spacing: 0.05em; }
+
+h1, h2 {
+  margin: 15px 0 0 0;
+  text-shadow: 1px 1px 10px rgba(50, 50, 50, 0.1); }
+
+h1 {
+  font-family: 'playfair display', sans-serif;
+  letter-spacing: 0.02em;
+  font-size: 16em;
+  color: #00ffe0; }
+
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 8em; } }
+h2 {
+  font-family: 'alice', sans-serif;
+  letter-spacing: 0.05em;
+  color: white; }
+
+a {
+  color: inherit; }
+  a:hover {
+    color: #ff0d51; }
+
+@media screen and (max-width: 960px) {
+  .button {
+    font-size: 0.8em; } }
+/* load screen */
+@keyframes Pulse {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes Pulse {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes Pulse {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes Pulse {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #030303;
+  padding: 25% 0 145% 0;
+  z-index: 1000;
+  width: 100%;
+  text-align: center; }
+
+#loading p {
+  -webkit-animation: Pulse 0.5s alternate infinite;
+  -moz-animation: Pulse 0.5s alternate infinite;
+  -ms-animation: Pulse 0.5s alternate infinite;
+  -o-animation: Pulse 0.5s alternate infinite;
+  animation: Pulse 0.5s alternate infinite;
+  font-family: 'alice', sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 200%;
+  color: #00ffe0;
+  text-transform: uppercase; }
+
+#photos {
+  z-index: 0; }
+
+/* fixed header */
+.collection header .button {
+  color: #c8c8c8;
+  border: 1px solid #c8c8c8;
+  margin: 15px;
+  padding: 15px;
+  display: inline-block;
+  background: rgba(3, 3, 3, 0.5); }
+  .collection header .button:hover {
+    background: rgba(0, 255, 224, 0.5); }
+  .collection header .button a:hover {
+    color: #c8c8c8; }
+
+.collection header {
+  position: fixed;
+  z-index: 1000;
+  top: 3%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+  .collection header .logo, .collection header .contact {
+    position: absolute; }
+  .collection header p {
+    opacity: 0.6; }
+    .collection header p:hover {
+      opacity: 1; }
+  .collection header .logo {
+    left: 1.5%; }
+    .collection header .logo p {
+      white-space: nowrap; }
+    .collection header .logo img {
+      height: 10px;
+      width: auto;
+      padding-right: 10%; }
+  .collection header .contact {
+    right: 1.5%;
+    text-align: right; }
+
+@media screen and (max-width: 960px) {
+  .collection header p {
+    opacity: 1; }
+    .collection header p:hover {
+      opacity: 1; }
+
+  .collection header .button {
+    color: #c8c8c8;
+    border: 1px solid #c8c8c8;
+    margin: 8px;
+    padding: 8px;
+    display: inline-block;
+    background: rgba(3, 3, 3, 0.5); }
+    .collection header .button:hover {
+      background: rgba(0, 255, 224, 0.5); }
+    .collection header .button a:hover {
+      color: #c8c8c8; }
+
+  .collection header {
+    top: 1%; }
+    .collection header .logo {
+      left: 1%; }
+    .collection header .contact {
+      right: 1%; } }
