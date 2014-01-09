@@ -63,31 +63,29 @@ h1, h2, h3 {
   font-weight: 300;
   margin: 0; }
 
-/* home page typography */
+/*  typography */
 header {
   display: block;
   letter-spacing: 0.3em;
   color: #00ffe0; }
+  header a {
+    color: white; }
+  header h1 {
+    font-size: 3em; }
+  header .icons {
+    font-size: 2em; }
 
-header a {
-  color: white; }
-
-header h1 {
-  font-size: 3em; }
-
-header .icons {
-  font-size: 2em; }
-
+section div {
+  color: #00ffe0; }
+  section div span {
+    color: #ff80e0; }
 section div > div + div {
   font-size: 2em;
   line-height: 1.53846em; }
 
-/* colors */
-section div {
-  color: #00ffe0; }
-
-section div span {
-  color: #ff80e0; }
+.page header {
+  font-size: 50%;
+  background: #17171a; }
 
 /* change font sizes */
 @media screen and (max-width: 1500px) {
@@ -102,10 +100,11 @@ section div span {
 /* header grid */
 header {
   width: 100%;
-  margin: 3.33333% 0; }
-
-header {
+  margin: 3.33333% 0;
   text-align: center; }
+  .page header {
+    margin: 0;
+    padding: 2% 0; }
 
 /* sections are the rows */
 section {
