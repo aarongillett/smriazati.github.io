@@ -1,8 +1,8 @@
 
 $(document).ready(function(){
 
-    $("#back").remove();
-    $(".container").append('<div id="more"><h1>More Work</h1><div id="grid"></div>');    
+    $("#container").remove();
+    $(".container").append('<div id="grid"></div>');    
     $("#grid").load("grid.html #container");
 });
 
