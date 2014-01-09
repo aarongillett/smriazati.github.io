@@ -56,12 +56,18 @@
 </div> <!-- container -->
 
 
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 <script>
 $(document).ready(function(){
+
+    $("#back").remove();
+    $(".post").append('<div class="more"><h1>More Work</h1><div id="grid"></div></div>');    
     $("#grid").load("grid.html #container");
 });
 </script>
+
 
 
 <!-- google analytics -->

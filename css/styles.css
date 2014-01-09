@@ -218,7 +218,13 @@ div.photos img {
 
 .more {
   margin-top: 50px;
-  text-align: center; }
+  text-align: center;
+  background: #17171a;
+  -webkit-box-shadow: 0px -5px -5px #17171a;
+  -moz-box-shadow: 0px -5px -5px #17171a;
+  -ms-box-shadow: 0px -5px -5px #17171a;
+  -o-box-shadow: 0px -5px -5px #17171a;
+  box-shadow: 0px -5px -5px #17171a; }
 
 #grid {
   margin-top: 25px;
