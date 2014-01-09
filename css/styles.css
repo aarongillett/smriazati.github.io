@@ -216,8 +216,9 @@ div.post {
 div.photos img {
   margin-bottom: 2%; }
 
-.more {
+#more {
   margin-top: 50px;
+  padding: 10px 0;
   text-align: center;
   background: #17171a;
   -webkit-box-shadow: 0px -5px -5px #17171a;
@@ -236,89 +237,3 @@ div.photos img {
   left: 15px !important;
   right: 0 !important;
   width: 45px !important; }
-
-/* snowy */
-.fall_snow {
-  background-image: url("../img/snow/snow3.png"), url("../img/snow/snow2.png"), url("../img/snow/snow3.png");
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  -webkit-animation: snow 15s linear infinite;
-  -moz-animation: snow 15s linear infinite;
-  -ms-animation: snow 15s linear infinite;
-  -o-animation: snow 15s linear infinite;
-  animation: snow 15s linear infinite; }
-
-@keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px; }
-
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px; }
-
-  100% {
-    background-position: 500px 1000px, 200px 400px, -100px 300px; } }
-
-@-moz-keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px; }
-
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px; }
-
-  100% {
-    background-position: 400px 1000px, 200px 400px, 100px 300px; } }
-
-@-webkit-keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px; }
-
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px; }
-
-  100% {
-    background-position: 500px 1000px, 200px 400px, -100px 300px; } }
-
-@-ms-keyframes snow {
-  0% {
-    background-position: 0px 0px, 0px 0px, 0px 0px; }
-
-  50% {
-    background-position: 500px 500px, 100px 200px, -100px 150px; }
-
-  100% {
-    background-position: 500px 1000px, 200px 400px, -100px 300px; } }
-
-.button {
-  background: #68EB87;
-  padding: 10px;
-  display: inline-block; }
-
-.button:hover {
-  cursor: pointer;
-  opacity: 0.8;
-  background: #00ffe0; }
-
-.snow {
-  color: black;
-  position: fixed;
-  top: 0;
-  left: 15px;
-  font-size: 80%;
-  text-align: left;
-  letter-spacing: 0.1em; }
-
-/* stack order */
-.fall_snow {
-  z-index: 1; }
-
-.container {
-  position: relative;
-  z-index: 10; }
-
-.fall_snow {
-  display: none; }
-
-/* end snow */
