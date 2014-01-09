@@ -88,10 +88,10 @@ section div > div + div {
 
 /* change font sizes */
 @media screen and (max-width: 1500px) {
-  section, .post {
+  section {
     font-size: 80%; } }
 @media screen and (max-width: 540px) {
-  section, .post {
+  section {
     font-size: 45%; } }
 
 /* header grid */
