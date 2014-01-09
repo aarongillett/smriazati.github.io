@@ -74,6 +74,9 @@ header {
     font-size: 3em; }
   header .icons {
     font-size: 2em; }
+  .page header {
+    font-size: 50%;
+    background: #17171a; }
 
 section div {
   color: #00ffe0; }
@@ -83,14 +86,17 @@ section div > div + div {
   font-size: 2em;
   line-height: 1.53846em; }
 
-.page header {
-  font-size: 50%;
-  background: #17171a; }
-
 /* change font sizes */
 @media screen and (max-width: 1500px) {
   section, .post {
     font-size: 80%; } }
+@media screen and (max-width: 960px) {
+  section, .post {
+    font-size: 100%; } }
+@media screen and (max-width: 540px) {
+  section, .post {
+    font-size: 85%; } }
+
 @media screen and (max-width: 960px) {
   section, .post {
     font-size: 100%; } }
