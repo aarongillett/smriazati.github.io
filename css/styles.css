@@ -41,9 +41,8 @@ img {
 a {
   text-decoration: none;
   color: inherit; }
-
-a:hover {
-  color: #00ffe0; }
+  a:hover {
+    color: #00ffe0; }
 
 .highlight {
   color: #ff80e0 !important; }
@@ -63,7 +62,6 @@ h1, h2, h3 {
   font-weight: 300;
   margin: 0; }
 
-/*  typography */
 header {
   display: block;
   letter-spacing: 0.3em;
@@ -85,8 +83,6 @@ section div {
 section div > div + div {
   font-size: 2em;
   line-height: 1.53846em; }
-
-/* change font sizes */
 @media screen and (max-width: 1500px) {
   section {
     font-size: 80%; } }
@@ -94,7 +90,6 @@ section div > div + div {
   section {
     font-size: 45%; } }
 
-/* header grid */
 header {
   width: 100%;
   margin: 3.33333% 0;
@@ -103,49 +98,38 @@ header {
     margin: 0;
     padding: 2% 0; }
 
-/* sections are the rows */
 section {
   display: inline-block;
   width: 100%; }
+  section:last-child {
+    margin-bottom: 5%; }
+  section div img {
+    min-width: 100%; }
+  section a > div {
+    width: 25%;
+    position: relative;
+    float: left;
+    overflow: hidden; }
+  section a:last-child > div {
+    margin-right: 0; }
+  section > div > div {
+    position: relative; }
+  section div > div + div {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5); }
+  section div:hover > div + div {
+    opacity: 0; }
+  section div .info {
+    padding: 10px; }
+  section a > div {
+    width: 50%; }
 
-section:last-child {
-  margin-bottom: 5%; }
-
-section div img {
-  min-width: 100%; }
-
-section a > div {
-  width: 25%;
-  position: relative;
-  float: left;
-  overflow: hidden; }
-
-section a:last-child > div {
-  margin-right: 0; }
-
-section > div > div {
-  position: relative; }
-
-/* dark overlay */
-section div > div + div {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.5); }
-
-/* hide overlay on hover */
-section div:hover > div + div {
-  opacity: 0; }
-
-section div .info {
-  padding: 10px; }
-
-/* break to 2 col at 1160 */
 @media screen and (max-width: 1200px) {
   section a > div {
     width: 50%; } }
-/* break to 1 col at 790 */
 @media screen and (max-width: 790) {
   section a > div {
     width: 100%; }
@@ -159,22 +143,35 @@ div.post {
   margin: 25px auto;
   text-align: center;
   letter-spacing: 0.1em; }
+  @media screen and (min-width: 1280px) {
+    div.post {
+      width: 1280px; } }
+  @media screen and (max-width: 960px) {
+    div.post {
+      width: 100%; } }
 
-@media screen and (min-width: 1280px) {
-  div.post {
-    width: 1280px; } }
-@media screen and (max-width: 960px) {
-  div.post {
-    width: 100%; } }
 .post hr {
   margin-bottom: 50px; }
 
-.description hr {
-  margin: 0; }
-
-.description p {
-  text-align: left;
-  text-transform: none; }
+.description {
+  width: 50%;
+  margin: 25px auto; }
+  .description h1 {
+    margin-bottom: 0px; }
+  .description h2 {
+    margin-top: 0; }
+  .description p {
+    font-weight: 300;
+    text-align: left;
+    text-transform: none; }
+    @media screen and (max-width: 540px) {
+      .description p {
+        font-size: 150%; } }
+  .description hr {
+    margin: 0; }
+  @media screen and (max-width: 960px) {
+    .description {
+      width: 90%; } }
 
 .center p {
   text-align: center;
@@ -185,29 +182,12 @@ div.post {
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0; }
-
-.video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.description {
-  width: 50%;
-  margin: 25px auto; }
-
-@media screen and (max-width: 960px) {
-  .description {
-    width: 90%; } }
-.description h1 {
-  margin-bottom: 0px; }
-
-.description h2 {
-  margin-top: 0; }
-
-.description p {
-  font-weight: 300; }
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
 
 div.photos img {
   margin-bottom: 2%; }
@@ -227,9 +207,9 @@ div.photos img {
   margin-top: 25px;
   text-align: left; }
 
-/* scroll to top override styles */
 #topcontrol {
   bottom: 15px !important;
   left: 15px !important;
   right: 0 !important;
-  width: 45px !important; }
+  width: 45px !important;
+  z-index: 100000; }
