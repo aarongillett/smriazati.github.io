@@ -40,7 +40,7 @@ img {
 
 a {
   text-decoration: none;
-  color: inherit; }
+  color: #cccccc; }
   a:hover {
     color: #adff00; }
 
@@ -151,6 +151,7 @@ div.post {
       width: 100%; } }
 
 .post hr {
+  border-width: 0px;
   margin-bottom: 50px; }
 
 .description {
@@ -174,8 +175,7 @@ div.post {
       width: 90%; } }
 
 .center p {
-  text-align: center;
-  text-transform: uppercase; }
+  text-align: center; }
 
 .video {
   position: relative;
