@@ -213,3 +213,10 @@ div.photos img {
   right: 0 !important;
   width: 45px !important;
   z-index: 100000; }
+
+.leftcol, .rightcol {
+  width: 48%;
+  display: inline-block; }
+
+.leftcol {
+  margin-right: 2%; }
