@@ -4,8 +4,8 @@ html, body {
 }
 
 body {
-  font-family: 'times new roman';
-  font-size: 16px;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 12px;
   padding: 1%;
   background: url("http://sarahriazati.com/img/bg-school-tile.png") repeat #ededed;
 }
