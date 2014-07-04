@@ -16,7 +16,7 @@ img {
 
 h1, p {
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 header, .work, footer {
@@ -33,7 +33,7 @@ header {
 }
 header p {
   font-size: 0.8em;
-  line-height: 1.1em;
+  line-height: 1.5em;
 }
 
 .work {
