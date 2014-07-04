@@ -1,0 +1,102 @@
+html, body {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  font-family: 'times new roman';
+  font-size: 16px;
+  padding: 1%;
+  background: url("http://sarahriazati.com/img/bg-school-tile.png") repeat #ededed;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, p {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+header, .work, footer {
+  display: inline-block;
+  margin: 0;
+  float: left;
+}
+
+header {
+  width: 24%;
+  background: #8bffde;
+  padding: 0 20px;
+  position: fixed;
+}
+header p {
+  font-size: 0.8em;
+}
+
+.work {
+  margin-left: 26%;
+  width: 60%;
+  padding: 0 3%;
+}
+.work section {
+  padding-bottom: 3%;
+}
+.work h1 {
+  background: #a4ffe5;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 790px) {
+  body {
+    padding: 0;
+  }
+
+  header, .work {
+    width: 100%;
+    padding: 15px;
+  }
+
+  header {
+    position: relative;
+  }
+
+  .work {
+    margin: 10px 0;
+  }
+}
+footer {
+  width: 100%;
+  font-size: 0.7em;
+  margin-top: 5%;
+}
+
+a, a:visited {
+  color: black;
+}
+a:hover, a:visited:hover {
+  color: #9900ff;
+}
+
+.videocontainer {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+.videocontainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  background: white;
+}
