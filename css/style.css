@@ -5,7 +5,8 @@ html, body {
 
 body {
   font-family: helvetica, arial, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 1.5em;
   padding: 1%;
   background: url("http://sarahriazati.com/img/bg-school-tile.png") repeat #ededed;
 }
