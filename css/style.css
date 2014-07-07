@@ -5,7 +5,7 @@ html, body {
 
 body {
   font-family: helvetica, arial, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   padding: 1%;
   background: url("http://sarahriazati.com/img/bg-school-tile.png") repeat #ededed;
 }
@@ -33,7 +33,6 @@ header {
 }
 header p {
   font-size: 0.8em;
-  line-height: 1.5em;
 }
 
 .work {
@@ -56,7 +55,7 @@ header p {
     padding: 0;
   }
 
-  header, .work {
+  header, .work, footer {
     width: 100%;
     padding: 15px;
   }
