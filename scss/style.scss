@@ -1,0 +1,165 @@
+@import "compass/css3";
+
+$gray: rgb(221, 221, 221);
+$highlight: rgb(0, 255, 235); /* green */
+$bg: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/95495/20120729_yellowstonepark_109.jpg';
+
+$transition: 0.3s ease all; 
+
+@mixin vendorize($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+
+
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+}
+
+iframe {
+  background: black;
+}
+
+body {
+  background:url($bg) no-repeat center center fixed #000000;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  /*background: $gray;
+  border: $highlight 10px solid;
+  */
+  
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  color: $gray;
+}
+
+
+
+
+a {
+  color: $gray;
+  text-decoration: none;
+  @include vendorize(transition, $transition);
+  &:hover {
+    color: $highlight;
+  }
+}
+
+
+
+/* responsive vid */
+.videocontainer {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+  & iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* spacing & grid */
+
+#rapper { 
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*.module {
+    width: 100%;
+    max-width: 100%;  
+    text-align: center;
+}*/
+
+  .container {
+      width: 85%;
+      max-width: 1280px;
+      margin: 0 auto;
+  }
+
+
+
+
+
+/* type */
+  h1 {
+    font-weight: 400;
+    background: black;
+    color: white;
+    display: inline-block;
+    font-size: 1.3em;
+  }
+
+/* content   */
+$headerspacer: 3em;
+header {
+  background: rgba(0,0,0,.5);
+  
+  &.module{
+    padding: 10% 0 15% 0;
+  }
+  h1 {
+    margin: 0 0 $headerspacer 0;
+    background: none;
+  }
+  
+  .more {
+    margin: $headerspacer auto 0 auto;
+    width: 15%;
+    img {width: 30%;}
+  }
+}
+
+
+#work {
+  background: rgba(0,0,0,.8);
+  padding: 10% 0;
+  
+  .worklist {
+    margin-bottom: $headerspacer;
+  }
+
+}
+
+footer {
+  background: rgb(0,0,0);
+  padding: 2% 0 5% 0;
+  font-size: 90%;
+  p {
+    display: inline-block;
+    margin: 0.5em 1em;
+    a:hover {
+      background: $highlight;
+      color: black;
+    }
+  }
+}
+
+
+
+::selection {
+  background: $highlight;
+  color: white;
+}
+
+::-moz-selection {
+  background: $highlight;
+  color: white;
+}
