@@ -312,7 +312,7 @@ footer {
 .intro, .about {
   @include mobilecontainer;
   article {
-    margin-top: $spacer*2;
+    margin: $spacer*2 0 $spacer*4 0;
   }
 }
 

@@ -209,7 +209,7 @@ footer {
     width: 90%;
     margin: 8% 2%; } }
 .intro article, .about article {
-  margin-top: 4%; }
+  margin: 4% 0 8% 0; }
 
 /* stories  */
 nav.interstory a {
