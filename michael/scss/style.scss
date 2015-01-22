@@ -1,0 +1,513 @@
+$link: rgb(20, 20, 20);
+$highlight: #FFFC00; 
+$white: #F7F7F7;
+$darklight: #0600FF;
+
+$transition: 0.5s ease all; 
+
+
+$postwidth: 800px;
+$spacer: 2%;
+$headerwidth: 350px;
+
+$med-bp:1000px;
+$sm-bp: 790px;
+
+@mixin vendorize($property, $value) {
+	-webkit-#{$property}: $value;
+	-moz-#{$property}: $value;
+	-ms-#{$property}: $value;
+	-o-#{$property}: $value;
+	#{$property}: $value;
+}
+
+@mixin coverbg($url) {
+  background: url($url) no-repeat center center fixed #FFF;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin selection($background, $color) {
+  ::selection {background: $background; color: $color;}
+  ::-moz-selection {background: $background;color: $color;}
+}
+
+@include selection ($link, white);
+
+@mixin button {
+  p, a {
+    background: $highlight;
+    text-decoration: none;  
+    &:hover {
+      background: none !important;
+      color: $link !important;
+    }
+  }
+}
+
+
+@mixin mobilecontainer {
+  @media screen and (max-width: $sm-bp) {
+    width: 90%;
+    margin: 0 auto;
+  }
+} 
+
+@mixin smalllogo {
+  width: $headerwidth;
+  @media screen and (max-width: $sm-bp) {
+    width: 50%;
+    margin-top: $spacer*5;
+  } 
+}
+
+@mixin resetUL{
+  @include vendorize(margin-before, 0);
+  @include vendorize(margin-after, 0);
+  @include vendorize(margin-start, 0);
+  @include vendorize(margin-end, 0);
+  @include vendorize(padding-start, 0);
+}
+
+@mixin nobghover {
+  &:hover {
+    background: none;
+    color: $darklight;
+  }
+}
+
+@mixin opacityhover($base) {
+  opacity: $base;
+  @include vendorize(transition, $transition);
+  &:hover {
+    opacity: 1;
+  }
+}
+
+/* general */
+
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  background: $white; 
+}
+
+
+a {
+  color: $link;
+  text-decoration: none;
+  @include vendorize(transition, $transition);
+  &:hover {
+    background: lighten($highlight,40%);
+  }
+  &.active{
+    text-decoration: underline;
+    cursor: text;
+    &:hover {
+      background: none;
+    }
+  }
+
+}
+
+
+.wrapper {
+  // background: url('../imgs/seamless_paper_texture.png') repeat; 
+  width: 100%;
+  text-align: center;
+}
+
+.button {
+  @include button;
+}
+
+
+/* photo grid 9x9 */
+
+$article-vert-spacing: 12vh;
+
+.photogrid {
+  @include mobilecontainer;
+
+  margin: 0 auto;
+  z-index: 99;
+
+  padding-left: 0  !important; // hacky js override
+  padding-right: 0 !important; // hacky js override
+  max-width: 100%;
+
+  .photo {
+    img {
+      max-width: 100%;
+    }
+
+    display: inline-block;
+    font-size: 0;
+    margin: 0;
+    padding: 1% 1% 0 0;
+    text-align: center;
+
+    @include opacityhover(0.8);
+
+    &:nth-child(3n+3) { padding-right: 0; }
+  }
+
+}
+
+
+// ARROWS  on home page
+.photogrid {
+  .up, .down {
+    display: inline-block;
+    padding: $spacer/2;
+    width: 50-($spacer*4);
+    
+
+    a {
+      width: 100%;
+      display: block;
+    }
+    img {
+      height: 50px; 
+    }
+
+  }
+  
+  .up {
+    text-align: right;
+  }
+  
+
+  .down {
+    text-align: left;
+  }
+}
+
+// center first solo arrow
+        // change #four to new ID if u add a div!!!!!
+#section0 {
+  .down, .up {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+
+/* headers everywhere */
+@mixin unfixedheader {
+  position: relative;
+  padding-top: $spacer;
+  img {
+    width: $postwidth;
+  }
+}
+
+header {
+  font-size: 0;
+  position: fixed;
+  top: 2%;
+  text-align: center;
+  width: 100%;
+
+  // z-index: 1000;
+
+  @include opacityhover(0.8);
+
+  img {
+    max-width: 100%;
+    width: 300px;
+  }
+
+  // about & intro
+  .intro & {
+    @include unfixedheader;
+  }
+
+  .about & {
+    @include unfixedheader;
+  }
+
+  .story & {
+    @include unfixedheader;
+    padding-top: $spacer/2;
+    img {
+      width: $postwidth/4;
+    }
+  }
+}
+
+
+/* nav & footer behave the same */
+
+nav.main, footer {
+  position: fixed;
+  z-index: 100;
+
+  @include opacityhover(0.3);
+
+  ul {
+    @include resetUL;
+
+    right: 0;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      position: fixed;
+
+      &:first-child {
+        left: $spacer;
+      }
+      &:nth-child(2) {
+        right: $spacer;
+      }
+    }
+  }
+}
+
+nav.main {
+  top: $spacer*1.5;
+  ul { li { &:last-child { 
+        @include button; // sign petition
+      }
+    } 
+  }
+}
+
+
+footer {
+  bottom: $spacer*2;
+  ul { li { &:last-child {
+        img {
+          width: 115px; // fab logo
+          vertical-align: sub; // hacky way to line up to cright
+          padding-bottom: 1px; // hacky way to line up to cright
+        }
+      }
+    }
+  }
+}
+
+
+
+/* text columns in general */
+.post {
+  width: $postwidth;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+/* intro & about page */
+
+.intro {
+  height: 100vh; // force height
+  body & { @include coverbg("../imgs/splash.jpg"); }
+}
+
+.intro, .about {
+  @include mobilecontainer;
+  article {
+    margin-top: $spacer*2;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* stories  */
+
+
+
+// INTER STORY ARROWS 
+
+nav.interstory {
+  a {
+    position: fixed;
+    z-index: 1000;
+    top: 40vh;
+
+
+    img {
+      width: 50px;
+    }
+
+    @include opacityhover(0.8);
+    @include nobghover;
+
+    &:nth-child(1) {
+      left: $spacer;
+      padding: 22px 30% 22px 0; // increase clickable area 
+    }
+    &:nth-child(2) {
+      right: $spacer;
+      padding: 22px 0 22px 30%; // increase clickable area 
+    
+    // FLIP ARROW
+      img {
+        @include vendorize(transform, scaleX(-1));
+        filter: FlipH;
+        -ms-filter: "FlipH";
+      }
+    }
+  }
+
+}
+
+
+
+.story {
+  @include mobilecontainer;
+  
+ .post {
+  margin-top: $spacer/2;
+  position: relative;
+
+    .nav a { // clickable ;)
+      padding: 0 22px;
+    }
+
+    // overlap note on big screens only
+    @media screen and (min-width: $med-bp) {
+      .note {
+        @include opacityhover(0.2);
+
+        position: absolute;
+        top: $spacer*2;
+        left: $spacer;
+      }
+      .right {
+        right: -($spacer*10);
+        left: auto;
+      }
+      .middle {
+        top: $spacer*12;
+      }
+      .push {
+        left: -($spacer*8);
+      }
+    } // overlap
+  } // post
+}
+
+
+
+
+
+
+
+
+/* typography */
+
+body {
+  font-size: 16px;
+  font-family: "Volkorn", "times new roman", serif;
+
+  @media screen and (max-width: $sm-bp) {
+    font-size: 14px;
+  }
+}
+
+h1, h2 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+// these guys should look & behave the same 
+footer, nav.main {
+  font-size: 1em;
+  .story & {
+    font-size: 80%;
+  }
+}
+
+
+
+// arrows!
+
+@mixin bigarrow {
+  font-size:2em;
+  a {@include nobghover;}
+}
+
+.up, .down {
+  @include bigarrow;
+}
+
+
+.highlight {
+  @include button;
+  background: $highlight;
+}
+
+
+
+// grid & pic is hidden until JS loads & fades in
+.photogrid {
+  display: none; // hidden until JS loads
+}
+.story .post {
+  display: none; // hidden until JS loads
+}
+
+
+//  custom full page resets
+.fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+  width: 150px !important;
+  height: 50px;
+  border: none;
+  margin: 0;
+  top: 45%;
+}
+
+.fp-controlArrow.fp-prev {
+  background: url("../imgs/arrow1-left.png") no-repeat;
+
+}
+
+.fp-controlArrow.fp-next {
+  background: url("../imgs/arrow1-left.png") no-repeat;
+  @include vendorize(transform, scaleX(-1));
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.fp-slidesNav {
+  position: absolute;
+  z-index: 4;
+  left: 0 !important;
+  opacity: 1;
+  width: 100%;
+  margin-left: 0 !important;
+}
+
+#fp-nav ul, .fp-slidesNav ul {
+  margin-top: -100px !important;
+  padding: 0;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  width: 6px !important;
+  height: 6px !important;
+  border: 1px solid #949494 !important;
+}
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
+  background: #949494 !important;
+}
+
