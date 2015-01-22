@@ -46,10 +46,10 @@ a {
   padding-left: 0  !important;
   padding-right: 0 !important;
   max-width: 100%; }
-  @media screen and (max-width: 790px) {
+  @media screen and (max-width: 850px) {
     .photogrid {
       width: 90%;
-      margin: 2% auto; } }
+      margin: 8% 2%; } }
   .photogrid .photo {
     display: inline-block;
     font-size: 0;
@@ -204,10 +204,10 @@ footer {
     -o-background-size: cover;
     background-size: cover; }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 850px) {
   .intro, .about {
     width: 90%;
-    margin: 2% auto; } }
+    margin: 8% 2%; } }
 .intro article, .about article {
   margin-top: 4%; }
 
@@ -244,10 +244,10 @@ nav.interstory a {
       filter: FlipH;
       -ms-filter: "FlipH"; }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 850px) {
   .story {
     width: 90%;
-    margin: 2% auto; } }
+    margin: 8% 2%; } }
 .story .post {
   margin-top: 1%;
   position: relative; }
@@ -278,7 +278,7 @@ nav.interstory a {
 body {
   font-size: 16px;
   font-family: "Volkorn", "times new roman", serif; }
-  @media screen and (max-width: 790px) {
+  @media screen and (max-width: 850px) {
     body {
       font-size: 14px; } }
 

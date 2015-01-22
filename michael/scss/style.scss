@@ -11,7 +11,7 @@ $spacer: 2%;
 $headerwidth: 350px;
 
 $med-bp:1000px;
-$sm-bp: 790px;
+$sm-bp: 850px;
 
 @mixin vendorize($property, $value) {
 	-webkit-#{$property}: $value;
@@ -51,7 +51,7 @@ $sm-bp: 790px;
 @mixin mobilecontainer {
   @media screen and (max-width: $sm-bp) {
     width: 90%;
-    margin: $spacer auto;
+    margin: $spacer*4 $spacer;
   }
 } 
 
