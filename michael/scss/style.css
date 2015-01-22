@@ -221,6 +221,8 @@ footer {
       .story header a img {
         width: 250px;
         padding: 22px; } }
+.story .storywrap {
+  padding-top: 2%; }
 .story .post {
   margin-top: 1%;
   position: relative; }
@@ -337,6 +339,3 @@ footer, nav.main {
 
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
   background: #949494 !important; }
-
-.fp-tableCell {
-  vertical-align: inherit !important; }

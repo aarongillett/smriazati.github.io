@@ -334,6 +334,10 @@ footer {
     }
   }
   
+  .storywrap {
+    padding-top: $spacer;
+  }
+
  .post {
   margin-top: $spacer/2;
   position: relative;
@@ -490,8 +494,8 @@ footer, nav.main {
   background: #949494 !important;
 }
 
-.fp-tableCell {
-  vertical-align: inherit !important;
-}
+// .fp-tableCell {
+//   vertical-align: inherit !important;
+// }
 
 
