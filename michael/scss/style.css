@@ -337,21 +337,25 @@ footer, nav.main {
   -ms-filter: "FlipH"; }
 
 .fp-slidesNav {
-  position: absolute;
+  position: fixed !important;
   z-index: 4;
   left: 0 !important;
   opacity: 1;
   width: 100%;
-  margin-left: 0 !important; }
-
-#fp-nav ul, .fp-slidesNav ul {
-  margin-top: -100px !important;
-  padding: 0; }
-
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
-  width: 6px !important;
-  height: 6px !important;
-  border: 1px solid #949494 !important; }
+  margin-left: 0 !important;
+  bottom: 2% !important; }
+  .fp-slidesNav ul {
+    width: 60px;
+    margin: -8% auto 0 auto !important;
+    text-align: center !important; }
+    .fp-slidesNav ul li {
+      width: 30% !important;
+      margin: 0 !important; }
+      .fp-slidesNav ul li a span {
+        border-radius: 0 !important;
+        width: 6px !important;
+        height: 7px !important;
+        border: 1px solid #949494 !important; }
 
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
   background: #949494 !important; }
