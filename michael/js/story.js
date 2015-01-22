@@ -11,7 +11,7 @@ function photoResizer() {
   var windowHeight = $(window).height();
   var photoPercent = 0.8; // percent of height of screen
   var imageHeight = photoPercent*windowHeight; // 
-  var imageWidth = (imageHeight*(.786)); 
+  var imageWidth = (imageHeight*(.8)); 
 
 
   // add image width, image height to photo element
