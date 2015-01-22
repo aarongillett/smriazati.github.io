@@ -130,7 +130,6 @@ a {
 $article-vert-spacing: 12vh;
 
 .photogrid {
-  @include mobilecontainer;
 
   margin: 0 auto;
   z-index: 99;
@@ -237,8 +236,21 @@ header {
     img {
       width: $postwidth/4;
     }
+
+    // fix header size on MOBILE
+    @media screen and (max-width: $sm-bp) {
+        padding-top: $spacer/2;
+      a img {
+        width: 250px;
+        padding: 22px;
+      }
+    }
   }
 }
+
+
+
+
 
 
 /* nav & footer behave the same */
@@ -322,17 +334,6 @@ footer {
 .story {
   // @include mobilecontainer;
 
-  // fix header size on MOBILE
-  @media screen and (max-width: $sm-bp) {
-    margin: 2% 0;
-    header {
-      padding-top: $spacer/2;
-      a img {
-        width: 350px;
-        padding: 22px;
-      }
-    }
-  }
   
   .storywrap {
     padding-top: $spacer;
@@ -494,8 +495,9 @@ footer, nav.main {
   background: #949494 !important;
 }
 
-// .fp-tableCell {
-//   vertical-align: inherit !important;
-// }
+.fp-tableCell {
+  vertical-align: inherit !important;
+}
+
 
 

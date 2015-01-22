@@ -41,6 +41,7 @@ function photoResizer() {
     $(".photo img").css("height", imageHeight);
     $(".photo img").css("width", imageWidth);
 
+
     var noteWidth = imageWidth/(1.25); // note is proportional to image 
     $(".note img").css("width", noteWidth);
 

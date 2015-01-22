@@ -46,10 +46,6 @@ a {
   padding-left: 0  !important;
   padding-right: 0 !important;
   max-width: 100%; }
-  @media screen and (max-width: 850px) {
-    .photogrid {
-      width: 90%;
-      margin: 8% 2%; } }
   .photogrid .photo {
     display: inline-block;
     font-size: 0;
@@ -124,6 +120,12 @@ header {
       width: 800px; }
     .story header img {
       width: 200px; }
+    @media screen and (max-width: 850px) {
+      .story header {
+        padding-top: 1%; }
+        .story header a img {
+          width: 250px;
+          padding: 22px; } }
 
 /* nav & footer behave the same */
 nav.main, footer {
@@ -213,14 +215,6 @@ footer {
   margin: 4% 0 8% 0; }
 
 /* stories  */
-@media screen and (max-width: 850px) {
-  .story {
-    margin: 2% 0; }
-    .story header {
-      padding-top: 1%; }
-      .story header a img {
-        width: 350px;
-        padding: 22px; } }
 .story .storywrap {
   padding-top: 2%; }
 .story .post {
@@ -339,3 +333,6 @@ footer, nav.main {
 
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
   background: #949494 !important; }
+
+.fp-tableCell {
+  vertical-align: inherit !important; }
