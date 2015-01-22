@@ -49,7 +49,7 @@ a {
   @media screen and (max-width: 790px) {
     .photogrid {
       width: 90%;
-      margin: 0 auto; } }
+      margin: 2% auto; } }
   .photogrid .photo {
     display: inline-block;
     font-size: 0;
@@ -207,7 +207,7 @@ footer {
 @media screen and (max-width: 790px) {
   .intro, .about {
     width: 90%;
-    margin: 0 auto; } }
+    margin: 2% auto; } }
 .intro article, .about article {
   margin-top: 4%; }
 
@@ -247,7 +247,7 @@ nav.interstory a {
 @media screen and (max-width: 790px) {
   .story {
     width: 90%;
-    margin: 0 auto; } }
+    margin: 2% auto; } }
 .story .post {
   margin-top: 1%;
   position: relative; }

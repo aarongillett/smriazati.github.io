@@ -51,7 +51,7 @@ $sm-bp: 790px;
 @mixin mobilecontainer {
   @media screen and (max-width: $sm-bp) {
     width: 90%;
-    margin: 0 auto;
+    margin: $spacer auto;
   }
 } 
 
