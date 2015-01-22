@@ -213,7 +213,7 @@ header {
   text-align: center;
   width: 100%;
 
-  // z-index: 1000;
+  z-index: 1000;
 
   @include opacityhover(0.8);
 
@@ -326,46 +326,6 @@ footer {
 
 
 /* stories  */
-
-
-
-// INTER STORY ARROWS 
-
-nav.interstory {
-  a {
-    position: fixed;
-    z-index: 1000;
-    top: 40vh;
-
-
-    img {
-      width: 50px;
-    }
-
-    @include opacityhover(0.8);
-    @include nobghover;
-
-    &:nth-child(1) {
-      left: $spacer;
-      padding: 22px 30% 22px 0; // increase clickable area 
-    }
-    &:nth-child(2) {
-      right: $spacer;
-      padding: 22px 0 22px 30%; // increase clickable area 
-    
-    // FLIP ARROW
-      img {
-        @include vendorize(transform, scaleX(-1));
-        filter: FlipH;
-        -ms-filter: "FlipH";
-      }
-    }
-  }
-
-}
-
-
-
 .story {
   @include mobilecontainer;
   
@@ -445,7 +405,6 @@ footer, nav.main {
 
 
 // arrows!
-
 @mixin bigarrow {
   font-size:2em;
   a {@include nobghover;}
@@ -479,14 +438,17 @@ footer, nav.main {
   border: none;
   margin: 0;
   top: 45%;
+  padding: 30%; // increase click area
 }
 
 .fp-controlArrow.fp-prev {
   background: url("../imgs/arrow1-left.png") no-repeat;
+  padding-left: 0;
 }
 
 .fp-controlArrow.fp-next {
   background: url("../imgs/arrow1-left.png") no-repeat;
+  padding-right: 0;
   @include vendorize(transform, scaleX(-1));
   filter: FlipH;
   -ms-filter: "FlipH";
@@ -499,10 +461,10 @@ footer, nav.main {
   opacity: 1;
   width: 100%;
   margin-left: 0 !important;
-  bottom: $spacer !important;
+  bottom: $spacer*3 !important;
   ul {
     width: 60px;
-    margin: -8% auto 0 auto !important;
+    margin: 0 auto !important;
     text-align: center !important;
     li {
       width: 30% !important;
