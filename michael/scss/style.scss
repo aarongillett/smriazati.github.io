@@ -377,6 +377,12 @@ nav.interstory {
       padding: 0 22px;
     }
 
+    .photo {
+      img {
+        text-align: center;
+      }
+    }
+
     // overlap note on big screens only
     @media screen and (min-width: $med-bp) {
       .note {

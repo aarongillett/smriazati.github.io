@@ -253,6 +253,8 @@ nav.interstory a {
   position: relative; }
   .story .post .nav a {
     padding: 0 22px; }
+  .story .post .photo img {
+    text-align: center; }
   @media screen and (min-width: 1000px) {
     .story .post .note {
       opacity: 0.2;
