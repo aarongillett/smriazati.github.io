@@ -318,20 +318,27 @@ footer {
 
 
 
-
-
-
-
-
-
-
 /* stories  */
 .story {
-  @include mobilecontainer;
+  // @include mobilecontainer;
+
+  // fix header size on MOBILE
+  @media screen and (max-width: $sm-bp) {
+    margin: 2% 0;
+    header {
+      padding-top: $spacer/2;
+      a img {
+        width: 250px;
+        padding: 22px;
+      }
+    }
+  }
   
  .post {
   margin-top: $spacer/2;
   position: relative;
+
+
 
     .nav a { // clickable ;)
       padding: 0 22px;
@@ -483,5 +490,8 @@ footer, nav.main {
   background: #949494 !important;
 }
 
+.fp-tableCell {
+  vertical-align: inherit !important;
+}
 
 
