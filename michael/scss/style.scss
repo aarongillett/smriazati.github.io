@@ -78,8 +78,16 @@ $sm-bp: 850px;
   }
 }
 
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+
 @mixin opacityhover($base) {
-  opacity: $base;
+  @include opacity($base);
   @include vendorize(transition, $transition);
   &:hover {
     opacity: 1;
@@ -257,7 +265,7 @@ header {
 
 nav.main, footer {
   position: fixed;
-  z-index: 100;
+  z-index: 1001;
 
   @include opacityhover(0.3);
 

@@ -11,6 +11,7 @@
 function photoResizer() {
 
   var windowHeight = $(window).height();
+  var windowCenter = windowHeight/2;
 
   if ($(window).width() > 1000) {
 
@@ -29,6 +30,12 @@ function photoResizer() {
     // now for some padding
     var postPadding = ((1-photoPercent)/2)*windowHeight;
     $(".post").css("padding-bottom", postPadding);
+
+    // and we can place the note super perfectly
+    var noteLeft = windowCenter * 0.01;
+
+    $(".note").css("left", noteLeft);
+
 
   } else {
 

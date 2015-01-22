@@ -53,6 +53,8 @@ a {
     padding: 1% 1% 0 0;
     text-align: center;
     opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
     -webkit-transition: 0.5s ease all;
     -moz-transition: 0.5s ease all;
     -ms-transition: 0.5s ease all;
@@ -92,6 +94,8 @@ header {
   width: 100%;
   z-index: 1000;
   opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
   -webkit-transition: 0.5s ease all;
   -moz-transition: 0.5s ease all;
   -ms-transition: 0.5s ease all;
@@ -130,8 +134,10 @@ header {
 /* nav & footer behave the same */
 nav.main, footer {
   position: fixed;
-  z-index: 100;
+  z-index: 1001;
   opacity: 0.3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
   -webkit-transition: 0.5s ease all;
   -moz-transition: 0.5s ease all;
   -ms-transition: 0.5s ease all;
@@ -227,6 +233,8 @@ footer {
   @media screen and (min-width: 1000px) {
     .story .post .note {
       opacity: 0.2;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+      filter: alpha(opacity=20);
       -webkit-transition: 0.5s ease all;
       -moz-transition: 0.5s ease all;
       -ms-transition: 0.5s ease all;
