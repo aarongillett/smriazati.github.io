@@ -107,17 +107,17 @@ header {
     width: 300px; }
   .intro header {
     position: relative;
-    padding-top: 2%; }
+    padding-top: 8%; }
     .intro header img {
       width: 800px; }
   .about header {
     position: relative;
-    padding-top: 2%; }
+    padding-top: 8%; }
     .about header img {
       width: 800px; }
   .story header {
     position: relative;
-    padding-top: 2%;
+    padding-top: 8%;
     padding-top: 1%; }
     .story header img {
       width: 800px; }

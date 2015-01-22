@@ -200,7 +200,7 @@ $article-vert-spacing: 12vh;
 /* headers everywhere */
 @mixin unfixedheader {
   position: relative;
-  padding-top: $spacer;
+  padding-top: $spacer*4;
   img {
     width: $postwidth;
   }
