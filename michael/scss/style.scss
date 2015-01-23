@@ -365,9 +365,6 @@ footer {
     .photo {
       img {
         text-align: center;
-  -webkit-backface-visibility: visible;
-  backface-visibility: visible;
-
       }
     }
 
@@ -395,7 +392,12 @@ footer {
 }
 
 
-
+// fix annoying flickers
+img.fixed {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform-style: preserve-3d;
+}
 
 
 

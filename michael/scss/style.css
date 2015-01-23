@@ -235,9 +235,7 @@ footer {
   .story .post .nav a {
     padding: 0 22px; }
   .story .post .photo img {
-    text-align: center;
-    -webkit-backface-visibility: visible;
-    backface-visibility: visible; }
+    text-align: center; }
   @media screen and (min-width: 1000px) {
     .story .post .note {
       opacity: 0.2;
@@ -262,6 +260,11 @@ footer {
       top: 24%; }
     .story .post .push {
       left: -16%; } }
+
+img.fixed {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform-style: preserve-3d; }
 
 /* typography */
 body {
