@@ -32,10 +32,13 @@ function photoResizer() {
     $(".post").css("padding-bottom", postPadding);
 
     // and we can place the note super perfectly
-    var noteLeft = imageWidth/2;
+    var noteCenter = imageWidth/2; // center it
+    var noteLeft = noteCenter - (imageWidth/1.5);
+    var noteRight = noteCenter + (imageWidth/1.5);
 
-    $(".note").css("left", noteLeft);
-    // $(".right").css("right", noteLeft);
+
+    $(".left").css("left", noteLeft);
+    $(".right").css("right", noteRight);
     // $(".right").css("left", "auto");
 
 
