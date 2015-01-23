@@ -89,8 +89,8 @@ $(window).keydown(function(e) {
 
 
 // mouse wheel plugin
-$('.photogrid').on('mousewheel', function(event) {
-      $(".photogrid").hide().fadeIn(500);
-});
+// $('.photogrid').on('mousewheel', function(event) {
+//       $(".photogrid").hide().fadeIn(500);
+// });
 
 
