@@ -295,9 +295,12 @@ footer, nav.main {
     font-size: 80%; } }
 .up, .down {
   font-size: 2em; }
-  .up a:hover, .down a:hover {
-    background: none;
-    color: #0600ff; }
+  .up a, .down a {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    .up a:hover, .down a:hover {
+      background: none;
+      color: #0600ff; }
 
 .highlight {
   background: #fffc00; }

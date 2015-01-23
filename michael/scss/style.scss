@@ -76,6 +76,8 @@ $sm-bp: 850px;
     background: none;
     color: $darklight;
   }
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 @mixin opacity($value){
@@ -201,7 +203,6 @@ $article-vert-spacing: 12vh;
 }
 
 // center first solo arrow
-        // change #four to new ID if u add a div!!!!!
 #section0 {
   .down, .up {
     text-align: center;
