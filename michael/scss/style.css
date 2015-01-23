@@ -235,7 +235,9 @@ footer {
   .story .post .nav a {
     padding: 0 22px; }
   .story .post .photo img {
-    text-align: center; }
+    text-align: center;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible; }
   @media screen and (min-width: 1000px) {
     .story .post .note {
       opacity: 0.2;

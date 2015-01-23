@@ -94,7 +94,7 @@ $sm-bp: 850px;
   &:hover {
     opacity: 1;
   }
-  
+
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
@@ -365,6 +365,9 @@ footer {
     .photo {
       img {
         text-align: center;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+
       }
     }
 
