@@ -66,8 +66,6 @@ a {
       max-width: 100%; }
     .photogrid .photo:hover {
       opacity: 1; }
-    .photogrid .photo img {
-      background-color: #f7f7f7; }
     .photogrid .photo:nth-child(3n+3) {
       padding-right: 0; }
 
@@ -109,8 +107,6 @@ header {
   backface-visibility: hidden; }
   header:hover {
     opacity: 1; }
-  header img {
-    background-color: #f7f7f7; }
   header img {
     max-width: 100%;
     width: 300px; }
@@ -155,8 +151,6 @@ nav.main, footer {
   backface-visibility: hidden; }
   nav.main:hover, footer:hover {
     opacity: 1; }
-  nav.main img, footer img {
-    background-color: #f7f7f7; }
   nav.main ul, footer ul {
     -webkit-margin-before: 0;
     -moz-margin-before: 0;
@@ -259,8 +253,6 @@ footer {
       left: 2%; }
       .story .post .note:hover {
         opacity: 1; }
-      .story .post .note img {
-        background-color: #f7f7f7; }
     .story .post .right {
       right: -20%;
       left: auto; }
