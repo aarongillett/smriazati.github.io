@@ -1,82 +1,357 @@
-/*
-Syntax error: Invalid CSS after "...kground-color: ": expected expression (e.g. 1px, bold), was "#white;"
-        on line 96 of /Users/sarah/Documents/portfolio/smriazati.github.io/michael/scss/style.scss
+::selection {
+  background: #141414;
+  color: white; }
 
-91:   @include vendorize(transition, $transition);
-92:   &:hover {
-93:     opacity: 1;
-94:   }
-95:   img {
-96:     background-color: #white;
-97:   }
-98: }
-99: 
-100: /* general *\/
-101: 
+::-moz-selection {
+  background: #141414;
+  color: white; }
 
-Backtrace:
-/Users/sarah/Documents/portfolio/smriazati.github.io/michael/scss/style.scss:96
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:1148:in `expected'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/script/lexer.rb:199:in `expected!'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/script/parser.rb:471:in `assert_expr'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/script/parser.rb:49:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:1021:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:1021:in `sass_script'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:881:in `value!'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:858:in `declaration'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:581:in `declaration_or_ruleset'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:1122:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:1122:in `rethrow'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:591:in `declaration_or_ruleset'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:553:in `block_child'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:542:in `block_contents'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:534:in `block'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:528:in `ruleset'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:590:in `declaration_or_ruleset'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:1122:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:1122:in `rethrow'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:591:in `declaration_or_ruleset'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:553:in `block_child'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:545:in `block_contents'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:534:in `block'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:186:in `mixin_directive'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:174:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:174:in `special_directive'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:146:in `directive'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:552:in `block_child'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:545:in `block_contents'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:82:in `stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/scss/parser.rb:27:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/engine.rb:342:in `_to_tree'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/engine.rb:315:in `_render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/engine.rb:262:in `render'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:362:in `update_stylesheet'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:203:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `each'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:283:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:117:in `initialize_adapter'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/polling.rb:32:in `start'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/polling.rb:32:in `initialize'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/polling.rb:32:in `new'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/vendor/listen/lib/listen/adapters/polling.rb:32:in `start'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/vendor/listen/lib/listen/multi_listener.rb:44:in `start'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin/compiler.rb:291:in `watch'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin.rb:107:in `send'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/exec.rb:463:in `watch_or_update'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/exec.rb:326:in `process_result'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/exec.rb:41:in `parse'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
-/Library/Ruby/Gems/1.8/gems/sass-3.2.12/bin/sass:9
-/usr/bin/sass:19:in `load'
-/usr/bin/sass:19
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"...kground-color: \": expected expression (e.g. 1px, bold), was \"#white;\"\A         on line 96 of /Users/sarah/Documents/portfolio/smriazati.github.io/michael/scss/style.scss\A \A 91:   @include vendorize(transition, $transition);\A 92:   &:hover {\A 93:     opacity: 1;\A 94:   }\A 95:   img {\A 96:     background-color: #white;\A 97:   }\A 98: }\A 99: \A 100: /* general */\A 101: "; }
+/* general */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  background: #f7f7f7; }
+
+a {
+  color: #141414;
+  text-decoration: none;
+  -webkit-transition: 0.5s ease all;
+  -moz-transition: 0.5s ease all;
+  -ms-transition: 0.5s ease all;
+  -o-transition: 0.5s ease all;
+  transition: 0.5s ease all; }
+  a:hover {
+    background: #fffecc; }
+  a.active {
+    text-decoration: underline;
+    cursor: text; }
+    a.active:hover {
+      background: none; }
+
+.wrapper {
+  width: 100%;
+  text-align: center; }
+
+.button p, .button a {
+  background: #fffc00;
+  text-decoration: none; }
+  .button p:hover, .button a:hover {
+    background: none !important;
+    color: #141414 !important; }
+
+/* photo grid 9x9 */
+.photogrid {
+  margin: 0 auto;
+  z-index: 99;
+  padding-left: 0  !important;
+  padding-right: 0 !important;
+  max-width: 100%; }
+  .photogrid .photo {
+    display: inline-block;
+    font-size: 0;
+    margin: 0;
+    padding: 1% 1% 0 0;
+    text-align: center;
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    -webkit-transition: 0.5s ease all;
+    -moz-transition: 0.5s ease all;
+    -ms-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
+    transition: 0.5s ease all; }
+    .photogrid .photo img {
+      max-width: 100%; }
+    .photogrid .photo:hover {
+      opacity: 1; }
+    .photogrid .photo img {
+      background-color: #f7f7f7; }
+    .photogrid .photo:nth-child(3n+3) {
+      padding-right: 0; }
+
+.photogrid .up, .photogrid .down {
+  display: inline-block;
+  padding: 1%;
+  width: 42%; }
+  .photogrid .up a, .photogrid .down a {
+    width: 100%;
+    display: block; }
+  .photogrid .up img, .photogrid .down img {
+    height: 50px; }
+.photogrid .up {
+  text-align: right; }
+.photogrid .down {
+  text-align: left; }
+
+#section0 .down, #section0 .up {
+  text-align: center;
+  width: 100%; }
+
+/* headers everywhere */
+header {
+  font-size: 0;
+  position: fixed;
+  top: 2%;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  -webkit-transition: 0.5s ease all;
+  -moz-transition: 0.5s ease all;
+  -ms-transition: 0.5s ease all;
+  -o-transition: 0.5s ease all;
+  transition: 0.5s ease all; }
+  header:hover {
+    opacity: 1; }
+  header img {
+    background-color: #f7f7f7; }
+  header img {
+    max-width: 100%;
+    width: 300px; }
+  .intro header {
+    position: relative;
+    padding-top: 8%; }
+    .intro header img {
+      width: 800px; }
+  .about header {
+    position: relative;
+    padding-top: 8%; }
+    .about header img {
+      width: 800px; }
+  .story header {
+    position: relative;
+    padding-top: 8%;
+    padding-top: 1%; }
+    .story header img {
+      width: 800px; }
+    .story header img {
+      width: 200px; }
+    @media screen and (max-width: 850px) {
+      .story header {
+        padding-top: 1%; }
+        .story header a img {
+          width: 250px;
+          padding: 22px; } }
+
+/* nav & footer behave the same */
+nav.main, footer {
+  position: fixed;
+  z-index: 1001;
+  opacity: 0.3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  -webkit-transition: 0.5s ease all;
+  -moz-transition: 0.5s ease all;
+  -ms-transition: 0.5s ease all;
+  -o-transition: 0.5s ease all;
+  transition: 0.5s ease all; }
+  nav.main:hover, footer:hover {
+    opacity: 1; }
+  nav.main img, footer img {
+    background-color: #f7f7f7; }
+  nav.main ul, footer ul {
+    -webkit-margin-before: 0;
+    -moz-margin-before: 0;
+    -ms-margin-before: 0;
+    -o-margin-before: 0;
+    margin-before: 0;
+    -webkit-margin-after: 0;
+    -moz-margin-after: 0;
+    -ms-margin-after: 0;
+    -o-margin-after: 0;
+    margin-after: 0;
+    -webkit-margin-start: 0;
+    -moz-margin-start: 0;
+    -ms-margin-start: 0;
+    -o-margin-start: 0;
+    margin-start: 0;
+    -webkit-margin-end: 0;
+    -moz-margin-end: 0;
+    -ms-margin-end: 0;
+    -o-margin-end: 0;
+    margin-end: 0;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    -ms-padding-start: 0;
+    -o-padding-start: 0;
+    padding-start: 0;
+    right: 0;
+    width: 100%; }
+    nav.main ul li, footer ul li {
+      display: inline-block;
+      position: fixed; }
+      nav.main ul li:first-child, footer ul li:first-child {
+        left: 2%; }
+      nav.main ul li:nth-child(2), footer ul li:nth-child(2) {
+        right: 2%; }
+
+nav.main {
+  top: 3%; }
+  nav.main ul li:last-child p, nav.main ul li:last-child a {
+    background: #fffc00;
+    text-decoration: none; }
+    nav.main ul li:last-child p:hover, nav.main ul li:last-child a:hover {
+      background: none !important;
+      color: #141414 !important; }
+
+footer {
+  bottom: 4%; }
+  footer ul li:last-child img {
+    width: 115px;
+    vertical-align: sub;
+    padding-bottom: 1px; }
+
+/* text columns in general */
+.post {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto; }
+
+/* intro & about page */
+.intro {
+  height: 100%; }
+  body .intro {
+    background: url("../imgs/splash.jpg") no-repeat center center fixed white;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+@media screen and (max-width: 850px) {
+  .intro, .about {
+    width: 90%;
+    margin: 8% 2%; } }
+.intro article, .about article {
+  margin: 4% 0 16% 0; }
+
+/* stories  */
+.story .storywrap {
+  padding-top: 2%; }
+.story .post {
+  margin-top: 1%;
+  position: relative; }
+  .story .post .nav a {
+    padding: 0 22px; }
+  .story .post .photo img {
+    text-align: center; }
+  @media screen and (min-width: 1000px) {
+    .story .post .note {
+      opacity: 0.2;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+      filter: alpha(opacity=20);
+      -webkit-transition: 0.5s ease all;
+      -moz-transition: 0.5s ease all;
+      -ms-transition: 0.5s ease all;
+      -o-transition: 0.5s ease all;
+      transition: 0.5s ease all;
+      position: absolute;
+      top: 4%;
+      left: 2%; }
+      .story .post .note:hover {
+        opacity: 1; }
+      .story .post .note img {
+        background-color: #f7f7f7; }
+    .story .post .right {
+      right: -20%;
+      left: auto; }
+    .story .post .middle {
+      top: 24%; }
+    .story .post .push {
+      left: -16%; } }
+
+/* typography */
+body {
+  font-size: 16px;
+  font-family: "Volkorn", "times new roman", serif; }
+  @media screen and (max-width: 850px) {
+    body {
+      font-size: 14px; } }
+
+h1, h2 {
+  font-size: 1em; }
+
+p {
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: left; }
+
+footer, nav.main {
+  font-size: 1em; }
+  .story footer, .story nav.main {
+    font-size: 80%; }
+
+@media screen and (max-width: 850px) {
+  .intro, .about {
+    font-size: 80%; } }
+.up, .down {
+  font-size: 2em; }
+  .up a:hover, .down a:hover {
+    background: none;
+    color: #0600ff; }
+
+.highlight {
+  background: #fffc00; }
+  .highlight p, .highlight a {
+    background: #fffc00;
+    text-decoration: none; }
+    .highlight p:hover, .highlight a:hover {
+      background: none !important;
+      color: #141414 !important; }
+
+.photogrid {
+  display: none; }
+
+.story .post {
+  display: none; }
+
+.fp-controlArrow.fp-prev, .fp-controlArrow.fp-next {
+  width: 150px !important;
+  height: 50px;
+  border: none;
+  margin: 0;
+  top: 45%;
+  padding: 30%; }
+
+.fp-controlArrow.fp-prev {
+  background: url("../imgs/arrow1-left.png") no-repeat;
+  padding-left: 0; }
+
+.fp-controlArrow.fp-next {
+  background: url("../imgs/arrow1-left.png") no-repeat;
+  padding-right: 0;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH"; }
+
+.fp-slidesNav {
+  position: fixed !important;
+  z-index: 4;
+  left: 0 !important;
+  opacity: 1;
+  width: 100%;
+  margin-left: 0 !important;
+  bottom: 6% !important; }
+  .fp-slidesNav ul {
+    width: 60px;
+    margin: 0 auto !important;
+    text-align: center !important; }
+    .fp-slidesNav ul li {
+      width: 30% !important;
+      margin: 0 !important; }
+      .fp-slidesNav ul li a span {
+        border-radius: 0 !important;
+        width: 6px !important;
+        height: 7px !important;
+        border: 1px solid #949494 !important; }
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
+  background: #949494 !important; }
+
+.fp-tableCell {
+  vertical-align: inherit !important; }
