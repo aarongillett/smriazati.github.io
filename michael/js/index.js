@@ -58,10 +58,39 @@ $( window ).resize(function() {
 
 
 
-// fade in 
+var fadeTime = 1100;
+
+// fade in on load
 $(document).ready(function() {
-  $(".photogrid").hide().fadeIn(1000);
+  $(".photogrid").hide().fadeIn(fadeTime*0.5);
 });
 
+
+// each grid fades so u don't see the scrolls
+
+// fade on clicks
+$('.down').click(function(){
+    $(".photogrid").hide().fadeIn(fadeTime);
+});
+
+$('.up').click(function(){
+    $(".photogrid").hide().fadeIn(fadeTime);
+});
+
+// fade on arrow keys
+$(window).keydown(function(e) {
+    if (e.keyCode == 40) {
+      $(".photogrid").hide().fadeIn(fadeTime);
+    }
+    else if (e.keyCode == 38) {
+      $(".photogrid").hide().fadeIn(fadeTime);
+    }
+});
+
+
+// mouse wheel plugin
+$('.photogrid').on('mousewheel', function(event) {
+      $(".photogrid").hide().fadeIn(500);
+});
 
 
