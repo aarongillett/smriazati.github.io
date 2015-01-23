@@ -1,11 +1,4 @@
-
-
-
-
 // grid resizer
-
-// If the screen is smaller than the med-bp, 
-// the photo percent is .5 and there is no bottom padding
 
 
 function photoResizer() {
@@ -34,15 +27,18 @@ function photoResizer() {
     // and we can place the note super perfectly
     var noteCenter = imageWidth/2; // center it
     var noteLeft = noteCenter - (imageWidth/1.5);
+    var noteLeftPush = noteCenter - (imageWidth/1.25);
     var noteRight = noteCenter + (imageWidth/3.5);
+    var noteRightPush = noteCenter + (imageWidth/2.5);
 
 
     $(".left").css("left", noteLeft);
+    $(".left-push").css("left", noteLeftPush);
     $(".right").css("left", noteRight);
-    // $(".right").css("left", "auto");
+    $(".right-push").css("left", noteRightPush);
 
 
-  } else {
+  } else { // on small screens
 
     var photoPercent = 0.55; // percent of height of screen
     var imageHeight = photoPercent*windowHeight; // 
@@ -61,13 +57,6 @@ function photoResizer() {
     $(".post").css("padding-bottom", "0");
 
   }
-
-
-
-
-
-  // console.log("width " + imageWidth);
-  // console.log("height " +  imageHeight);
 };
 
 $(document).ready(function() {
