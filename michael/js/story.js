@@ -34,11 +34,11 @@ function photoResizer() {
     // and we can place the note super perfectly
     var noteCenter = imageWidth/2; // center it
     var noteLeft = noteCenter - (imageWidth/1.5);
-    var noteRight = noteCenter + (imageWidth/1.5);
+    var noteRight = noteCenter + (imageWidth/3.5);
 
 
     $(".left").css("left", noteLeft);
-    $(".right").css("right", noteRight);
+    $(".right").css("left", noteRight);
     // $(".right").css("left", "auto");
 
 
