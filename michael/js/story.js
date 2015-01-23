@@ -75,4 +75,3 @@ $( window ).resize(function() {
 $(document).ready(function() {
   $(".post").hide().fadeIn(1000);
 });
-
