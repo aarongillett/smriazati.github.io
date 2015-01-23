@@ -59,7 +59,9 @@ a {
     -moz-transition: 0.5s ease all;
     -ms-transition: 0.5s ease all;
     -o-transition: 0.5s ease all;
-    transition: 0.5s ease all; }
+    transition: 0.5s ease all;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
     .photogrid .photo img {
       max-width: 100%; }
     .photogrid .photo:hover {
@@ -102,7 +104,9 @@ header {
   -moz-transition: 0.5s ease all;
   -ms-transition: 0.5s ease all;
   -o-transition: 0.5s ease all;
-  transition: 0.5s ease all; }
+  transition: 0.5s ease all;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
   header:hover {
     opacity: 1; }
   header img {
@@ -146,7 +150,9 @@ nav.main, footer {
   -moz-transition: 0.5s ease all;
   -ms-transition: 0.5s ease all;
   -o-transition: 0.5s ease all;
-  transition: 0.5s ease all; }
+  transition: 0.5s ease all;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
   nav.main:hover, footer:hover {
     opacity: 1; }
   nav.main img, footer img {
@@ -246,6 +252,8 @@ footer {
       -ms-transition: 0.5s ease all;
       -o-transition: 0.5s ease all;
       transition: 0.5s ease all;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
       position: absolute;
       top: 4%;
       left: 2%; }

@@ -95,6 +95,10 @@ $sm-bp: 850px;
   img {
     background-color: $white;
   }
+  
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
 }
 
 /* general */
