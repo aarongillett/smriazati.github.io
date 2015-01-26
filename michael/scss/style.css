@@ -58,7 +58,8 @@ a {
 .photogrid {
   margin: 0 auto;
   z-index: 99;
-  max-width: 100%; }
+  max-width: 100%;
+  font-size: 0; }
   .photogrid .photo {
     opacity: 0.8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
@@ -73,7 +74,6 @@ a {
     display: inline-block;
     font-size: 0;
     margin: 0;
-    padding: 0 1% 1% 0;
     text-align: center; }
     .photogrid .photo:hover {
       opacity: 1; }

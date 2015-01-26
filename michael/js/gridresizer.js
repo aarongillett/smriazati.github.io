@@ -17,8 +17,7 @@ function gridResizer() {
       $photo.css("width", imageWidth);
 
       // add some padding
-      var imagePaddingOffset = 30;
-      var gridPadding = ((windowHeight-gridWidth)-imagePaddingOffset)/2;
+      var gridPadding = ((windowHeight-gridWidth))/2;
       $photogrid.css("padding-top", gridPadding);
 
       // add height for scrolling function

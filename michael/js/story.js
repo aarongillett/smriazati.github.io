@@ -15,10 +15,16 @@ function photoResizer() {
     // $overlay.css("height", windowHeight);
     // $overlay.css("width", windowWidth);
 
+
+      // add some padding
+      // var gridPadding = ((windowHeight-gridWidth))/2;
+      // $photogrid.css("padding-top", gridPadding);
+
+
+
     // add some padding
     var gridWidth = 0.7*windowHeight; // X% of window height
-    var imagePaddingOffset = 30;
-    var gridPadding = ((windowHeight-gridWidth)-imagePaddingOffset)/2;
+    var gridPadding = ((windowHeight-gridWidth))/2;
     $post.css("padding-top", gridPadding);
     $note.css("padding-top", gridPadding);
 
@@ -26,7 +32,7 @@ function photoResizer() {
         
         var photoPercent = percentage; // percent of height of screen
         var imageHeight = photoPercent*windowHeight; // 
-        var imageWidth = (imageHeight*(.77)); 
+        var imageWidth = (imageHeight*(.786)); 
 
         // update post width to image width
         $post.css("width", imageWidth);
@@ -70,7 +76,7 @@ function photoResizer() {
 
 
   if ($(window).width() > 1000) {
-    imageHeightCalculator(0.75);
+    imageHeightCalculator(0.70);
 
   } else { // on small screens
     imageHeightCalculator(0.55);
