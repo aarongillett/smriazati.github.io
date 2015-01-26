@@ -1,53 +1,53 @@
-$(function() {
-  String.prototype.decodeHTML = function() {
-    return $("<div>", {html: "" + this}).html();
-  };
+// $(function() {
+//   String.prototype.decodeHTML = function() {
+//     return $("<div>", {html: "" + this}).html();
+//   };
 
-  var $main = $("main"),
+//   var $main = $("main"),
   
-  init = function() {
-        $main.fadeIn(1000);
-        console.log("fade in!");
-  },
+//   init = function() {
+//         $main.fadeIn(1000);
+//         console.log("fade in!");
+//   },
   
-  ajaxLoad = function(html) {
-    document.title = html
-      .match(/<title>(.*?)<\/title>/)[1]
-      .trim()
-      .decodeHTML();
+//   ajaxLoad = function(html) {
+//     document.title = html
+//       .match(/<title>(.*?)<\/title>/)[1]
+//       .trim()
+//       .decodeHTML();
 
-    init();
-  },
+//     init();
+//   },
   
-  loadPage = function(href) {
-    $main.load(href + " main>*", ajaxLoad);
-  };
+//   loadPage = function(href) {
+//     $main.load(href + " main>*", ajaxLoad);
+//   };
   
-  init();
+//   init();
   
-  $(window).on("popstate", function(e) {
-    if (e.originalEvent.state !== null) {
-      loadPage(location.href);
-    }
-  });
+//   $(window).on("popstate", function(e) {
+//     if (e.originalEvent.state !== null) {
+//       loadPage(location.href);
+//     }
+//   });
 
-  $(document).on("click", "a, area", function() {
-    var href = $(this).attr("href");
+//   $(document).on("click", "a, area", function() {
+//     var href = $(this).attr("href");
 
 
-      history.pushState({}, '', href);
-      loadPage(href);
-      return false;
+//       history.pushState({}, '', href);
+//       loadPage(href);
+//       return false;
 
-    // if (href.indexOf(document.domain) > -1
-    //   || href.indexOf(':') === -1)
-    // {
-    //   history.pushState({}, '', href);
-    //   loadPage(href);
-    //   return false;
-    // }
-  });
-});
+//     // if (href.indexOf(document.domain) > -1
+//     //   || href.indexOf(':') === -1)
+//     // {
+//     //   history.pushState({}, '', href);
+//     //   loadPage(href);
+//     //   return false;
+//     // }
+//   });
+// });
 
 
 
