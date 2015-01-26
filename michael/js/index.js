@@ -3,23 +3,26 @@ var currentSection, homeSection;
 var mouseWheelTransition = false; 
 var panelTransition = false; 
 
+// arrows cache
+var $down = $(".down");
+var $up = $(".up");
+
 //Constants
 var fadeTime = 1000; 
 
-//
-// var infoToggle = false; 
-// var infoRaisingTime = 1000; 
-
-
+var sectionId;
 
 $(function() {
-  //Check if info hash
-  if (getLocationHash() == "info")
-    showInfo(); 
-
   //Initialize section vars
   homeSection = $('.panel').eq(0); 
   currentSection = homeSection; 
+
+  sectionId = currentSection.attr("id");
+  console.log(sectionId);
+
+
+
+
 
   // Stop default behaviours for links
   var a = document.getElementsByTagName('a');
@@ -52,12 +55,20 @@ function scrollToNext () {
             currentSection.css("visibility", "hidden"); 
             currentSection = nextSection; 
             panelTransition = false; 
+
+            if (currentSection.attr("id") === "grid4") {
+              $down.addClass("inactive");
+            } else if (currentSection.attr("id") === "grid2") {
+              $up.removeClass("inactive");
+            }
+
           });
         }
       }
     });
   }
 }
+
 
 function scrollToPrevious () {
   if (!panelTransition){
@@ -77,11 +88,22 @@ function scrollToPrevious () {
             currentSection.css("visibility", "hidden"); 
             currentSection = nextSection; 
             panelTransition = false; 
+          
+
+            console.log(currentSection);
+            if (currentSection.attr("id") === "grid3") {
+              $down.removeClass("inactive");
+            } else if (currentSection.attr("id") === "grid1") {
+              $up.addClass("inactive");
+            }
+
           });
         }
       }
     });
   }
+
+
 }
 
 // On keys

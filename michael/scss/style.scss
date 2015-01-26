@@ -207,7 +207,7 @@ header {
 
   img {
     max-width: 100%;
-    width: 300px;
+    width: 200px;
     @media screen and (max-width: $sm-bp) { // smaller on mobile
       width: 200px;
     }
@@ -226,11 +226,15 @@ nav.interslide {
   text-align: center;
   position: fixed;
   z-index: 1000;
+
   div {
     display: inline-block;
-    padding: 0 $spacer;
+    padding: 0 11px;
     img {
       height: 50px;
+      @media screen and (max-width: $sm-bp) {
+        height: 30px;
+      }
     }
   }
 }
@@ -444,7 +448,6 @@ footer, nav.main {
   @include button;
 }
 
-
-
-
-
+.inactive {
+  @include opacity(0.2);
+}

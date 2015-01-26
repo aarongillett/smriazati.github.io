@@ -104,7 +104,7 @@ header {
     opacity: 1; }
   header img {
     max-width: 100%;
-    width: 300px; }
+    width: 200px; }
     @media screen and (max-width: 850px) {
       header img {
         width: 200px; } }
@@ -127,9 +127,12 @@ nav.interslide {
   z-index: 1000; }
   nav.interslide div {
     display: inline-block;
-    padding: 0 2%; }
+    padding: 0 11px; }
     nav.interslide div img {
       height: 50px; }
+      @media screen and (max-width: 850px) {
+        nav.interslide div img {
+          height: 30px; } }
 
 /* nav & footer behave the same */
 nav.main, footer {
@@ -308,3 +311,8 @@ footer, nav.main {
   .highlight p:hover, .highlight a:hover {
     background: none !important;
     color: #141414 !important; }
+
+.inactive {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20); }
