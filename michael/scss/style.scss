@@ -392,7 +392,7 @@ footer {
     img {
       height: 50px;
       @media screen and (max-width: $sm-bp) {
-        height: 30px;
+        display: none;
       }
       @media screen and (min-width: $lrg-bp) {
         height: 70px;

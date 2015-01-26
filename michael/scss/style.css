@@ -252,7 +252,7 @@ footer {
     height: 50px; }
     @media screen and (max-width: 850px) {
       .story .gridposition img {
-        height: 30px; } }
+        display: none; } }
     @media screen and (min-width: 1300px) {
       .story .gridposition img {
         height: 70px; } }
