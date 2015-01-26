@@ -217,19 +217,6 @@ footer {
     .story .post a:hover {
       background: none;
       color: #0600ff; }
-  .story .post .close a, .story .post .gridposition a {
-    opacity: 0.5;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-    filter: alpha(opacity=50);
-    -webkit-transition: 0.5s ease all;
-    -moz-transition: 0.5s ease all;
-    -ms-transition: 0.5s ease all;
-    -o-transition: 0.5s ease all;
-    transition: 0.5s ease all;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
-    .story .post .close a:hover, .story .post .gridposition a:hover {
-      opacity: 1; }
   .story .post .close {
     position: absolute;
     padding-right: 22px;

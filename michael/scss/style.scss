@@ -348,11 +348,11 @@ footer {
     }
 
 
-    .close, .gridposition {
-      a {        
-        @include opacityhover(0.5);
-      }
-    }
+    // .close, .gridposition {
+    //   a {        
+    //     @include opacityhover(0.5);
+    //   }
+    // }
 
    .close {
       position: absolute;
