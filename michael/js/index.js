@@ -214,15 +214,31 @@ window.onhashchange = function(e) {
     }
 }
 
-function setCurrentPanelFromHash(){
-  if (getLocationHash() === "grid2"){
-    console.log("you are in grid 2")
-  } else if (getLocationHash() === "grid3"){
-    console.log("you are in grid 3")
-  } else if (getLocationHash() === "grid4"){
-    console.log("you are in grid 4")
-  }
-}
+// function setCurrentPanelFromHash(){
+//   if (getLocationHash() === "grid2"){
+    
+//     console.log("you are in grid 2");
+//     setLocationHash("grid2");
+
+//     $(".a").css("opacity", "0.0"); 
+//     $(".b").css("opacity", "1.0"); 
+
+//   } else if (getLocationHash() === "grid3"){
+//     console.log("you are in grid 3");
+
+//     $(".a").css("opacity", "0.0"); 
+//     $(".c").css("opacity", "1.0"); 
+
+//   } else if (getLocationHash() === "grid4"){
+//     console.log("you are in grid 4");
+
+//     $(".a").css("opacity", "0.0"); 
+//     $(".d").css("opacity", "1.0"); 
+
+//   }
+// }
+
+
 
 
 
