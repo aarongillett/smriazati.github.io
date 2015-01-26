@@ -31,6 +31,7 @@ $postwidth: 800px;
 $spacer: 2%;
 $headerwidth: 350px;
 
+$lrg-bp: 1300px;
 $med-bp:1000px;
 $sm-bp: 850px;
 
@@ -392,6 +393,9 @@ footer {
       height: 50px;
       @media screen and (max-width: $sm-bp) {
         height: 30px;
+      }
+      @media screen and (min-width: $lrg-bp) {
+        height: 70px;
       }
     }
   }

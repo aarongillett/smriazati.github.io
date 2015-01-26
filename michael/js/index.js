@@ -60,9 +60,10 @@ function scrollToNext () {
 
 
             sectionId = currentSection.attr("id");
-            // console.log("current section id is " + sectionId);
-            history.pushState({id: sectionId}, '', 'index.html#' + sectionId);
+            // // console.log("current section id is " + sectionId);
+            // history.pushState({id: sectionId}, '', 'index.html#' + sectionId);
 
+            location.hash = '#' + sectionId;
 
           });
         }
@@ -99,7 +100,8 @@ function scrollToPrevious () {
 
             sectionId = currentSection.attr("id");
             // console.log("current section id is " + sectionId);
-            history.pushState({id: sectionId}, '', 'index.html#' + sectionId);
+            // history.pushState({id: sectionId}, '', 'index.html#' + sectionId);
+            location.hash = '#' + sectionId;
 
           });
         }
@@ -204,22 +206,28 @@ window.onhashchange = function(e) {
 }
 
 
-// window.onhashchange = function(e) {
-//     if (panelTransition)
-//         panelTransition = false; 
-//     else {
-//         setCurrentPanelFromHash(); 
-//     }
-// }
+window.onhashchange = function(e) {
+    if (panelTransition)
+        panelTransition = false; 
+    else {
+        setCurrentPanelFromHash(); 
+    }
+}
 
-// function setCurrentPanelFromHash(){
-//   if (getLocationHash() == "info"){
-//     // if (!infoToggle){
-//     //   showInfo(); 
-//     // }
-//   }else{
-//     // if (infoToggle){
-//     //   showInfo(); 
-//     // }
-//   }
-// }
+function setCurrentPanelFromHash(){
+  if (getLocationHash() === "grid2"){
+    console.log("you are in grid 2")
+  } else if (getLocationHash() === "grid3"){
+    console.log("you are in grid 3")
+  } else if (getLocationHash() === "grid4"){
+    console.log("you are in grid 4")
+  }
+}
+
+
+
+
+
+
+
+
