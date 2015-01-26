@@ -18,10 +18,6 @@ $(function() {
   currentSection = homeSection; 
 
   sectionId = currentSection.attr("id");
-  console.log(sectionId);
-
-
-
 
 
   // Stop default behaviours for links
@@ -62,6 +58,10 @@ function scrollToNext () {
               $up.removeClass("inactive");
             }
 
+
+            sectionId = currentSection.attr("id");
+            console.log("current section id is " + sectionId);
+
           });
         }
       }
@@ -89,13 +89,14 @@ function scrollToPrevious () {
             currentSection = nextSection; 
             panelTransition = false; 
           
-
-            console.log(currentSection);
             if (currentSection.attr("id") === "grid3") {
               $down.removeClass("inactive");
             } else if (currentSection.attr("id") === "grid1") {
               $up.addClass("inactive");
             }
+
+            sectionId = currentSection.attr("id");
+            console.log("current section id is " + sectionId);
 
           });
         }

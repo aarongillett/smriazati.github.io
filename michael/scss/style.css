@@ -73,7 +73,7 @@ a {
     display: inline-block;
     font-size: 0;
     margin: 0;
-    padding: 1% 1% 0 0;
+    padding: 0 1% 1% 0;
     text-align: center; }
     .photogrid .photo:hover {
       opacity: 1; }
@@ -211,28 +211,29 @@ footer {
 /* stories  */
 .story .post {
   position: relative; }
+  .story .post a {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    .story .post a:hover {
+      background: none;
+      color: #0600ff; }
+  .story .post .close a, .story .post .gridposition a {
+    opacity: 0.5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: alpha(opacity=50);
+    -webkit-transition: 0.5s ease all;
+    -moz-transition: 0.5s ease all;
+    -ms-transition: 0.5s ease all;
+    -o-transition: 0.5s ease all;
+    transition: 0.5s ease all;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    .story .post .close a:hover, .story .post .gridposition a:hover {
+      opacity: 1; }
   .story .post .close {
     position: absolute;
     padding-right: 22px;
     padding-left: 8%; }
-    .story .post .close a {
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      opacity: 0.5;
-      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
-      filter: alpha(opacity=50);
-      -webkit-transition: 0.5s ease all;
-      -moz-transition: 0.5s ease all;
-      -ms-transition: 0.5s ease all;
-      -o-transition: 0.5s ease all;
-      transition: 0.5s ease all;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden; }
-      .story .post .close a:hover {
-        background: none;
-        color: #0600ff; }
-      .story .post .close a:hover {
-        opacity: 1; }
     .story .post .close img {
       width: 35px; }
   .story .post .photo img {
@@ -258,15 +259,13 @@ footer {
     .story .post .middle {
       top: 30% !important; } }
 .story .gridposition {
-  padding-top: 2%; }
+  padding-top: 4%;
+  text-align: center; }
   .story .gridposition img {
-    width: 50px; }
+    height: 50px; }
     @media screen and (max-width: 850px) {
       .story .gridposition img {
-        width: 35px; } }
-.story .overlay {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.05); }
+        height: 30px; } }
 
 img.fixed {
   -webkit-backface-visibility: visible;
@@ -316,3 +315,5 @@ footer, nav.main {
   opacity: 0.2;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
   filter: alpha(opacity=20); }
+  .inactive a {
+    cursor: default; }

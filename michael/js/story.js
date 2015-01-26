@@ -12,8 +12,8 @@ function photoResizer() {
     var $overlay = $(".overlay");
 
     // OVERLAY
-    $overlay.css("height", windowHeight);
-    $overlay.css("width", windowWidth);
+    // $overlay.css("height", windowHeight);
+    // $overlay.css("width", windowWidth);
 
     // add some padding
     var gridWidth = 0.7*windowHeight; // X% of window height
