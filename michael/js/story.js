@@ -26,7 +26,7 @@ function photoResizer() {
         
         var photoPercent = percentage; // percent of height of screen
         var imageHeight = photoPercent*windowHeight; // 
-        var imageWidth = (imageHeight*(.8)); 
+        var imageWidth = (imageHeight*(.77)); 
 
         // update post width to image width
         $post.css("width", imageWidth);

@@ -214,6 +214,9 @@ window.onhashchange = function(e) {
     }
 }
 
+
+
+
 // function setCurrentPanelFromHash(){
 //   if (getLocationHash() === "grid2"){
     

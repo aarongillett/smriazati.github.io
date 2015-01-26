@@ -1,4 +1,5 @@
-jquery
-- MAKE HOME PAGE ID'S LINKABLE
-- fix delay on adding "inactive" to nav arrows
+Problems >>>>>>>>
+- can not enter index page to a specific ID
+- 1000ms delay on inactive arrow, url updater
+
 
