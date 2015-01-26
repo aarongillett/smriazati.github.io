@@ -3,9 +3,9 @@ var currentSection, homeSection;
 var mouseWheelTransition = false; 
 var panelTransition = false; 
 
-// arrows cache
-var $down = $(".down");
-var $up = $(".up");
+//  cache arrows
+var $down = $("nav.interslide .down");
+var $up = $("nav.interslide .up");
 
 //Constants
 var fadeTime = 1000; 
@@ -60,7 +60,9 @@ function scrollToNext () {
 
 
             sectionId = currentSection.attr("id");
-            console.log("current section id is " + sectionId);
+            // console.log("current section id is " + sectionId);
+            history.pushState({id: sectionId}, '', 'index.html#' + sectionId);
+
 
           });
         }
@@ -96,7 +98,8 @@ function scrollToPrevious () {
             }
 
             sectionId = currentSection.attr("id");
-            console.log("current section id is " + sectionId);
+            // console.log("current section id is " + sectionId);
+            history.pushState({id: sectionId}, '', 'index.html#' + sectionId);
 
           });
         }
@@ -195,22 +198,28 @@ function setLocationHash(str){
   window.location.hash = str;
 }
 
+
 window.onhashchange = function(e) {
-    if (panelTransition)
-        panelTransition = false; 
-    else {
-        setCurrentPanelFromHash(); 
-    }
+  panelTransition = false; 
 }
 
-function setCurrentPanelFromHash(){
-  if (getLocationHash() == "info"){
-    // if (!infoToggle){
-    //   showInfo(); 
-    // }
-  }else{
-    // if (infoToggle){
-    //   showInfo(); 
-    // }
-  }
-}
+
+// window.onhashchange = function(e) {
+//     if (panelTransition)
+//         panelTransition = false; 
+//     else {
+//         setCurrentPanelFromHash(); 
+//     }
+// }
+
+// function setCurrentPanelFromHash(){
+//   if (getLocationHash() == "info"){
+//     // if (!infoToggle){
+//     //   showInfo(); 
+//     // }
+//   }else{
+//     // if (infoToggle){
+//     //   showInfo(); 
+//     // }
+//   }
+// }
