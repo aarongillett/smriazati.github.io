@@ -61,22 +61,12 @@ a {
   max-width: 100%;
   font-size: 0; }
   .photogrid .photo {
-    opacity: 0.8;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-    filter: alpha(opacity=80);
-    -webkit-transition: 0.5s ease all;
-    -moz-transition: 0.5s ease all;
-    -ms-transition: 0.5s ease all;
-    -o-transition: 0.5s ease all;
-    transition: 0.5s ease all;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     display: inline-block;
     font-size: 0;
     margin: 0;
-    text-align: center; }
-    .photogrid .photo:hover {
-      opacity: 1; }
+    padding: 0;
+    text-align: center;
+    overflow: hidden; }
     .photogrid .photo:nth-child(3n+3) {
       padding-right: 0; }
     .photogrid .photo img {

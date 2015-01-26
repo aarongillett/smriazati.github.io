@@ -15,18 +15,12 @@ function photoResizer() {
     // $overlay.css("height", windowHeight);
     // $overlay.css("width", windowWidth);
 
-
-      // add some padding
-      // var gridPadding = ((windowHeight-gridWidth))/2;
-      // $photogrid.css("padding-top", gridPadding);
-
-
-
     // add some padding
-    var gridWidth = 0.7*windowHeight; // X% of window height
-    var gridPadding = ((windowHeight-gridWidth))/2;
+    var gridHeight = 0.7*windowHeight; // X% of window height
+    var gridPadding = ((windowHeight-gridHeight))/2;
     $post.css("padding-top", gridPadding);
     $note.css("padding-top", gridPadding);
+
 
     function imageHeightCalculator(percentage) {
         
@@ -76,7 +70,7 @@ function photoResizer() {
 
 
   if ($(window).width() > 1000) {
-    imageHeightCalculator(0.70);
+    imageHeightCalculator(0.7);
 
   } else { // on small screens
     imageHeightCalculator(0.55);

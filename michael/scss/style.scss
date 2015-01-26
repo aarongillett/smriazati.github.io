@@ -167,15 +167,14 @@ a {
   z-index: 99;
   max-width: 100%;
   font-size: 0;
-  
-  .photo {
-    @include opacityhover(0.8);
 
+  .photo {
     display: inline-block;
     font-size: 0;
     margin: 0;
-    // padding: 0 1% 1% 0;
+    padding: 0;
     text-align: center;
+    overflow: hidden;
 
     &:nth-child(3n+3) { padding-right: 0; }
 
