@@ -29,43 +29,37 @@ function showNext() {
           scrollTop: scrollDestination
       }, 1);
      }
+     console.log("changeScrollDown function");
   };
 
 
   if (currentScroll != (maxWindowHeight-windowHeight)) {
     $grid.fadeOut(fadeOutSpeed, changeScrollDown);
-    $grid.fadeIn(fadeSpeed); 
+    $grid.fadeIn(fadeSpeed, resetMouseWheelTransition); 
   } else {
     $grid.fadeOut(fadeOutSpeed, backToTop);
-    $grid.fadeIn(fadeSpeed); 
+    $grid.fadeIn(fadeSpeed, resetMouseWheelTransition); 
   }
 }
 
 
 function showPrev() {
-  // cache whole grid
   $grid = $("#grid");
 
-  // current scroll location
   var currentScroll = $(window).scrollTop();
 
   function changeScrollUp() {
-    // calculate scroll destination using window height
     var scrollDestination = currentScroll - windowHeight;
-    // if scrollDestination > windowHeight * 4
     if (scrollDestination < maxWindowHeight) {
-      // change scroll position to scroll destination
       $('html, body').animate({
           scrollTop: scrollDestination
       }, 1);
     } 
   };
 
-  // fade out grids & change scroll position up
-  // but if its at the top then do nothing
   if (currentScroll != 0) {
     $grid.fadeOut(fadeOutSpeed, changeScrollUp);
-    $grid.fadeIn(fadeSpeed);   
+    $grid.fadeIn(fadeSpeed, resetMouseWheelTransition);   
   }
 }
 
@@ -160,12 +154,16 @@ else document.attachEvent("onmousewheel", MouseWheelHandler);
 var mouseWheelTimeOut; 
 function MouseWheelHandler(e) {
   e.preventDefault(); 
+
+  if(mouseWheelTransition)
+    return;
+
   // cross-browser wheel delta
   var e = window.event || e; // old IE support
   var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 
-  window.clearTimeout(mouseWheelTimeOut);
-  mouseWheelTimeOut = window.setTimeout(resetMouseWheelTransition, 2-0); 
+  // window.clearTimeout(mouseWheelTimeOut);
+  // mouseWheelTimeOut = window.setTimeout(resetMouseWheelTransition, 2-0); 
 
 
   if (!mouseWheelTransition){
