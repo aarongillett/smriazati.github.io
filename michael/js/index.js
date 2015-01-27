@@ -22,11 +22,11 @@ function showNext() {
       $('html, body').animate({
           scrollTop: scrollDestination
       }, 1);
-    } else { // but if its at the bottom, go back to top
-      $('html, body').animate({
-          scrollTop: 0
-      }, 1);
-    }
+    // } else { // but if its at the bottom, go back to top
+    //   $('html, body').animate({
+    //       scrollTop: 0
+    //   }, 1);
+    // }
   };
 
   // fade out grids & change scroll position down
