@@ -24,6 +24,7 @@ function showNext() {
   function changeScrollDown() {
     // $(this).hide();
     var scrollDestination = windowHeight + currentScroll;
+    scrollPosition = scrollDestination;
     if (scrollDestination < maxWindowHeight) {
       $('html, body').animate({
           scrollTop: scrollDestination
@@ -50,6 +51,7 @@ function showPrev() {
 
   function changeScrollUp() {
     var scrollDestination = currentScroll - windowHeight;
+    scrollPosition = scrollDestination;
     if (scrollDestination < maxWindowHeight) {
       $('html, body').animate({
           scrollTop: scrollDestination
@@ -63,6 +65,31 @@ function showPrev() {
   }
 }
 
+var windowHeight_old = 0;
+var scrollPosition = 0;
+
+function windowResize() {
+  var windowHeight_new = $(window).height();
+
+  var s = windowHeight_new / windowHeight_old;
+
+  var newScrollPos = scrollPosition * s;
+
+  // scrollToPos(newScrollPos);
+  if (newScrollPos < maxWindowHeight) {
+    $('html, body').animate({
+        scrollTop: newScrollPos
+    }, 1);
+  }
+
+  windowHeight_old = windowHeight_new;
+}
+
+
+// update on window resize
+$( window ).resize(function() {
+  windowResize();
+});
 
 
 // function windowResetter() {
@@ -114,10 +141,6 @@ function showPrev() {
 // });
 
 
-// // update on window resize
-// $( window ).resize(function() {
-//   windowResetter();
-// });
 
 
 // add other events
