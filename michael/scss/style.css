@@ -269,6 +269,8 @@ footer, nav.main {
     .up a:hover, .down a:hover {
       background: none;
       color: #0600ff; }
+  .up:hover, .down:hover {
+    cursor: pointer; }
 
 .highlight p, .highlight a {
   background: #fffc00;

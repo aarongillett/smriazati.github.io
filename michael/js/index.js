@@ -3,7 +3,15 @@ var windowWidth = $(window).width();
 
 var fadeSpeed = 800;
 var fadeOutSpeed = fadeSpeed*0.5;
+var maxWindowHeight = windowHeight*4;
 
+var currentScroll;
+
+function backToTop() {
+  $('html, body').animate({
+    scrollTop: 0
+  }, 1)
+};
 
 function showNext() {
   // cache whole grid
@@ -17,22 +25,25 @@ function showNext() {
     // calculate scroll destination using window height
     var scrollDestination = windowHeight + currentScroll;
     // if scrollDestination > windowHeight * 4
-    if (scrollDestination < windowHeight*4) {
+    if (scrollDestination < maxWindowHeight) {
       // change scroll position to scroll destination
       $('html, body').animate({
           scrollTop: scrollDestination
       }, 1);
     // } else { // but if its at the bottom, go back to top
-    //   $('html, body').animate({
-    //       scrollTop: 0
-    //   }, 1);
+;
      }
   };
 
-  // fade out grids & change scroll position down
-  $grid.fadeOut(fadeOutSpeed, changeScrollDown);
-  $grid.fadeIn(fadeSpeed);
+  console.log(currentScroll);
 
+  if (currentScroll != (maxWindowHeight-windowHeight)) {
+    $grid.fadeOut(fadeOutSpeed, changeScrollDown);
+    $grid.fadeIn(fadeSpeed); 
+  } else {
+    $grid.fadeOut(fadeOutSpeed, backToTop);
+    $grid.fadeIn(fadeSpeed); 
+  }
 }
 
 
@@ -47,7 +58,7 @@ function showPrev() {
     // calculate scroll destination using window height
     var scrollDestination = currentScroll - windowHeight;
     // if scrollDestination > windowHeight * 4
-    if (scrollDestination < windowHeight*4) {
+    if (scrollDestination < maxWindowHeight) {
       // change scroll position to scroll destination
       $('html, body').animate({
           scrollTop: scrollDestination

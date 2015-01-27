@@ -448,7 +448,12 @@ footer, nav.main {
   a {@include nobghover;}
 }
 
-.up, .down { @include bigarrow; }
+.up, .down { 
+  @include bigarrow; 
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 
 .highlight {
