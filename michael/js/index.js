@@ -26,7 +26,7 @@ function showNext() {
     //   $('html, body').animate({
     //       scrollTop: 0
     //   }, 1);
-    // }
+     }
   };
 
   // fade out grids & change scroll position down
