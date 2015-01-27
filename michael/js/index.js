@@ -25,7 +25,7 @@ function showNext() {
     // $(this).hide();
     var scrollDestination = windowHeight + currentScroll;
     if (scrollDestination < maxWindowHeight) {
-      $('html, body').stop().animate({
+      $('html, body').animate({
           scrollTop: scrollDestination
       }, 1);
      }
@@ -55,7 +55,7 @@ function showPrev() {
     // if scrollDestination > windowHeight * 4
     if (scrollDestination < maxWindowHeight) {
       // change scroll position to scroll destination
-      $('html, body').stop().animate({
+      $('html, body').animate({
           scrollTop: scrollDestination
       }, 1);
     } 
@@ -143,13 +143,6 @@ jQuery(function () {
 });
 
 
-// // using on
-// $('.photogrid').on('mousewheel', function(event) {
-//     showNext().stop();
-// });
-
-
-
 // mouse wheel
 
 var mouseWheelTransition = false; 
@@ -189,27 +182,4 @@ function MouseWheelHandler(e) {
 function resetMouseWheelTransition(){
   mouseWheelTransition = false; 
 }
-
-
-
-// $(function () {
-//   $(document).on("mousewheel", function(e, delta) {
-//     console.log("delta" + delta);
-// // up is 1
-// // down is -1
-
-
-
-
-//   });
-
-
-// });
-
-
-
-
-
-
-
 
