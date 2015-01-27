@@ -11,6 +11,7 @@ function backToTop() {
   $('html, body').animate({
     scrollTop: 0
   }, 1)
+  console.log('top!');
 };
 
 function showNext() {
