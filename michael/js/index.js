@@ -13,6 +13,7 @@ function showNext() {
   var currentScroll = $(window).scrollTop();
 
   function changeScrollDown() {
+    $(this).hide();
     // calculate scroll destination using window height
     var scrollDestination = windowHeight + currentScroll;
     // if scrollDestination > windowHeight * 4
@@ -119,21 +120,21 @@ function showPrev() {
 // });
 
 
-// // add other events
-// // key press
-// jQuery(function () {
-//   $(document).keydown(function (evt) {
-//     if (evt.keyCode == 40 || evt.keyCode == 34 || evt.keyCode == 39 ) { // down arrow
-//       evt.preventDefault(); // prevents the usual scrolling behaviour
-//       showNext(); // scroll to the next new heading instead
-//     }
+// add other events
+// key press
+jQuery(function () {
+  $(document).keydown(function (evt) {
+    if (evt.keyCode == 40 || evt.keyCode == 34 || evt.keyCode == 39 ) { // down arrow
+      evt.preventDefault(); // prevents the usual scrolling behaviour
+      showNext(); // scroll to the next new heading instead
+    }
 
-//     if (evt.keyCode == 38 || evt.keyCode == 33 || evt.keyCode == 37){
-//       evt.preventDefault(); // prevents the usual scrolling behaviour
-//       showPrev(); // scroll to the next new heading instead
-//     }
-//   });
-// });
+    if (evt.keyCode == 38 || evt.keyCode == 33 || evt.keyCode == 37){
+      evt.preventDefault(); // prevents the usual scrolling behaviour
+      showPrev(); // scroll to the next new heading instead
+    }
+  });
+});
 
 
 
