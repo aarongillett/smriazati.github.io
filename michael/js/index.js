@@ -11,32 +11,26 @@ function backToTop() {
   $('html, body').animate({
     scrollTop: 0
   }, 1)
-  console.log('top!');
 };
 
+
+
+
 function showNext() {
-  // cache whole grid
   $grid = $("#grid");
 
-  // get current scroll location
   var currentScroll = $(window).scrollTop();
 
   function changeScrollDown() {
-    $(this).hide();
-    // calculate scroll destination using window height
+    // $(this).hide();
     var scrollDestination = windowHeight + currentScroll;
-    // if scrollDestination > windowHeight * 4
     if (scrollDestination < maxWindowHeight) {
-      // change scroll position to scroll destination
-      $('html, body').animate({
+      $('html, body').stop().animate({
           scrollTop: scrollDestination
       }, 1);
-    // } else { // but if its at the bottom, go back to top
-;
      }
   };
 
-  console.log(currentScroll);
 
   if (currentScroll != (maxWindowHeight-windowHeight)) {
     $grid.fadeOut(fadeOutSpeed, changeScrollDown);
@@ -61,7 +55,7 @@ function showPrev() {
     // if scrollDestination > windowHeight * 4
     if (scrollDestination < maxWindowHeight) {
       // change scroll position to scroll destination
-      $('html, body').animate({
+      $('html, body').stop().animate({
           scrollTop: scrollDestination
       }, 1);
     } 
@@ -149,44 +143,73 @@ jQuery(function () {
 });
 
 
+// // using on
+// $('.photogrid').on('mousewheel', function(event) {
+//     showNext().stop();
+// });
+
+
 
 // mouse wheel
 
-// var mouseWheelTransition = false; 
+var mouseWheelTransition = false; 
+
+//On mousewheel
+if (document.addEventListener) {
+  // IE9, Chrome, Safari, Opera
+  document.addEventListener("mousewheel", MouseWheelHandler, false);
+  // Firefox
+  document.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
+}
+// IE 6/7/8
+else document.attachEvent("onmousewheel", MouseWheelHandler);
+
+var mouseWheelTimeOut; 
+function MouseWheelHandler(e) {
+  e.preventDefault(); 
+  // cross-browser wheel delta
+  var e = window.event || e; // old IE support
+  var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+
+  window.clearTimeout(mouseWheelTimeOut);
+  mouseWheelTimeOut = window.setTimeout(resetMouseWheelTransition, 2-0); 
 
 
-// //On mousewheel
-// if (document.addEventListener) {
-//   // IE9, Chrome, Safari, Opera
-//   document.addEventListener("mousewheel", MouseWheelHandler, false);
-//   // Firefox
-//   document.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
-// }
-// // IE 6/7/8
-// else document.attachEvent("onmousewheel", MouseWheelHandler);
-
-// var mouseWheelTimeOut; 
-// function MouseWheelHandler(e) {
-//   e.preventDefault(); 
-//   // cross-browser wheel delta
-//   var e = window.event || e; // old IE support
-//   var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-
-//   window.clearTimeout(mouseWheelTimeOut);
-//   mouseWheelTimeOut = window.setTimeout(resetMouseWheelTransition, 2-0); 
-
-//   if (!mouseWheelTransition){
-//     if (delta == -1)
-//       showNext(); 
-//     if (delta == 1)
-//       showPrev(); 
-//   }
+  if (!mouseWheelTransition){
+    if (delta == -1)
+      showNext(); 
+    if (delta == 1)
+      showPrev(); 
+  }
     
-//   mouseWheelTransition = true; 
+  mouseWheelTransition = true; 
 
-// }
+}
 
-// function resetMouseWheelTransition(){
-//   mouseWheelTransition = false; 
-// }
+function resetMouseWheelTransition(){
+  mouseWheelTransition = false; 
+}
+
+
+
+// $(function () {
+//   $(document).on("mousewheel", function(e, delta) {
+//     console.log("delta" + delta);
+// // up is 1
+// // down is -1
+
+
+
+
+//   });
+
+
+// });
+
+
+
+
+
+
+
 
