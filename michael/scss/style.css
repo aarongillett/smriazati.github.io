@@ -270,6 +270,11 @@ footer, nav.main {
   .up:hover, .down:hover {
     cursor: pointer; }
 
+.center {
+  text-align: center;
+  font-size: 1.5em;
+  text-decoration: underline; }
+
 .highlight p, .highlight a {
   background: #fffc00;
   text-decoration: none; }

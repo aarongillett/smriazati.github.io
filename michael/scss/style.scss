@@ -424,6 +424,11 @@ footer, nav.main {
   }
 }
 
+.center {
+  text-align: center;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
 
 .highlight {
   @include button;
