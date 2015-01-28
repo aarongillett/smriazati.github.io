@@ -37,6 +37,8 @@ function gridResizer() {
 
 
 
+
+
 $(document).ready(function() {
   var $panel = $(".panel");
   gridResizer();
