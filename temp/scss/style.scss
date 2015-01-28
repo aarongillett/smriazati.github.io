@@ -2,7 +2,8 @@
 // sassy supplies
 
 $link: rgb(20, 20, 20);
-$highlight: #FFFC00; 
+// $highlight: #FFFC00; 
+$highlight: #1F29DF;
 $white: #F7F7F7;
 $darklight: #0600FF;
 
@@ -53,8 +54,8 @@ $sm-bp: 850px;
 
 @mixin mobilecontainer {
   @media screen and (max-width: $sm-bp) {
-    width: 90%;
-    margin: $spacer*4 $spacer;
+    width: 75%;
+    margin: $spacer auto;
   }
 } 
 
@@ -103,6 +104,35 @@ $sm-bp: 850px;
 
 }
 
+
+
+@mixin desaturateHover {
+    @include vendorize(transition, $transition);
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+
+  &:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%); -o-filter: grayscale(100%);
+    filter: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale');
+    filter: gray;
+    -webkit-filter: grayscale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 // general
 
 
@@ -119,7 +149,8 @@ a {
   text-decoration: none;
   @include vendorize(transition, $transition);
   &:hover {
-    background: lighten($highlight,40%);
+    color: $highlight;
+    // background: lighten($highlight,40%);
   }
   &.active{
     text-decoration: underline;
@@ -162,6 +193,7 @@ a {
 
     img {
       max-width: 100%;
+      @include desaturateHover;
     }
   }
 }
@@ -190,7 +222,7 @@ header {
 
   img {
     max-width: 100%;
-    width: 200px;
+    width: 300px;
     @media screen and (max-width: $med-bp) { // bigger on mobile
       height: 80px;
       width: auto;
@@ -229,15 +261,27 @@ nav.interslide {
 
 // on desktops
 nav.main {
-  @include opacityhover(0.3);
+  @include opacityhover(0.7);
   position: fixed;
   z-index: 1001;
 
   top: $spacer*1.5;
   left: $spacer;
+
+  a {
+    padding: 44px 44px 44px 0;
+  }
+
   p a::before {
-    content: "About the project";
-    padding: 22px 0; 
+    content: "i";
+    padding: 44px 44px 44px 0;
+  }
+  .about & {
+    p a::before {
+      content: url('../imgs/arrow1-left.png');
+      padding: 44px 44px 44px 0;
+      width: 50px;
+    }
   }
 }
 
@@ -249,22 +293,21 @@ nav.main {
     left: 0;
 
     padding: $spacer/2 $spacer;
-    background: rgb(231, 229, 229);
+    background: $white;
+
+    a {
+      padding: 44px 44px 44px 0;
+    }
 
     &:hover {
       @include opacity(0.3);
     }
 
-    a.active {
-      text-decoration: none;
-    }
-
     p a::before {
-      content: "+";
-      font-size: 5em;
+      content: "i";
       display: block;
 
-      padding: 22px 0 11px 0;
+      padding: 44px 44px 44px 0;
     }
   }
 }
@@ -272,14 +315,15 @@ nav.main {
 
 
 
-/* intro & about page */
+// intro & about page
 
 .intro, .about {
+  article {
+    margin: $spacer 0;
+  }
+
   @include mobilecontainer;
 
-  article {
-    margin: $spacer*2 0 $spacer*8 0;
-  }
 }
 
 
@@ -367,9 +411,9 @@ body {
   font-family: "Volkorn", "times new roman", serif;
   font-weight: 400;
 
-  @media screen and (max-width: $sm-bp) {
-    font-size: 12px;
-  }
+  // @media screen and (max-width: $sm-bp) {
+  //   font-size: 12px;
+  // }
 }
 
 a {
@@ -391,19 +435,6 @@ p {
   font-size: 2em;
   line-height: 1.5em;
   text-align: left;
-  .credits & {
-    font-size: 1em;
-    line-height: 1.3em;
-    width: 80%;
-    a.logo {
-      font-size: 0;
-      img {
-        height: 20px;
-        vertical-align: bottom;
-        padding-bottom: 5px;
-      }
-    }
-  }
 
   nav.main & {
     font-size: 1em;
@@ -417,12 +448,46 @@ p {
 }
 
 
-// intro & about get small on small screens
-@media screen and (max-width: $sm-bp) {
-  .intro, .about {
-    font-size: 80%;
+.credits {
+  h2 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    // width: 80%;
+  }
+
+  a.logo {
+    font-size: 0;
+    img {
+      height: 20px;
+      vertical-align: bottom;
+      padding-bottom: 9px;
+    }
   }
 }
+
+
+.credits, footer {
+  margin-top: 50px;
+}
+
+footer {
+  p {
+    text-align: center;
+    margin: -1px 0 0 0;
+    font-size: 0.9em;
+    @include opacity(0.5);
+    &:first-child {
+      img {
+        height: 20px;
+      }
+    }
+  }
+}
+
 
 // ARROWED
 @mixin bigarrow {
@@ -446,6 +511,12 @@ p {
   @include opacity(0.2);
   cursor: default !important;
 }
+
+
+
+
+
+
 
 
 
