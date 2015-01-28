@@ -226,7 +226,7 @@ footer {
   text-align: center; }
   .story .gridposition img {
     height: 50px; }
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 1000px) {
       .story .gridposition img {
         display: none; } }
     @media screen and (min-width: 1300px) {

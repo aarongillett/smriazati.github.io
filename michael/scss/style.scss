@@ -378,7 +378,7 @@ footer {
     text-align: center;
     img {
       height: 50px;
-      @media screen and (max-width: $sm-bp) {
+      @media screen and (max-width: $med-bp) {
         display: none;
       }
       @media screen and (min-width: $lrg-bp) {
