@@ -5,6 +5,8 @@ function gridResizer() {
   var windowWidth = $(window).width();
 
   var $panel = $(".panel");
+  $panel.css("display", "none");
+
 
   $panel.css("height", windowHeight);
   $panel.css("width", windowWidth);
@@ -30,7 +32,7 @@ function gridResizer() {
   $photogrid.css("height", gridHeight);
   $photogrid.css("width", gridWidth);
 
-  
+  $panel.css("display", "block");
 };
 
 
