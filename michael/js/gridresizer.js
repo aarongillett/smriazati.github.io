@@ -4,21 +4,21 @@ function gridResizer() {
   var windowHeight = $(window).height();
   var windowWidth = $(window).width();
 
-  var gridPercent = 0.7;
-
   var $panel = $(".panel");
 
+  $panel.css("height", windowHeight);
+  $panel.css("width", windowWidth);
+
+  var gridPercent = 0.7;
   var $photogrid = $panel.find(".photogrid");
   var $photo = $photogrid.find(".photo");
 
   var gridHeight = gridPercent*windowHeight;
-  var imageHeight = gridHeight/3; // image is 1/3 of grid height
-  var imageWidth = (imageHeight*(.786)); // image width is proportional
-  var gridWidth = imageWidth*3; // X% of window height
+  var imageHeight = gridHeight/3; 
+  var imageWidth = (imageHeight*(.786)); 
 
-
-  $panel.css("height", windowHeight);
-  $panel.css("width", windowWidth);
+  var extraCushion = 10;
+  var gridWidth = (imageWidth*3)+extraCushion; 
 
 
   $photo.css("height", imageHeight);
@@ -36,9 +36,7 @@ function gridResizer() {
 
 $(document).ready(function() {
   var $panel = $(".panel");
-
   gridResizer();
-
   $panel.fadeIn(fadeSpeed);
 });
 
