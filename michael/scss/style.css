@@ -89,12 +89,14 @@ header {
     position: relative;
     padding-top: 8%; }
     .intro header img {
-      width: 600px; }
+      width: 600px;
+      height: auto; }
   .about header {
     position: relative;
     padding-top: 8%; }
     .about header img {
-      width: 600px; }
+      width: 600px;
+      height: auto; }
 
 nav.interslide {
   bottom: 2%;
