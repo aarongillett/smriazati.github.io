@@ -63,7 +63,7 @@ function hideArrow() {
   }
 }
 
-
+hideArrow();
 
 function showPrev() {
   $grid = $("#grid");

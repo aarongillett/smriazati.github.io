@@ -81,9 +81,10 @@ header {
   header img {
     max-width: 100%;
     width: 200px; }
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 1000px) {
       header img {
-        width: 200px; } }
+        height: 80px;
+        width: auto; } }
   .intro header {
     position: relative;
     padding-top: 8%; }
@@ -106,9 +107,10 @@ nav.interslide {
     padding: 0 11px; }
     nav.interslide div img {
       height: 50px; }
-      @media screen and (max-width: 850px) {
+      @media screen and (max-width: 1000px) {
         nav.interslide div img {
-          height: 30px; } }
+          height: 75px;
+          padding: 0 22px; } }
 
 /* nav & footer behave the same */
 nav.main, footer {
@@ -263,12 +265,6 @@ footer, nav.main {
     font-size: 80%; } }
 .up, .down {
   font-size: 2em; }
-  .up a, .down a {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden; }
-    .up a:hover, .down a:hover {
-      background: none;
-      color: #0600ff; }
   .up:hover, .down:hover {
     cursor: pointer; }
 
