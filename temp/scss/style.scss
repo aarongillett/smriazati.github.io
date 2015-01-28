@@ -1,5 +1,5 @@
 
-// styles for michael site
+// sassy supplies
 
 $link: rgb(20, 20, 20);
 $highlight: #FFFC00; 
@@ -103,7 +103,7 @@ $sm-bp: 850px;
 
 }
 
-/* general */
+// general
 
 
 html, body {
@@ -142,7 +142,7 @@ a {
 }
 
 
-/* photo grid 9x9 */
+// photo grid 9x9
 .photogrid {
   margin: 0 auto;
   z-index: 99;
@@ -166,14 +166,7 @@ a {
   }
 }
 
-// .a {background: pink;}
-// .b {background: yellow;}
-// .c {background: green;}
-// .d {background: red;}
-
-
-
-/* headers everywhere */
+// headers everywhere
 @mixin unfixedheader {
   position: relative;
   padding-top: $spacer*4;
@@ -234,29 +227,52 @@ nav.interslide {
 
 
 
-
+// on desktops
 nav.main {
   @include opacityhover(0.3);
-
   position: fixed;
   z-index: 1001;
+
+  top: $spacer*1.5;
   left: $spacer;
-  
+  p a::before {
+    content: "About the project";
+    padding: 22px 0; 
+  }
 }
 
-nav.main {
-  top: $spacer*1.5;
+
+// on mobiles
+@media screen and (max-width: $med-bp) {
+  nav.main {
+    top: 0;
+    left: 0;
+
+    padding: $spacer/2 $spacer;
+    background: rgb(231, 229, 229);
+
+    &:hover {
+      @include opacity(0.3);
+    }
+
+    a.active {
+      text-decoration: none;
+    }
+
+    p a::before {
+      content: "+";
+      font-size: 5em;
+      display: block;
+
+      padding: 22px 0 11px 0;
+    }
+  }
 }
 
 
 
 
 /* intro & about page */
-
-// .intro {
-//   height: 100%; // force height
-//   // body & { @include coverbg("../imgs/splash.jpg"); }
-// }
 
 .intro, .about {
   @include mobilecontainer;
@@ -267,7 +283,7 @@ nav.main {
 }
 
 
-/*  COLUMN WIDTH throughout */
+ // COLUMN WIDTH throughout
 .post {
   width: $postwidth;
   max-width: 100%;
@@ -275,22 +291,14 @@ nav.main {
 }
 
 
-/* stories  */
+// stories 
 .story {
  .post {
-    // margin-top: 125px; // offset 75px (~header height) plus some space
     position: relative;
 
     a {
       @include nobghover;
     }
-
-
-    // .close, .gridposition {
-    //   a {        
-    //     @include opacityhover(0.5);
-    //   }
-    // }
 
    .close {
       position: absolute;
@@ -336,13 +344,6 @@ nav.main {
       }
     }
   }
-
-
-  // .overlay {
-  //   position: absolute;
-  //   background: rgba(0,0,0,0.05);
-  // }
-
 }
 
 
@@ -359,7 +360,7 @@ img.fixed {
 }
 
 
-/* typography */
+// typography
 
 body {
   font-size: 16px;
@@ -408,7 +409,7 @@ p {
     font-size: 1em;
     margin-top: 0;
   }
-  
+
   &.center {
     text-align: center;
     font-size: 1.5em;
@@ -449,8 +450,3 @@ p {
 
 
 
-
-
-// .panel {
-//   display: none;
-// }

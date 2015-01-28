@@ -6,7 +6,6 @@
   background: #141414;
   color: white; }
 
-/* general */
 html, body {
   width: 100%;
   max-width: 100%;
@@ -39,7 +38,6 @@ a {
     background: none !important;
     color: #141414 !important; }
 
-/* photo grid 9x9 */
 .photogrid {
   margin: 0 auto;
   z-index: 99;
@@ -58,7 +56,6 @@ a {
     .photogrid .photo img {
       max-width: 100%; }
 
-/* headers everywhere */
 header {
   opacity: 0.8;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
@@ -127,13 +124,31 @@ nav.main {
   backface-visibility: hidden;
   position: fixed;
   z-index: 1001;
+  top: 3%;
   left: 2%; }
   nav.main:hover {
     opacity: 1; }
+  nav.main p a::before {
+    content: "About the project";
+    padding: 22px 0; }
 
-nav.main {
-  top: 3%; }
-
+@media screen and (max-width: 1000px) {
+  nav.main {
+    top: 0;
+    left: 0;
+    padding: 1% 2%;
+    background: #e7e5e5; }
+    nav.main:hover {
+      opacity: 0.3;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+      filter: alpha(opacity=30); }
+    nav.main a.active {
+      text-decoration: none; }
+    nav.main p a::before {
+      content: "+";
+      font-size: 5em;
+      display: block;
+      padding: 22px 0 11px 0; } }
 /* intro & about page */
 @media screen and (max-width: 850px) {
   .intro, .about {
@@ -142,13 +157,11 @@ nav.main {
 .intro article, .about article {
   margin: 4% 0 16% 0; }
 
-/*  COLUMN WIDTH throughout */
 .post {
   width: 800px;
   max-width: 100%;
   margin: 0 auto; }
 
-/* stories  */
 .story .post {
   position: relative; }
   .story .post a {
@@ -202,7 +215,6 @@ img.fixed {
   backface-visibility: visible;
   -webkit-transform-style: preserve-3d; }
 
-/* typography */
 body {
   font-size: 16px;
   font-family: "Volkorn", "times new roman", serif;
