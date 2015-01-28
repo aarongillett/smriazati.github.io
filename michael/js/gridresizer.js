@@ -17,24 +17,18 @@ function gridResizer() {
   var gridWidth = imageWidth*3; // X% of window height
 
 
-      // add width to grid, add image dimensions
-      $photo.css("height", imageHeight);
-      $photo.css("width", imageWidth);
-
-      // // add some padding
-      var gridPadding = ((windowHeight-gridHeight))/2;
-      $photogrid.css("padding-top", gridPadding);
-
-      // // add height for scrolling function
-      $photogrid.css("height", gridHeight);
-      $photogrid.css("width", gridWidth);
-
-      // center fixed grids
-      // $photogrid.css("padding-left", (windowWidth-gridWidth)/2)
-
   $panel.css("height", windowHeight);
   $panel.css("width", windowWidth);
 
+
+  $photo.css("height", imageHeight);
+  $photo.css("width", imageWidth);
+
+  var gridPadding = ((windowHeight-gridHeight))/2;
+  $photogrid.css("padding-top", gridPadding);
+
+  $photogrid.css("height", gridHeight);
+  $photogrid.css("width", gridWidth);
 
 };
 
