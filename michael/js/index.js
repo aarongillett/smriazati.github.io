@@ -5,32 +5,43 @@ var fadeSpeed = 800;
 var fadeOutSpeed = fadeSpeed*0.5;
 var maxWindowHeight = windowHeight*4;
 
-var currentScroll;
+var currentScroll = $(window).scrollTop();
+
+var scrollDestination = 0;
+
+// var currentScroll;
+
+
 
 function backToTop() {
+  currentPanelIdx = 0;
   $('html, body').animate({
     scrollTop: 0
-  }, 1)
+  }, 1);
+  currentScroll = 0;
+
+  $(".up").addClass('inactive');
+
 };
-
-
 
 
 function showNext() {
   $grid = $("#grid");
 
-  var currentScroll = $(window).scrollTop();
+var currentScroll = $(window).scrollTop();
 
   function changeScrollDown() {
-    // $(this).hide();
-    var scrollDestination = windowHeight + currentScroll;
+    scrollDestination = windowHeight + currentScroll;
+
     scrollPosition = scrollDestination;
     if (scrollDestination < maxWindowHeight) {
       $('html, body').animate({
           scrollTop: scrollDestination
       }, 1);
      }
-     console.log("changeScrollDown function");
+     currentPanelIdx++;
+    currentScroll = scrollDestination;
+hideArrow();
   };
 
 
@@ -41,105 +52,97 @@ function showNext() {
     $grid.fadeOut(fadeOutSpeed, backToTop);
     $grid.fadeIn(fadeSpeed, resetMouseWheelTransition); 
   }
+
 }
+
+function hideArrow() {
+  if (currentPanelIdx === 0) {
+    $(".up").addClass('inactive');
+  } else {
+    $(".up").removeClass('inactive');
+  }
+}
+
 
 
 function showPrev() {
   $grid = $("#grid");
+  $up = $(".up");
 
-  var currentScroll = $(window).scrollTop();
+  currentScroll = $(window).scrollTop();
 
   function changeScrollUp() {
-    var scrollDestination = currentScroll - windowHeight;
+    scrollDestination = currentScroll - windowHeight;
     scrollPosition = scrollDestination;
     if (scrollDestination < maxWindowHeight) {
       $('html, body').animate({
           scrollTop: scrollDestination
       }, 1);
     } 
+    currentPanelIdx--;
+    currentScroll = scrollDestination;
+    hideArrow();
+
   };
 
-  if (currentScroll != 0) {
+  if (currentScroll > 0) {
     $grid.fadeOut(fadeOutSpeed, changeScrollUp);
     $grid.fadeIn(fadeSpeed, resetMouseWheelTransition);   
+  } else {
+    currentPanelIdx = 0;
+    resetMouseWheelTransition();
   }
 }
 
-var windowHeight_old = 0;
-var scrollPosition = 0;
+var currentPanelIdx = 0;
+var toTop;
 
-function windowResize() {
-  var windowHeight_new = $(window).height();
 
-  var s = windowHeight_new / windowHeight_old;
+// set current panel to correct index on entry
+function setCurrentPanelIdx() {
+   
+toTop = $(window).scrollTop();
 
-  var newScrollPos = scrollPosition * s;
+  if (toTop = 0) 
+    currentPanelIdx = 0;
+  else if (toTop > 0 && toTop >= windowHeight)
+    currentPanelIdx = 1;
+  else if (toTop > windowHeight && toTop >= windowHeight*2)
+    currentPanelIdx = 2;
+  else if (toTop > windowHeight*2 && toTop >= windowHeight*3)
+    currentPanelIdx = 3;
+}
 
-  // scrollToPos(newScrollPos);
+setCurrentPanelIdx();
+
+
+
+
+function findIndex(gridId) {
+  var idx = 0;
+  $(".panel").each(function(index) {
+    if($(this).attr('id') = gridId) {
+      idx = index;
+    }
+  });
+
+  return idx;
+}
+
+function gotoPanel(index) {
+  var newScrollPos = index * windowHeight;
   if (newScrollPos < maxWindowHeight) {
     $('html, body').animate({
         scrollTop: newScrollPos
     }, 1);
   }
 
-  windowHeight_old = windowHeight_new;
 }
 
-
-// update on window resize
 $( window ).resize(function() {
-  windowResize();
+  windowHeight = $(window).height();
+  gotoPanel(currentPanelIdx);
 });
-
-
-// function windowResetter() {
-//   // window resetter
-//   // to lock panel to top of panel if window is resized
-
-//   // calculate panel tops
-//   // each panel's top is window height * 1, 2, 3, 4
-//   var panelATop = 0;
-//   var panelBTop = windowHeight*1;
-//   var panelCTop = windowHeight*2;
-//   var panelDTop = windowHeight*3;
-
-//   // get scroll position
-//   var currentScroll = $(window).scrollTop();
-//   console.log(currentScroll);
-
-//   // if scroll position is in certain range
-//   // set it to the top
-
-//   if (currentScroll > panelATop && currentScroll < panelBTop) {
-//       $('html, body').animate({
-//           scrollTop: panelATop
-//       }, 1);
-//       console.log("reset A");
-//   } else if (currentScroll > panelBTop && currentScroll < panelCTop) {
-//       $('html, body').animate({
-//           scrollTop: panelBTop
-//       }, 1);
-//       console.log("reset B");
-//   } else if (currentScroll > panelCTop && currentScroll < panelDTop) {
-//       $('html, body').animate({
-//           scrollTop: panelCTop
-//       }, 1);
-//       console.log("reset c");
-//   } else if (currentScroll > panelDTop) {
-//       $('html, body').animate({
-//           scrollTop: panelDTop
-//       }, 1);
-//       console.log("reset D");
-//   }
-
-// }
-
-
-
-// $(document).ready(function() {
-//   windowResetter();
-// });
-
 
 
 
@@ -185,10 +188,6 @@ function MouseWheelHandler(e) {
   var e = window.event || e; // old IE support
   var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
 
-  // window.clearTimeout(mouseWheelTimeOut);
-  // mouseWheelTimeOut = window.setTimeout(resetMouseWheelTransition, 2-0); 
-
-
   if (!mouseWheelTransition){
     if (delta == -1)
       showNext(); 
@@ -202,5 +201,38 @@ function MouseWheelHandler(e) {
 
 function resetMouseWheelTransition(){
   mouseWheelTransition = false; 
+}
+
+
+
+
+
+
+//On touch scroll
+document.addEventListener("touchmove", handleMove, false);
+document.addEventListener("touchend", handleEnd, false);
+ 
+var bTouchScrolling = false;
+var scrollingStartY;
+function handleMove(event) {
+  //start of scroll event for iOS
+  event.preventDefault();
+  var touches = event.changedTouches;
+   if (!bTouchScrolling){
+    bTouchScrolling = true;
+    scrollingStartY = touches[0].pageY;
+  }
+}
+ 
+function handleEnd(event) {
+  //start of scroll event for iOS
+  var touches = event.changedTouches;
+  if (bTouchScrolling){
+    bTouchScrolling = false;
+    if (touches[0].pageY > scrollingStartY)
+      showPrev();
+    else
+      showNext();
+  }
 }
 

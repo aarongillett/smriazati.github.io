@@ -43,7 +43,7 @@ function gridResizer() {
 $(document).ready(function() {
   var $panel = $(".panel");
 
-  $panel.hide();
+  // $panel.hide();
 
   gridResizer();
 
