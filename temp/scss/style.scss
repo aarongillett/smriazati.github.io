@@ -1,0 +1,464 @@
+
+// styles for michael site
+
+$link: rgb(20, 20, 20);
+$highlight: #FFFC00; 
+$white: #F7F7F7;
+$darklight: #0600FF;
+
+$transition: 0.5s ease all; 
+
+$postwidth: 800px;
+$spacer: 2%;
+$headerwidth: 350px;
+
+$lrg-bp: 1300px;
+$med-bp:1000px;
+$sm-bp: 850px;
+
+@mixin vendorize($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin coverbg($url) {
+  background: url($url) no-repeat center center fixed #FFF;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin selection($background, $color) {
+  ::selection {background: $background; color: $color;}
+  ::-moz-selection {background: $background;color: $color;}
+}
+
+@include selection ($link, white);
+
+@mixin button {
+  p, a {
+    background: $highlight;
+    text-decoration: none;  
+    &:hover {
+      background: none !important;
+      color: $link !important;
+    }
+  }
+}
+
+
+@mixin mobilecontainer {
+  @media screen and (max-width: $sm-bp) {
+    width: 90%;
+    margin: $spacer*4 $spacer;
+  }
+} 
+
+@mixin smalllogo {
+  width: $headerwidth;
+  @media screen and (max-width: $sm-bp) {
+    width: 50%;
+    margin-top: $spacer*5;
+  } 
+}
+
+@mixin resetUL{
+  @include vendorize(margin-before, 0);
+  @include vendorize(margin-after, 0);
+  @include vendorize(margin-start, 0);
+  @include vendorize(margin-end, 0);
+  @include vendorize(padding-start, 0);
+}
+
+@mixin nobghover {
+  &:hover {
+    background: none;
+    color: $darklight;
+  }
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+
+@mixin opacityhover($base) {
+  @include opacity($base);
+  @include vendorize(transition, $transition);
+  &:hover {
+    opacity: 1;
+  }
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+
+/* general */
+
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  background: $white; 
+}
+
+
+a {
+  color: $link;
+
+  text-decoration: none;
+  @include vendorize(transition, $transition);
+  &:hover {
+    background: lighten($highlight,40%);
+  }
+  &.active{
+    text-decoration: underline;
+    cursor: text;
+    &:hover {
+      background: none;
+    }
+  }
+
+}
+
+
+#wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.button {
+  @include button;
+}
+
+
+/* photo grid 9x9 */
+.photogrid {
+  margin: 0 auto;
+  z-index: 99;
+  max-width: 100%;
+  font-size: 0;
+  display: inherit !important;
+
+  .photo {
+    display: inline-block;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+
+    &:nth-child(3n+3) { padding-right: 0; }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+// .a {background: pink;}
+// .b {background: yellow;}
+// .c {background: green;}
+// .d {background: red;}
+
+
+
+/* headers everywhere */
+@mixin unfixedheader {
+  position: relative;
+  padding-top: $spacer*4;
+  img {
+    width: $postwidth*0.75;
+    height: auto;
+  }
+}
+
+header {
+  @include opacityhover(0.8);
+
+  position: fixed;
+  top: 2%;
+  width: 100%;
+
+  text-align: center;
+  font-size: 0;
+
+  z-index: 1000;
+
+  img {
+    max-width: 100%;
+    width: 200px;
+    @media screen and (max-width: $med-bp) { // bigger on mobile
+      height: 80px;
+      width: auto;
+    }
+  }
+
+  // about & intro
+  .intro & {@include unfixedheader;}
+  .about & {@include unfixedheader;}
+}
+
+
+// interslide nav
+nav.interslide {
+  bottom: $spacer;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 1000;
+
+  div {
+    display: inline-block;
+    padding: 0 11px;
+    img {
+      height: 50px;
+      @media screen and (max-width: $med-bp) {
+        height: 75px;
+        padding: 0 22px;
+      }
+    }
+  }
+}
+
+
+
+
+
+/* nav & footer behave the same */
+nav.main, footer {
+  @include opacityhover(0.3);
+
+  position: fixed;
+  z-index: 1001;
+
+  ul {
+    @include resetUL;
+
+    right: 0;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      position: fixed;
+
+      &:first-child { left: $spacer;}
+      &:nth-child(2) {  right: $spacer;}
+    }
+  }
+}
+
+nav.main {
+  top: $spacer*1.5;
+}
+
+footer {
+  bottom: $spacer*2;
+  ul { li { &:last-child { img {
+          width: 115px; // fab logo
+    } } }
+  }
+}
+
+
+/* intro & about page */
+
+// .intro {
+//   height: 100%; // force height
+//   // body & { @include coverbg("../imgs/splash.jpg"); }
+// }
+
+.intro, .about {
+  @include mobilecontainer;
+
+  article {
+    margin: $spacer*2 0 $spacer*8 0;
+  }
+}
+
+
+/*  COLUMN WIDTH throughout */
+.post {
+  width: $postwidth;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+/* stories  */
+.story {
+ .post {
+    // margin-top: 125px; // offset 75px (~header height) plus some space
+    position: relative;
+
+    a {
+      @include nobghover;
+    }
+
+
+    // .close, .gridposition {
+    //   a {        
+    //     @include opacityhover(0.5);
+    //   }
+    // }
+
+   .close {
+      position: absolute;
+      padding-right: 22px;
+      padding-left: $spacer*4;
+      img {
+        width: 35px;
+      }
+   }
+
+    .photo {
+      img {
+        text-align: center;
+      }
+    }
+
+    // overlap note on big screens only
+    @media screen and (min-width: $med-bp) {
+      .note {
+        @include opacityhover(0.2);
+        position: absolute;
+        top: $spacer*2;
+      }
+      .right, .right-push {
+        top: $spacer*4 !important; // bump down because of close button
+      }
+      .middle {
+        top: $spacer*15 !important; 
+      }
+    } // overlap
+  } // post
+
+  .gridposition {
+    padding-top: $spacer*2;
+    text-align: center;
+    img {
+      height: 50px;
+      @media screen and (max-width: $med-bp) {
+        display: none;
+      }
+      @media screen and (min-width: $lrg-bp) {
+        height: 70px;
+      }
+    }
+  }
+
+
+  // .overlay {
+  //   position: absolute;
+  //   background: rgba(0,0,0,0.05);
+  // }
+
+}
+
+
+
+
+
+
+
+// fix annoying flickers
+img.fixed {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-transform-style: preserve-3d;
+}
+
+
+/* typography */
+
+body {
+  font-size: 16px;
+  font-family: "Volkorn", "times new roman", serif;
+  font-weight: 400;
+
+  @media screen and (max-width: $sm-bp) {
+    font-size: 12px;
+  }
+}
+
+h1, h2 {
+  font-size: 1em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+p {
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: left;
+  .credits & {
+    font-size: 1em;
+    line-height: 1.3em;
+    width: 80%;
+    a.logo {
+      font-size: 0;
+      img {
+        height: 20px;
+      }
+    }
+  }
+}
+
+footer, nav.main {
+  font-size: 1em;
+}
+
+// intro & about get small on small screens
+@media screen and (max-width: $sm-bp) {
+  .intro, .about {
+    font-size: 80%;
+  }
+}
+
+// ARROWED
+@mixin bigarrow {
+  font-size:2em;
+}
+
+.up, .down { 
+  @include bigarrow; 
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.center {
+  text-align: center;
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+.highlight {
+  @include button;
+}
+
+.inactive {
+  @include opacity(0.2);
+  cursor: default !important;
+}
+
+
+
+
+
+
+// .panel {
+//   display: none;
+// }
