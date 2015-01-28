@@ -282,6 +282,5 @@ footer, nav.main {
 .inactive {
   opacity: 0.2;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-  filter: alpha(opacity=20); }
-  .inactive a {
-    cursor: default; }
+  filter: alpha(opacity=20);
+  cursor: default !important; }
