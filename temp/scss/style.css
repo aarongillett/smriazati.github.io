@@ -268,7 +268,9 @@ p {
     .credits p a.logo {
       font-size: 0; }
       .credits p a.logo img {
-        height: 20px; }
+        height: 20px;
+        vertical-align: bottom;
+        padding-bottom: 5px; }
 
 footer, nav.main {
   font-size: 1em; }
