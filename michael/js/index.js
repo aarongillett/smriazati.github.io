@@ -21,6 +21,7 @@ function backToTop() {
   currentScroll = 0;
 
   $(".up").addClass('inactive');
+// window.location.hash = "#";
 
 };
 
@@ -41,15 +42,17 @@ var currentScroll = $(window).scrollTop();
      }
      currentPanelIdx++;
     currentScroll = scrollDestination;
-hideArrow();
+    hideArrow();
   };
 
 
   if (currentScroll != (maxWindowHeight-windowHeight)) {
     $grid.fadeOut(fadeOutSpeed, changeScrollDown);
+    window.location.hash = "#";
     $grid.fadeIn(fadeSpeed, resetMouseWheelTransition); 
   } else {
     $grid.fadeOut(fadeOutSpeed, backToTop);
+    window.location.hash = "#";
     $grid.fadeIn(fadeSpeed, resetMouseWheelTransition); 
   }
 
@@ -82,11 +85,11 @@ function showPrev() {
     currentPanelIdx--;
     currentScroll = scrollDestination;
     hideArrow();
-
   };
 
   if (currentScroll > 0) {
     $grid.fadeOut(fadeOutSpeed, changeScrollUp);
+    window.location.hash = "#";
     $grid.fadeIn(fadeSpeed, resetMouseWheelTransition);   
   } else {
     currentPanelIdx = 0;
