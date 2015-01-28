@@ -114,8 +114,7 @@ nav.interslide {
           height: 75px;
           padding: 0 22px; } }
 
-/* nav & footer behave the same */
-nav.main, footer {
+nav.main {
   opacity: 0.3;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
   filter: alpha(opacity=30);
@@ -127,52 +126,13 @@ nav.main, footer {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   position: fixed;
-  z-index: 1001; }
-  nav.main:hover, footer:hover {
+  z-index: 1001;
+  left: 2%; }
+  nav.main:hover {
     opacity: 1; }
-  nav.main ul, footer ul {
-    -webkit-margin-before: 0;
-    -moz-margin-before: 0;
-    -ms-margin-before: 0;
-    -o-margin-before: 0;
-    margin-before: 0;
-    -webkit-margin-after: 0;
-    -moz-margin-after: 0;
-    -ms-margin-after: 0;
-    -o-margin-after: 0;
-    margin-after: 0;
-    -webkit-margin-start: 0;
-    -moz-margin-start: 0;
-    -ms-margin-start: 0;
-    -o-margin-start: 0;
-    margin-start: 0;
-    -webkit-margin-end: 0;
-    -moz-margin-end: 0;
-    -ms-margin-end: 0;
-    -o-margin-end: 0;
-    margin-end: 0;
-    -webkit-padding-start: 0;
-    -moz-padding-start: 0;
-    -ms-padding-start: 0;
-    -o-padding-start: 0;
-    padding-start: 0;
-    right: 0;
-    width: 100%; }
-    nav.main ul li, footer ul li {
-      display: inline-block;
-      position: fixed; }
-      nav.main ul li:first-child, footer ul li:first-child {
-        left: 2%; }
-      nav.main ul li:nth-child(2), footer ul li:nth-child(2) {
-        right: 2%; }
 
 nav.main {
   top: 3%; }
-
-footer {
-  bottom: 4%; }
-  footer ul li:last-child img {
-    width: 115px; }
 
 /* intro & about page */
 @media screen and (max-width: 850px) {
@@ -251,6 +211,11 @@ body {
     body {
       font-size: 12px; } }
 
+a {
+  text-decoration: underline; }
+  nav a {
+    text-decoration: none; }
+
 h1, h2 {
   font-size: 1em; }
 
@@ -271,9 +236,12 @@ p {
         height: 20px;
         vertical-align: bottom;
         padding-bottom: 5px; }
-
-footer, nav.main {
-  font-size: 1em; }
+  nav.main p {
+    font-size: 1em;
+    margin-top: 0; }
+  p.center {
+    text-align: center;
+    font-size: 1.5em; }
 
 @media screen and (max-width: 850px) {
   .intro, .about {
@@ -282,11 +250,6 @@ footer, nav.main {
   font-size: 2em; }
   .up:hover, .down:hover {
     cursor: pointer; }
-
-.center {
-  text-align: center;
-  font-size: 1.5em;
-  text-decoration: underline; }
 
 .highlight p, .highlight a {
   background: #fffc00;

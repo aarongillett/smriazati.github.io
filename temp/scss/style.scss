@@ -235,40 +235,20 @@ nav.interslide {
 
 
 
-/* nav & footer behave the same */
-nav.main, footer {
+nav.main {
   @include opacityhover(0.3);
 
   position: fixed;
   z-index: 1001;
-
-  ul {
-    @include resetUL;
-
-    right: 0;
-    width: 100%;
-
-    li {
-      display: inline-block;
-      position: fixed;
-
-      &:first-child { left: $spacer;}
-      &:nth-child(2) {  right: $spacer;}
-    }
-  }
+  left: $spacer;
+  
 }
 
 nav.main {
   top: $spacer*1.5;
 }
 
-footer {
-  bottom: $spacer*2;
-  ul { li { &:last-child { img {
-          width: 115px; // fab logo
-    } } }
-  }
-}
+
 
 
 /* intro & about page */
@@ -391,6 +371,13 @@ body {
   }
 }
 
+a {
+  text-decoration: underline;
+  nav & {
+    text-decoration: none;
+  }
+}
+
 h1, h2 {
   font-size: 1em;
 }
@@ -416,11 +403,18 @@ p {
       }
     }
   }
+
+  nav.main & {
+    font-size: 1em;
+    margin-top: 0;
+  }
+  
+  &.center {
+    text-align: center;
+    font-size: 1.5em;
+  }
 }
 
-footer, nav.main {
-  font-size: 1em;
-}
 
 // intro & about get small on small screens
 @media screen and (max-width: $sm-bp) {
@@ -441,11 +435,7 @@ footer, nav.main {
   }
 }
 
-.center {
-  text-align: center;
-  font-size: 1.5em;
-  text-decoration: underline;
-}
+
 
 .highlight {
   @include button;
