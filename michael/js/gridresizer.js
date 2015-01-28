@@ -37,8 +37,6 @@ function gridResizer() {
 $(document).ready(function() {
   var $panel = $(".panel");
 
-  $panel.hide();
-
   gridResizer();
 
   $panel.fadeIn(fadeSpeed);
