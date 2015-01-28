@@ -30,6 +30,7 @@ function gridResizer() {
   $photogrid.css("height", gridHeight);
   $photogrid.css("width", gridWidth);
 
+  
 };
 
 
