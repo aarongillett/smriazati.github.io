@@ -21,7 +21,6 @@ function backToTop() {
   currentScroll = 0;
 
   $(".up").addClass('inactive');
-// window.location.hash = "#";
 
 };
 
@@ -40,33 +39,25 @@ function showNext() {
           scrollTop: scrollDestination
       }, 1);
      }
-     currentPanelIdx++;
+    currentPanelIdx++;
     currentScroll = scrollDestination;
     hideArrow();
+    window.location.hash = "#";
+
   };
 
 
   if (currentScroll != (maxWindowHeight-windowHeight)) {
     $grid.fadeOut(fadeOutSpeed, changeScrollDown);
-    window.location.hash = "#";
     $grid.fadeIn(fadeSpeed, resetMouseWheelTransition); 
   } else {
     $grid.fadeOut(fadeOutSpeed, backToTop);
-    window.location.hash = "#";
     $grid.fadeIn(fadeSpeed, resetMouseWheelTransition); 
   }
 
 }
 
-function hideArrow() {
-  if (currentPanelIdx === 0) {
-    $(".up").addClass('inactive');
-  } else {
-    $(".up").removeClass('inactive');
-  }
-}
 
-hideArrow();
 
 function showPrev() {
   $grid = $("#grid");
@@ -85,11 +76,12 @@ function showPrev() {
     currentPanelIdx--;
     currentScroll = scrollDestination;
     hideArrow();
+    window.location.hash = "#";
+
   };
 
   if (currentScroll > 0) {
     $grid.fadeOut(fadeOutSpeed, changeScrollUp);
-    window.location.hash = "#";
     $grid.fadeIn(fadeSpeed, resetMouseWheelTransition);   
   } else {
     currentPanelIdx = 0;
@@ -102,25 +94,14 @@ function showPrev() {
 
 var currentPanelIdx = 0;
 
-
-
-
-// set current panel to correct index on entry from story page
-var toTop;
-function setCurrentPanelIdx() {
-     
-  toTop = currentScroll;
-    if (toTop = 0) 
-      currentPanelIdx = 0;
-    else if (toTop > 0 && toTop >= windowHeight)
-      currentPanelIdx = 1;
-    else if (toTop > windowHeight && toTop >= windowHeight*2)
-      currentPanelIdx = 2;
-    else if (toTop > windowHeight*2 && toTop >= windowHeight*3)
-      currentPanelIdx = 3;
+function hideArrow() {
+  if (currentPanelIdx === 0) {
+    $(".up").addClass('inactive');
+  } else {
+    $(".up").removeClass('inactive');
   }
-// setCurrentPanelIdx();
-
+}
+hideArrow();
 
 
 

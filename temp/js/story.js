@@ -38,7 +38,7 @@ function photoResizer() {
 
         if ($(window).width() > 1000) {
 
-            var noteWidth = imageWidth/1.5; // note is proportional to image 
+            var noteWidth = imageWidth/2; // note is proportional to image 
             $note.find("img").css("width", noteWidth);
 
             var noteCenter = imageWidth/2; // center it

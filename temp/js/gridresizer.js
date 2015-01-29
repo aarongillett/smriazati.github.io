@@ -22,7 +22,6 @@ function gridResizer() {
   var extraCushion = 10;
   var gridWidth = (imageWidth*3)+extraCushion; 
 
-
   $photo.css("height", imageHeight);
   $photo.css("width", imageWidth);
 
@@ -32,17 +31,15 @@ function gridResizer() {
   $photogrid.css("height", gridHeight);
   $photogrid.css("width", gridWidth);
 
-  $panel.css("display", "block");
+  // $panel.css("display", "block");
+  $panel.fadeIn(fadeSpeed);
+
 };
 
 
 
-
-
 $(document).ready(function() {
-  var $panel = $(".panel");
   gridResizer();
-  $panel.fadeIn(fadeSpeed);
 });
 
 
