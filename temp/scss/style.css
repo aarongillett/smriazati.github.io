@@ -120,6 +120,8 @@ nav.interslide {
   nav.interslide div {
     display: inline-block;
     padding: 0 11px; }
+    nav.interslide div:hover {
+      cursor: pointer; }
     nav.interslide div img {
       height: 50px; }
       @media screen and (max-width: 1000px) {
@@ -145,31 +147,28 @@ nav.main {
   nav.main:hover {
     opacity: 1; }
   nav.main a {
-    padding: 44px 44px 44px 0; }
+    padding: 0 44px 44px 0; }
   nav.main p a::before {
-    content: "i";
-    padding: 44px 44px 44px 0; }
+    content: url("../imgs/info1-sm.png");
+    padding: 0 44px 44px 0; }
   .about nav.main p a::before {
     content: url("../imgs/arrow1-left.png");
-    padding: 44px 44px 44px 0;
     width: 50px; }
 
 @media screen and (max-width: 1000px) {
   nav.main {
     top: 0;
     left: 0;
-    padding: 1% 2%;
-    background: #f7f7f7; }
+    padding: 1% 2%; }
     nav.main a {
-      padding: 44px 44px 44px 0; }
+      padding: 0 44px 44px 0; }
     nav.main:hover {
       opacity: 0.3;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
       filter: alpha(opacity=30); }
     nav.main p a::before {
-      content: "i";
       display: block;
-      padding: 44px 44px 44px 0; } }
+      padding: 0 44px 44px 0; } }
 .intro article, .about article {
   margin: 2% 0; }
 @media screen and (max-width: 850px) {
@@ -262,11 +261,8 @@ p {
     text-align: center;
     font-size: 1.5em; }
 
-.credits h2 {
-  font-size: 2em; }
 .credits p {
-  font-size: 1.2em;
-  line-height: 1.4em; }
+  font-size: 100%; }
 .credits a.logo {
   font-size: 0; }
   .credits a.logo img {
@@ -280,17 +276,14 @@ p {
 footer p {
   text-align: center;
   margin: -1px 0 0 0;
-  font-size: 0.9em;
+  font-size: 90%;
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50); }
   footer p:first-child img {
     height: 20px; }
-
-.up, .down {
-  font-size: 2em; }
-  .up:hover, .down:hover {
-    cursor: pointer; }
+  footer p span {
+    font-family: helvetica, arial, sans-serif; }
 
 .highlight p, .highlight a {
   background: #1f29df;

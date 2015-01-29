@@ -246,6 +246,9 @@ nav.interslide {
   div {
     display: inline-block;
     padding: 0 11px;
+    &:hover {
+      cursor: pointer;
+    }
     img {
       height: 50px;
       @media screen and (max-width: $med-bp) {
@@ -258,8 +261,8 @@ nav.interslide {
 
 
 
-
-// on desktops
+$nav-padding:  0 44px 44px 0;
+// main nav on desktops
 nav.main {
   @include opacityhover(0.7);
   position: fixed;
@@ -269,34 +272,33 @@ nav.main {
   left: $spacer;
 
   a {
-    padding: 44px 44px 44px 0;
+    padding: $nav-padding;
   }
 
   p a::before {
-    content: "i";
-    padding: 44px 44px 44px 0;
+    // content: "i";
+    content: url('../imgs/info1-sm.png');
+    padding: $nav-padding;
   }
   .about & {
     p a::before {
       content: url('../imgs/arrow1-left.png');
-      padding: 44px 44px 44px 0;
       width: 50px;
     }
   }
 }
 
 
-// on mobiles
+// main nav on mobiles
 @media screen and (max-width: $med-bp) {
   nav.main {
     top: 0;
     left: 0;
 
     padding: $spacer/2 $spacer;
-    background: $white;
 
     a {
-      padding: 44px 44px 44px 0;
+      padding: $nav-padding;
     }
 
     &:hover {
@@ -304,10 +306,8 @@ nav.main {
     }
 
     p a::before {
-      content: "i";
       display: block;
-
-      padding: 44px 44px 44px 0;
+      padding: $nav-padding;
     }
   }
 }
@@ -321,9 +321,7 @@ nav.main {
   article {
     margin: $spacer 0;
   }
-
   @include mobilecontainer;
-
 }
 
 
@@ -367,7 +365,7 @@ nav.main {
         top: $spacer*2;
       }
       .right, .right-push {
-        top: $spacer*4 !important; // bump down because of close button
+        top: $spacer*4 !important; 
       }
       .middle {
         top: $spacer*15 !important; 
@@ -410,10 +408,6 @@ body {
   font-size: 16px;
   font-family: "Volkorn", "times new roman", serif;
   font-weight: 400;
-
-  // @media screen and (max-width: $sm-bp) {
-  //   font-size: 12px;
-  // }
 }
 
 a {
@@ -449,14 +443,8 @@ p {
 
 
 .credits {
-  h2 {
-    font-size: 2em;
-  }
-
   p {
-    font-size: 1.2em;
-    line-height: 1.4em;
-    // width: 80%;
+    font-size: 100%;
   }
 
   a.logo {
@@ -469,7 +457,6 @@ p {
   }
 }
 
-
 .credits, footer {
   margin-top: 50px;
 }
@@ -478,28 +465,20 @@ footer {
   p {
     text-align: center;
     margin: -1px 0 0 0;
-    font-size: 0.9em;
+    font-size: 90%;
     @include opacity(0.5);
     &:first-child {
       img {
         height: 20px;
       }
     }
+    span {
+      font-family: helvetica, arial, sans-serif;
+    }
   }
 }
 
 
-// ARROWED
-@mixin bigarrow {
-  font-size:2em;
-}
-
-.up, .down { 
-  @include bigarrow; 
-  &:hover {
-    cursor: pointer;
-  }
-}
 
 
 
@@ -511,7 +490,6 @@ footer {
   @include opacity(0.2);
   cursor: default !important;
 }
-
 
 
 
