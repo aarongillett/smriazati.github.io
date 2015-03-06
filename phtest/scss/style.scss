@@ -1,0 +1,343 @@
+$link: #000;
+$white: #fff8fa;
+$dark: #000;
+
+$transition: 0.3s ease all;
+
+
+$med-bp: 1024px;
+$sm-bp: 790px;
+
+
+@mixin vendorize($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin coverbg($url) {
+  background: url($url) no-repeat center center fixed #FFF;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@mixin selection($background, $color) {
+  ::selection {background: $background; color: $color;}
+  ::-moz-selection {background: $background;color: $color;}
+}
+
+@include selection ($link, white);
+
+@mixin resetUL{
+  @include vendorize(margin-before, 0);
+  @include vendorize(margin-after, 0);
+  @include vendorize(margin-start, 0);
+  @include vendorize(margin-end, 0);
+  @include vendorize(padding-start, 0);
+  list-style-type: none;
+}
+
+
+@mixin opacity($value){
+  $IEValue: $value*100;
+  opacity: $value;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$IEValue+")";
+  filter: alpha(opacity=$IEValue);
+}
+
+
+@mixin opacityhover($base) {
+  @include opacity($base);
+  @include vendorize(transition, $transition);
+  &:hover {
+    opacity: 1;
+  }
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+
+@mixin noborderhover() {
+  border: none;
+  &:hover {
+    border: none;
+  }
+}
+
+// general
+
+ul, dd {
+  @include resetUL;
+}
+
+button {
+  border: none;
+  background: none;
+}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: none;
+}
+button:focus {
+  outline: none;
+}
+
+
+
+// typography
+
+body {
+  font-family: "Suisse BP Int'l",helvetica, arial, sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  background: $white;
+}
+
+dt, a { // invisible border so hover works 
+  border-bottom: 4px solid $white;
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 2px;
+
+
+  &:hover {
+    border-bottom: 4px solid $link;
+  }
+}
+
+.project-wrapper a {
+  border-bottom: 4px solid $link;
+}
+
+
+
+h1, h2, p {
+  font-size: 1em; 
+  margin: 0;
+  font-weight: 700;
+}
+
+strong {
+  font-weight: inherit;
+  text-transform: uppercase; 
+}
+
+
+
+// accordion
+#project-links {
+  dt {
+    cursor: pointer;
+  }
+
+  .open {
+    & + dd {
+      display: block;
+    }
+
+    &:before {
+      content: ("- ");
+    }
+  }
+
+  .closed {
+    & + dd {
+      display: none;
+    }
+    &:before {
+      content: ("+ ");
+    }
+  }
+
+}
+
+
+
+
+// spacing & position & grid
+// everythings fixed :)
+
+$spacer: 50px;
+$spacer-top: 140px;
+
+header, .news, .imprint, .contact {
+  position: fixed;
+}
+
+header, .news {
+  top: $spacer;
+}
+
+.imprint, .contact {
+  bottom: $spacer;
+}
+
+header, .contact {
+  left: $spacer;
+}
+
+.news, .imprint {
+  right: $spacer;
+}
+
+
+
+// things aren't fixed in mobile
+
+@media screen and (max-width: 1024px) {
+
+  .projects {
+    .thumbnails-wrapper {
+      display: none !important;
+    }
+  }
+
+  body {
+    font-size: 90%;
+    line-height: 90%;
+  }
+
+  header, .news, .imprint, .contact {
+    position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+  }
+
+}
+
+
+
+
+
+.projects {
+  position: relative;
+  top: $spacer-top;
+
+  .accordion-wrapper, .thumbnails-wrapper {
+    display: inline-block;
+  }
+
+  .thumbnails-wrapper {
+    top: 0;
+    position: absolute;
+    img {
+      max-width: 90%;
+      padding-left: 5%;
+    }
+  }
+
+  .accordion-wrapper {
+    width: 480px; // diff from design specs!
+    padding-left: 320px;
+
+    h2 {
+      margin-bottom: $spacer/2;
+    }
+  }
+
+
+}
+
+
+
+// news & twitter widget
+
+.news {
+  h2 {
+    cursor: pointer;
+  }
+}
+
+.twitter-widget {
+  position: absolute;
+  background: pink;
+  width: 360px;
+  height: 500px; // fake for now
+  top: $spacer-top;
+  right: $spacer;
+  z-index: 10000;
+}
+
+
+
+
+// project page
+
+.project-wrapper {
+  margin-top: 50px;
+
+  .project-info, .project-slideshow, .close {
+    display: inline-block;
+    position: absolute;
+  }
+
+  .project-info {
+    left: 110px;
+
+    width: 410px;
+
+    & div {
+      margin-bottom: 25px;
+    }
+
+    .project-year {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+
+  .close {
+    right: 110px;
+    z-index: 10000;
+    a {
+      padding: 0 0 22px 22px;
+      @include noborderhover;
+    }
+  }
+
+  .project-slideshow {
+    right: 110px;
+    // width: 900px;
+
+    div img {
+    }
+
+    ul {
+      margin-top: -20px;
+      position: absolute;
+
+      li {
+        display: inline-block;
+        button:hover {
+          border-bottom: 4px solid $dark;
+          margin-bottom: -2px;
+        }
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+

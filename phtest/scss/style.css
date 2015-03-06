@@ -1,0 +1,178 @@
+::selection {
+  background: black;
+  color: white; }
+
+::-moz-selection {
+  background: black;
+  color: white; }
+
+ul, dd {
+  -webkit-margin-before: 0;
+  -moz-margin-before: 0;
+  -ms-margin-before: 0;
+  -o-margin-before: 0;
+  margin-before: 0;
+  -webkit-margin-after: 0;
+  -moz-margin-after: 0;
+  -ms-margin-after: 0;
+  -o-margin-after: 0;
+  margin-after: 0;
+  -webkit-margin-start: 0;
+  -moz-margin-start: 0;
+  -ms-margin-start: 0;
+  -o-margin-start: 0;
+  margin-start: 0;
+  -webkit-margin-end: 0;
+  -moz-margin-end: 0;
+  -ms-margin-end: 0;
+  -o-margin-end: 0;
+  margin-end: 0;
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  -ms-padding-start: 0;
+  -o-padding-start: 0;
+  padding-start: 0;
+  list-style-type: none; }
+
+button {
+  border: none;
+  background: none; }
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+  border: none; }
+
+button:focus {
+  outline: none; }
+
+body {
+  font-family: "Suisse BP Int'l",helvetica, arial, sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  background: #fff8fa; }
+
+dt, a {
+  border-bottom: 4px solid #fff8fa; }
+
+a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 2px; }
+  a:hover {
+    border-bottom: 4px solid black; }
+
+.project-wrapper a {
+  border-bottom: 4px solid black; }
+
+h1, h2, p {
+  font-size: 1em;
+  margin: 0;
+  font-weight: 700; }
+
+strong {
+  font-weight: inherit;
+  text-transform: uppercase; }
+
+#project-links dt {
+  cursor: pointer; }
+#project-links .open + dd {
+  display: block; }
+#project-links .open:before {
+  content: "- "; }
+#project-links .closed + dd {
+  display: none; }
+#project-links .closed:before {
+  content: "+ "; }
+
+header, .news, .imprint, .contact {
+  position: fixed; }
+
+header, .news {
+  top: 50px; }
+
+.imprint, .contact {
+  bottom: 50px; }
+
+header, .contact {
+  left: 50px; }
+
+.news, .imprint {
+  right: 50px; }
+
+@media screen and (max-width: 1024px) {
+  .projects .thumbnails-wrapper {
+    display: none !important; }
+
+  body {
+    font-size: 90%;
+    line-height: 90%; }
+
+  header, .news, .imprint, .contact {
+    position: absolute; } }
+.projects {
+  position: relative;
+  top: 140px; }
+  .projects .accordion-wrapper, .projects .thumbnails-wrapper {
+    display: inline-block; }
+  .projects .thumbnails-wrapper {
+    top: 0;
+    position: absolute; }
+    .projects .thumbnails-wrapper img {
+      max-width: 90%;
+      padding-left: 5%; }
+  .projects .accordion-wrapper {
+    width: 480px;
+    padding-left: 320px; }
+    .projects .accordion-wrapper h2 {
+      margin-bottom: 25px; }
+
+.news h2 {
+  cursor: pointer; }
+
+.twitter-widget {
+  position: absolute;
+  background: pink;
+  width: 360px;
+  height: 500px;
+  top: 140px;
+  right: 50px;
+  z-index: 10000; }
+
+.project-wrapper {
+  margin-top: 50px; }
+  .project-wrapper .project-info, .project-wrapper .project-slideshow, .project-wrapper .close {
+    display: inline-block;
+    position: absolute; }
+  .project-wrapper .project-info {
+    left: 110px;
+    width: 410px; }
+    .project-wrapper .project-info div {
+      margin-bottom: 25px; }
+    .project-wrapper .project-info .project-year {
+      position: absolute;
+      top: 0;
+      right: 0; }
+  .project-wrapper .close {
+    right: 110px;
+    z-index: 10000; }
+    .project-wrapper .close a {
+      padding: 0 0 22px 22px;
+      border: none; }
+      .project-wrapper .close a:hover {
+        border: none; }
+  .project-wrapper .project-slideshow {
+    right: 110px; }
+    .project-wrapper .project-slideshow ul {
+      margin-top: -20px;
+      position: absolute; }
+      .project-wrapper .project-slideshow ul li {
+        display: inline-block; }
+        .project-wrapper .project-slideshow ul li button:hover {
+          border-bottom: 4px solid black;
+          margin-bottom: -2px; }
