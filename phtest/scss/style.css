@@ -55,6 +55,12 @@ body {
   line-height: 22px;
   letter-spacing: 0.01em;
   background: #fff8fa; }
+  @media screen and (max-width: 1280px) {
+    body {
+      font-size: 90%; } }
+  @media screen and (max-width: 1024px) {
+    body {
+      font-size: 100%; } }
 
 dt, a {
   border-bottom: 4px solid #fff8fa; }
@@ -66,6 +72,12 @@ a {
   margin-bottom: 2px; }
   a:hover {
     border-bottom: 4px solid black; }
+
+.contact a {
+  margin-bottom: 0;
+  border-bottom: 0; }
+  .contact a:hover {
+    border-bottom: none; }
 
 .project-wrapper a {
   border-bottom: 4px solid black; }
@@ -105,16 +117,6 @@ header, .contact {
 .news, .imprint {
   right: 50px; }
 
-@media screen and (max-width: 1024px) {
-  .projects .thumbnails-wrapper {
-    display: none !important; }
-
-  body {
-    font-size: 90%;
-    line-height: 90%; }
-
-  header, .news, .imprint, .contact {
-    position: absolute; } }
 .projects {
   position: relative;
   top: 140px; }
@@ -124,7 +126,7 @@ header, .contact {
     top: 0;
     position: absolute; }
     .projects .thumbnails-wrapper img {
-      max-width: 90%;
+      max-width: 30%;
       padding-left: 5%; }
   .projects .accordion-wrapper {
     width: 480px;
@@ -132,8 +134,11 @@ header, .contact {
     .projects .accordion-wrapper h2 {
       margin-bottom: 25px; }
 
-.news h2 {
-  cursor: pointer; }
+.news {
+  z-index: 10000; }
+  .news h2 {
+    cursor: pointer;
+    background: #fff8fa; }
 
 .twitter-widget {
   position: absolute;
@@ -144,6 +149,25 @@ header, .contact {
   right: 50px;
   z-index: 10000; }
 
+@media screen and (max-width: 1024px) {
+  .projects .thumbnails-wrapper {
+    display: none !important; }
+
+  header, .news, .imprint, .contact, .projects {
+    position: relative;
+    float: left;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 15px 0 5px 50px; }
+
+  .twitter-widget, .news {
+    display: none; }
+
+  .projects .accordion-wrapper {
+    padding-left: 0; } }
 .project-wrapper {
   margin-top: 50px; }
   .project-wrapper .project-info, .project-wrapper .project-slideshow, .project-wrapper .close {

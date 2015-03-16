@@ -38,7 +38,7 @@ function imageHover() {
 
     $this.hide().css({
       'position' : 'fixed',
-      'top' : 0
+      'top' : 30
     });
 
   });

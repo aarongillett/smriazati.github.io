@@ -4,7 +4,7 @@ $dark: #000;
 
 $transition: 0.3s ease all;
 
-
+$lrg-bp: 1280px;
 $med-bp: 1024px;
 $sm-bp: 790px;
 
@@ -68,6 +68,16 @@ $sm-bp: 790px;
   }
 }
 
+@mixin removelinkunderlines {
+  margin-bottom: 0;
+  border-bottom: 0;
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+
+
 // general
 
 ul, dd {
@@ -100,6 +110,15 @@ body {
   line-height: 22px;
   letter-spacing: 0.01em;
   background: $white;
+
+  @media screen and (max-width: $lrg-bp) {
+    font-size: 90%;
+  }
+
+  @media screen and (max-width: $med-bp) {
+    font-size: 100%;
+  }
+
 }
 
 dt, a { // invisible border so hover works 
@@ -117,6 +136,12 @@ a {
     border-bottom: 4px solid $link;
   }
 }
+
+
+.contact a {
+  @include removelinkunderlines;
+}
+
 
 .project-wrapper a {
   border-bottom: 4px solid $link;
@@ -195,34 +220,6 @@ header, .contact {
 
 
 
-// things aren't fixed in mobile
-
-@media screen and (max-width: 1024px) {
-
-  .projects {
-    .thumbnails-wrapper {
-      display: none !important;
-    }
-  }
-
-  body {
-    font-size: 90%;
-    line-height: 90%;
-  }
-
-  header, .news, .imprint, .contact {
-    position: absolute;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-  }
-
-}
-
-
-
-
 
 .projects {
   position: relative;
@@ -236,7 +233,7 @@ header, .contact {
     top: 0;
     position: absolute;
     img {
-      max-width: 90%;
+      max-width: 30%;
       padding-left: 5%;
     }
   }
@@ -258,8 +255,10 @@ header, .contact {
 // news & twitter widget
 
 .news {
+  z-index: 10000;
   h2 {
     cursor: pointer;
+    background: $white;
   }
 }
 
@@ -272,6 +271,47 @@ header, .contact {
   right: $spacer;
   z-index: 10000;
 }
+
+
+
+// things aren't fixed in mobile
+
+@media screen and (max-width: 1024px) {
+
+  .projects {
+    .thumbnails-wrapper {
+      display: none !important;
+    }
+  }
+
+
+
+  header, .news, .imprint, .contact, .projects {
+    position: relative;
+    float: left;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: 15px 0 5px 50px;
+  }
+
+  .twitter-widget, .news {
+    display: none;
+  }
+
+  .projects {
+
+    .accordion-wrapper {
+      padding-left: 0;
+    }
+  }
+
+}
+
+
 
 
 
