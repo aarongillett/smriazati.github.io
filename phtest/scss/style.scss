@@ -243,7 +243,7 @@ header, .contact {
     padding-left: 320px;
 
     z-index: 10000;
-    position: absolute;
+    position: relative;
 
 
     dt {
@@ -345,6 +345,23 @@ header, .contact {
   .project-info, .project-slideshow, .close {
     display: inline-block;
     position: absolute;
+  }
+
+
+  $mobile-spacer: 75px;
+  @media screen and (max-width: $med-bp) {
+    .project-info, .project-slideshow {
+      display: inline-block;
+      position: relative;
+      margin-left: $mobile-spacer;
+      left: 0;
+    }    
+
+    .project-slideshow {
+      .slick-list {
+        margin-left: $mobile-spacer
+      }
+    }
   }
 
   .project-info {

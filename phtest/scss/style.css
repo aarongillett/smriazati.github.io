@@ -132,7 +132,7 @@ header, .contact {
     width: 480px;
     padding-left: 320px;
     z-index: 10000;
-    position: absolute; }
+    position: relative; }
     .projects .accordion-wrapper dt {
       border: none;
       margin-bottom: 5px; }
@@ -182,6 +182,14 @@ header, .contact {
   .project-wrapper .project-info, .project-wrapper .project-slideshow, .project-wrapper .close {
     display: inline-block;
     position: absolute; }
+  @media screen and (max-width: 1024px) {
+    .project-wrapper .project-info, .project-wrapper .project-slideshow {
+      display: inline-block;
+      position: relative;
+      margin-left: 75px;
+      left: 0; }
+    .project-wrapper .project-slideshow .slick-list {
+      margin-left: 75px; } }
   .project-wrapper .project-info {
     left: 110px;
     width: 410px; }
