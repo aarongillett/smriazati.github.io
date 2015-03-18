@@ -17,6 +17,12 @@ function imageHover() {
     window_height = $(window).height();
     window_width = $(window).width();
 
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+
     // resize height if image is too tall
     if (img_height > window_height) {
       $this.css({
@@ -38,7 +44,8 @@ function imageHover() {
 
     $this.hide().css({
       'position' : 'fixed',
-      'top' : 30
+      'top' : getRandomArbitrary(0,1) * window_height/4,
+      'right' : getRandomArbitrary(0,1) * window_width/3
     });
 
   });

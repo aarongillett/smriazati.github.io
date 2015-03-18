@@ -242,9 +242,30 @@ header, .contact {
     width: 480px; // diff from design specs!
     padding-left: 320px;
 
+    z-index: 10000;
+    position: absolute;
+
+
+    dt {
+      border: none;
+      margin-bottom: 5px;
+    }
+
+
     h2 {
       margin-bottom: $spacer/2;
+      background: $white;
+
     }
+
+    // background
+    h2, dd ul li a {
+      background: $white;
+      display: inline-block;
+    }
+
+
+
   }
 
 
@@ -364,6 +385,7 @@ header, .contact {
       position: absolute;
 
       li {
+        background: $white;
         display: inline-block;
         button:hover {
           border-bottom: 4px solid $dark;
@@ -374,10 +396,6 @@ header, .contact {
   }
 
 }
-
-
-
-
 
 
 

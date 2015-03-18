@@ -130,9 +130,18 @@ header, .contact {
       padding-left: 5%; }
   .projects .accordion-wrapper {
     width: 480px;
-    padding-left: 320px; }
+    padding-left: 320px;
+    z-index: 10000;
+    position: absolute; }
+    .projects .accordion-wrapper dt {
+      border: none;
+      margin-bottom: 5px; }
     .projects .accordion-wrapper h2 {
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      background: #fff8fa; }
+    .projects .accordion-wrapper h2, .projects .accordion-wrapper dd ul li a {
+      background: #fff8fa;
+      display: inline-block; }
 
 .news {
   z-index: 10000; }
@@ -196,6 +205,7 @@ header, .contact {
       margin-top: -20px;
       position: absolute; }
       .project-wrapper .project-slideshow ul li {
+        background: #fff8fa;
         display: inline-block; }
         .project-wrapper .project-slideshow ul li button:hover {
           border-bottom: 4px solid black;

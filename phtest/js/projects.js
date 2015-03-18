@@ -29,6 +29,7 @@ function setSlideDimensions() {
   // set max-width of image based on images width
   $slideshow.css('max-width', imgWidth);
 
+
 }
 
 
