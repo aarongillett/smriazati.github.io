@@ -159,7 +159,8 @@ header, .contact {
   padding: 50px; }
 
 #twitter_feed p:before {
-  content: "+ "; }
+  content: "+ ";
+  margin-bottom: 50px; }
 
 @media screen and (max-width: 1024px) {
   .projects .thumbnails-wrapper {
