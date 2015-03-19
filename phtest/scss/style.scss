@@ -291,7 +291,6 @@ header, .contact {
   top: $spacer-top;
   right: $spacer;
   z-index: 10000;
-  padding: $spacer;
   h2 a {
     @include noborderhover;
   }
@@ -299,7 +298,7 @@ header, .contact {
 
 #twitter_feed {
   p {
-    margin-bottom: $spacer;
+    margin-top: $spacer/5;
     &:before {
       content: "+ ";
     }

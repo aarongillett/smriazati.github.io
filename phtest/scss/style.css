@@ -155,15 +155,14 @@ header, .contact {
   width: 360px;
   top: 140px;
   right: 50px;
-  z-index: 10000;
-  padding: 50px; }
+  z-index: 10000; }
   .twitter-widget h2 a {
     border: none; }
     .twitter-widget h2 a:hover {
       border: none; }
 
 #twitter_feed p {
-  margin-bottom: 50px; }
+  margin-top: 10px; }
   #twitter_feed p:before {
     content: "+ "; }
 
