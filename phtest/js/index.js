@@ -98,41 +98,13 @@ $( window ).resize(function() {
 
 // twitter
 
-// var config1 = {
-//   "id": '577594630809755649',
-//   "domId": 'twitter_feed',
-//   "maxTweets": 3,
-//   "enableLinks": false,
-//   "showUser": false
-// };
-
-// twitterFetcher.fetch(config1);
-
-
-var config5 = {
+var config1 = {
   "id": '577594630809755649',
   "domId": 'twitter_feed',
   "maxTweets": 3,
   "enableLinks": false,
   "showUser": false,
-  "showTime": true,
-  "dateFunction": '',
-  "showRetweet": false,
-  "customCallback": handleTweets,
-  "showInteraction": false
+  "showTime" : false
 };
 
-function handleTweets(tweets){
-    var x = tweets.length;
-    var n = 0;
-    var element = document.getElementById('example5');
-    var html = '<ul>';
-    while(n < x) {
-      html += '<li>' + tweets[n] + '</li>';
-      n++;
-    }
-    html += '</ul>';
-    element.innerHTML = html;
-}
-
-twitterFetcher.fetch(config5);
+twitterFetcher.fetch(config1);
