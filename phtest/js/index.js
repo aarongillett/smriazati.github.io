@@ -93,3 +93,16 @@ $( window ).resize(function() {
   imageHover();
 });
 
+
+
+
+// twitter
+
+var config1 = {
+  "id": '577594630809755649',
+  "domId": 'twitter_feed',
+  "maxTweets": 3,
+  "enableLinks": true,
+  "showUser": false
+};
+twitterFetcher.fetch(config1);
