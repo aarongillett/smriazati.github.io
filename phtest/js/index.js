@@ -104,7 +104,8 @@ var config1 = {
   "maxTweets": 3,
   "enableLinks": false,
   "showUser": false,
-  "showTime" : false
+  "showTime" : false,
+  "showInteraction" : false
 };
 
 twitterFetcher.fetch(config1);

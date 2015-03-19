@@ -294,6 +294,14 @@ header, .contact {
   padding: $spacer;
 }
 
+#twitter_feed {
+  p {
+    &:before {
+      content: "+ ";
+    }
+  }
+}
+
 
 
 // things aren't fixed in mobile
