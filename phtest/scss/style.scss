@@ -291,6 +291,7 @@ header, .contact {
   top: $spacer-top;
   right: $spacer;
   z-index: 10000;
+  padding: $spacer;
 }
 
 
@@ -414,18 +415,5 @@ header, .contact {
 
 }
 
-
-
-
-
-// twitter stuff
-
-
-
-iframe#twitter-widget-0 {
-  .header {
-    display: none;
-  }
-}
 
 

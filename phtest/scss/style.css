@@ -155,7 +155,8 @@ header, .contact {
   width: 360px;
   top: 140px;
   right: 50px;
-  z-index: 10000; }
+  z-index: 10000;
+  padding: 50px; }
 
 @media screen and (max-width: 1024px) {
   .projects .thumbnails-wrapper {
@@ -217,6 +218,3 @@ header, .contact {
         .project-wrapper .project-slideshow ul li button:hover {
           border-bottom: 4px solid black;
           margin-bottom: -2px; }
-
-iframe#twitter-widget-0 .header {
-  display: none; }
