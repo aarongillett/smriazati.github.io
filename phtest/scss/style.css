@@ -151,6 +151,7 @@ header, .contact {
 
 .twitter-widget {
   position: absolute;
+  background: #fff8fa;
   width: 360px;
   top: 140px;
   right: 50px;
@@ -217,5 +218,5 @@ header, .contact {
           border-bottom: 4px solid black;
           margin-bottom: -2px; }
 
-.twitter-widget iframe .header {
+iframe#twitter-widget-0 .header {
   display: none; }

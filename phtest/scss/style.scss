@@ -285,7 +285,7 @@ header, .contact {
 
 .twitter-widget {
   position: absolute;
-  // background: pink;
+  background: $white;
   width: 360px;
   // height: 500px; // fake for now
   top: $spacer-top;
@@ -422,7 +422,7 @@ header, .contact {
 
 
 
-.twitter-widget iframe {
+iframe#twitter-widget-0 {
   .header {
     display: none;
   }
