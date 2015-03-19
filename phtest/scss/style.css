@@ -216,3 +216,6 @@ header, .contact {
         .project-wrapper .project-slideshow ul li button:hover {
           border-bottom: 4px solid black;
           margin-bottom: -2px; }
+
+.twitter-widget iframe .header {
+  display: none; }
