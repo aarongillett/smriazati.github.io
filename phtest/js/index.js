@@ -105,4 +105,5 @@ var config1 = {
   "enableLinks": true,
   "showUser": false
 };
+
 twitterFetcher.fetch(config1);
