@@ -162,7 +162,8 @@ header, .contact {
       border: none; }
 
 #twitter_feed p {
-  margin-top: 10px; }
+  margin-top: 10px;
+  overflow-wrap: break-word; }
   #twitter_feed p:before {
     content: "+ "; }
 

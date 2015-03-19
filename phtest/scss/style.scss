@@ -298,7 +298,8 @@ header, .contact {
 
 #twitter_feed {
   p {
-    margin-top: $spacer/5;
+    margin-top: $spacer/5;  
+    overflow-wrap: break-word;
     &:before {
       content: "+ ";
     }
