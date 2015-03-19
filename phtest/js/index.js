@@ -111,7 +111,7 @@ $( window ).resize(function() {
 
 var config5 = {
   "id": '577594630809755649',
-  "domId": '',
+  "domId": 'twitter_feed',
   "maxTweets": 3,
   "enableLinks": false,
   "showUser": false,
