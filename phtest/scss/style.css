@@ -151,9 +151,7 @@ header, .contact {
 
 .twitter-widget {
   position: absolute;
-  background: pink;
   width: 360px;
-  height: 500px;
   top: 140px;
   right: 50px;
   z-index: 10000; }
