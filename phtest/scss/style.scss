@@ -292,13 +292,16 @@ header, .contact {
   right: $spacer;
   z-index: 10000;
   padding: $spacer;
+  h2 a {
+    @include noborderhover;
+  }
 }
 
 #twitter_feed {
   p {
+    margin-bottom: $spacer;
     &:before {
       content: "+ ";
-      margin-bottom: $spacer;
     }
   }
 }
