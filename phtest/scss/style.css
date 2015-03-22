@@ -217,7 +217,11 @@ header, .contact {
       .project-wrapper .close a:hover {
         border: none; }
   .project-wrapper .project-slideshow {
-    right: 110px; }
+    right: 110px;
+    max-width: 50%;
+    top: 105px; }
+    .project-wrapper .project-slideshow div img {
+      max-width: 100%; }
     .project-wrapper .project-slideshow ul {
       margin-top: -20px;
       position: absolute; }

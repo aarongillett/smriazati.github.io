@@ -406,8 +406,11 @@ header, .contact {
   .project-slideshow {
     right: 110px;
     // width: 900px;
+    max-width: 50%;
+    top: 105px;
 
     div img {
+      max-width: 100%;
     }
 
     ul {
@@ -426,6 +429,10 @@ header, .contact {
   }
 
 }
+
+
+
+
 
 
 
