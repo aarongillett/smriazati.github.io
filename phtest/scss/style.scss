@@ -407,6 +407,15 @@ header, .contact {
     right: 110px;
     // width: 900px;
     max-width: 50%;
+    @media screen and (max-width: $lrg-bp) {
+      max-width: 40%;
+    }
+
+    @media screen and (max-width: $med-bp) {
+      max-width: 80%;
+    }
+
+
     top: 105px;
 
     div img {
