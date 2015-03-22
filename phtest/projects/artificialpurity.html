@@ -24,6 +24,28 @@
   <link rel="stylesheet" href="../css/slick.css" media="screen" type="text/css" />
 
 
+<script src="../js/jquery.js"></script>
+<script src="../js/slick.min.js"></script>
+<script>
+
+  $(document).ready(function() {
+
+    $('.project-slideshow').slick({
+      dots: true,
+      infinite: true,
+      speed: 100,
+      slidesToShow: 1,
+      arrows: false,
+      fade: true,
+      adaptiveHeight: true
+
+    });
+               
+  });
+
+</script>
+
+
 
 </head>
 
@@ -71,10 +93,6 @@
 
 
 
-
-
-<script src="../js/jquery.js"></script>
-<script src="../js/slick.min.js"></script>
 <script src="../js/projects.js"></script>
 
 
