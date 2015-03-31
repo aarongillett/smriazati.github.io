@@ -384,7 +384,14 @@ header {
       top: 0;
       right: 0;
     }
+
+    .project-description {
+      p {
+        margin-bottom: $spacer/2;
+      }
+    }
   }
+
 
 
   .close {

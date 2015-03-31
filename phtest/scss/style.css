@@ -199,6 +199,8 @@ header .bio {
       position: absolute;
       top: 0;
       right: 0; }
+    .project-wrapper .project-info .project-description p {
+      margin-bottom: 25px; }
   .project-wrapper .close {
     right: 110px;
     z-index: 10000; }
