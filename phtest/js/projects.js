@@ -1,3 +1,15 @@
+// page loader 
+
+  function loadOut(){
+      $('#pageloader').fadeOut(400);
+  }
+  window.onload = function() {
+    loadOut();  
+  }
+
+
+
+
 
 function centerNav() {
   var imgWidth = $('.project-slideshow div img').width();
