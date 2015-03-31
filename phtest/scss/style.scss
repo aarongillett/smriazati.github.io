@@ -106,34 +106,40 @@ button:focus {
 body {
   font-family: "Suisse BP Int'l",helvetica, arial, sans-serif;
   font-weight: 700;
-  font-size: 21px;
+  font-size: 23px;
   line-height: 22px;
   letter-spacing: 0.01em;
   background: $white;
 
   @media screen and (max-width: $lrg-bp) {
-    font-size: 90%;
+    // font-size: 90%;
+    // line-height: 80%;
   }
 
   @media screen and (max-width: $med-bp) {
     font-size: 100%;
+    line-height: 90%;
   }
 
 }
 
 dt, a { // invisible border so hover works 
-  border-bottom: 4px solid $white;
+  // border-bottom: 4px solid $white;
+  margin-top: 2px;
 }
 
 a {
   color: $link;
   text-decoration: none;
   display: inline-block;
-  margin-bottom: 2px;
+  // margin-bottom: 2px;
 
+  // fake margin so appearance of hover border doesn't affect position
+  margin-bottom: 4px;
 
   &:hover {
     border-bottom: 4px solid $link;
+    margin-bottom: 0;
   }
 }
 
@@ -219,6 +225,13 @@ header, .contact {
 }
 
 
+header {
+  .bio {
+    width: 260px;
+  }
+}
+
+
 
 
 .projects {
@@ -254,13 +267,11 @@ header, .contact {
 
     h2 {
       margin-bottom: $spacer/2;
-      background: $white;
 
     }
 
     // background
     h2, dd ul li a {
-      background: $white;
       display: inline-block;
     }
 
@@ -279,13 +290,11 @@ header, .contact {
   z-index: 10000;
   h2 {
     cursor: pointer;
-    background: $white;
   }
 }
 
 .twitter-widget {
   position: absolute;
-  background: $white;
   width: 360px;
   // height: 500px; // fake for now
   top: $spacer-top;
@@ -300,6 +309,7 @@ header, .contact {
   p {
     margin-top: $spacer/5;  
     overflow-wrap: break-word;
+    line-height: 1.1em;
     &:before {
       content: "+ ";
     }
@@ -358,23 +368,6 @@ header, .contact {
   .project-info, .project-slideshow, .close {
     display: inline-block;
     position: absolute;
-  }
-
-
-  $mobile-spacer: 75px;
-  @media screen and (max-width: $med-bp) {
-    .project-info, .project-slideshow {
-      display: inline-block;
-      position: relative;
-      margin-left: $mobile-spacer;
-      left: 0;
-    }    
-
-    .project-slideshow {
-      .slick-list {
-        margin-left: $mobile-spacer
-      }
-    }
   }
 
   .project-info {
@@ -440,7 +433,67 @@ header, .contact {
 }
 
 
+// mobile 
 
+  $mobile-spacer: 75px;
+  @media screen and (max-width: $med-bp) {
+    .project-wrapper {
+      position: relative;
+
+      .project-info, .project-slideshow {
+        display: inline-block;
+        position: relative;
+        margin-left: $mobile-spacer;
+        left: 0;
+      }    
+
+      
+
+    }
+
+  }
+
+
+
+
+// imprint page
+
+.imprint-wrapper {
+    position: relative;
+    top: 50px;
+    width: 480px; // diff from design specs!
+    padding-left: 420px;
+
+    p {
+      margin-bottom: $spacer/2;
+    }
+
+    .close {
+      position: fixed;
+      top: 50px;
+      right: 50px;
+      a {@include removelinkunderlines;}
+    }
+}
+
+
+div#pageloader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0%;
+  background-color: $white;
+  z-index: 1000000;
+
+  // display: none;
+
+  img {
+    margin: 25% 0 0 45%;
+  }
+}
 
 
 

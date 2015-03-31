@@ -51,27 +51,26 @@ button:focus {
 body {
   font-family: "Suisse BP Int'l",helvetica, arial, sans-serif;
   font-weight: 700;
-  font-size: 21px;
+  font-size: 23px;
   line-height: 22px;
   letter-spacing: 0.01em;
   background: #fff8fa; }
-  @media screen and (max-width: 1280px) {
-    body {
-      font-size: 90%; } }
   @media screen and (max-width: 1024px) {
     body {
-      font-size: 100%; } }
+      font-size: 100%;
+      line-height: 90%; } }
 
 dt, a {
-  border-bottom: 4px solid #fff8fa; }
+  margin-top: 2px; }
 
 a {
   color: black;
   text-decoration: none;
   display: inline-block;
-  margin-bottom: 2px; }
+  margin-bottom: 4px; }
   a:hover {
-    border-bottom: 4px solid black; }
+    border-bottom: 4px solid black;
+    margin-bottom: 0; }
 
 .contact a {
   margin-bottom: 0;
@@ -117,6 +116,9 @@ header, .contact {
 .news, .imprint {
   right: 50px; }
 
+header .bio {
+  width: 260px; }
+
 .projects {
   position: relative;
   top: 140px; }
@@ -137,21 +139,17 @@ header, .contact {
       border: none;
       margin-bottom: 5px; }
     .projects .accordion-wrapper h2 {
-      margin-bottom: 25px;
-      background: #fff8fa; }
+      margin-bottom: 25px; }
     .projects .accordion-wrapper h2, .projects .accordion-wrapper dd ul li a {
-      background: #fff8fa;
       display: inline-block; }
 
 .news {
   z-index: 10000; }
   .news h2 {
-    cursor: pointer;
-    background: #fff8fa; }
+    cursor: pointer; }
 
 .twitter-widget {
   position: absolute;
-  background: #fff8fa;
   width: 360px;
   top: 140px;
   right: 50px;
@@ -163,7 +161,8 @@ header, .contact {
 
 #twitter_feed p {
   margin-top: 10px;
-  overflow-wrap: break-word; }
+  overflow-wrap: break-word;
+  line-height: 1.1em; }
   #twitter_feed p:before {
     content: "+ "; }
 
@@ -191,14 +190,6 @@ header, .contact {
   .project-wrapper .project-info, .project-wrapper .project-slideshow, .project-wrapper .close {
     display: inline-block;
     position: absolute; }
-  @media screen and (max-width: 1024px) {
-    .project-wrapper .project-info, .project-wrapper .project-slideshow {
-      display: inline-block;
-      position: relative;
-      margin-left: 75px;
-      left: 0; }
-    .project-wrapper .project-slideshow .slick-list {
-      margin-left: 75px; } }
   .project-wrapper .project-info {
     left: 110px;
     width: 410px; }
@@ -237,3 +228,41 @@ header, .contact {
         .project-wrapper .project-slideshow ul li button:hover {
           border-bottom: 4px solid black;
           margin-bottom: -2px; }
+
+@media screen and (max-width: 1024px) {
+  .project-wrapper {
+    position: relative; }
+    .project-wrapper .project-info, .project-wrapper .project-slideshow {
+      display: inline-block;
+      position: relative;
+      margin-left: 75px;
+      left: 0; } }
+.imprint-wrapper {
+  position: relative;
+  top: 50px;
+  width: 480px;
+  padding-left: 420px; }
+  .imprint-wrapper p {
+    margin-bottom: 25px; }
+  .imprint-wrapper .close {
+    position: fixed;
+    top: 50px;
+    right: 50px; }
+    .imprint-wrapper .close a {
+      margin-bottom: 0;
+      border-bottom: 0; }
+      .imprint-wrapper .close a:hover {
+        border-bottom: none; }
+
+div#pageloader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0%;
+  background-color: #fff8fa;
+  z-index: 1000000; }
+  div#pageloader img {
+    margin: 25% 0 0 45%; }

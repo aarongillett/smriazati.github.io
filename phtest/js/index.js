@@ -1,3 +1,16 @@
+// page loader 
+
+  function loadOut(){
+      $('#pageloader').fadeOut(400);
+  }
+  window.onload = function() {
+    loadOut();  
+  }
+
+
+
+// image hovers
+
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -83,6 +96,14 @@ function getRandomArbitrary(min, max) {
   var $twitter = $('.twitter-widget').hide();
   $('.news h2').click(function() {
     $twitter.toggle();
+
+    // clear all images by setting them to display none
+    var $projectthumbs = $('#project-thumbs li img');
+
+    $projectthumbs.css({
+      'display' : 'none'
+    });
+
   }); 
 
 })(jQuery);
