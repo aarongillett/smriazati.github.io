@@ -112,8 +112,8 @@ body {
   background: $white;
 
   @media screen and (max-width: $lrg-bp) {
-    // font-size: 90%;
-    // line-height: 80%;
+    font-size: 95%;
+    line-height: 85%;
   }
 
   @media screen and (max-width: $med-bp) {
@@ -254,6 +254,11 @@ header {
   .accordion-wrapper {
     width: 480px; // diff from design specs!
     padding-left: 320px;
+
+    @media screen and (max-width: $lrg-bp) {
+      padding-left: 220px;
+
+    }
 
     z-index: 10000;
     position: relative;

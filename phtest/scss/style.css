@@ -55,6 +55,10 @@ body {
   line-height: 22px;
   letter-spacing: 0.01em;
   background: #fff8fa; }
+  @media screen and (max-width: 1280px) {
+    body {
+      font-size: 95%;
+      line-height: 85%; } }
   @media screen and (max-width: 1024px) {
     body {
       font-size: 100%;
@@ -135,6 +139,9 @@ header .bio {
     padding-left: 320px;
     z-index: 10000;
     position: relative; }
+    @media screen and (max-width: 1280px) {
+      .projects .accordion-wrapper {
+        padding-left: 220px; } }
     .projects .accordion-wrapper dt {
       border: none;
       margin-bottom: 5px; }
